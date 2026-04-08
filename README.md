@@ -1,11 +1,9 @@
-# boticario-digital
-Inventario de plantas medicinales de Puerto Rico — CIFI 4996 / ESGE 4995
 
 # 🌿 Boticario Digital de Plantas Medicinales de Puerto Rico
 
-Inventario digital interactivo de las 101 plantas medicinales documentadas en Puerto Rico por el Prof. Ricardo Juan Morales De Jesús en el marco del curso CIFI 4996 de la Universidad de Puerto Rico (2022).
+Inventario digital interactivo de las 101 plantas medicinales documentadas en Puerto Rico por el Prof. Ricardo Juan Morales De Jesús en el marco del curso CIFI 4996 de la Universidad de Puerto Rico (2022). Implementación digital por el curso ESGE 4995 (2026). 
 
-**Demo:** [Ver el Boticario Digital →](https://TU_USUARIO.github.io/boticario-digital/)
+**Demo:** [Ver el Boticario Digital →](https://ricardojuanmorales.github.io/boticario-digital/)
 
 ---
 
