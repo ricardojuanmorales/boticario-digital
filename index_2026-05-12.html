@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Inventario digital de plantas medicinales de Puerto Rico — CIFI 4996, 2022">
+<meta name="theme-color" content="#2D5016">
+<title>Boticario Digital · Plantas Medicinales de Puerto Rico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Lora:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --v:#2D5016;--vl:#3a6b1c;--vd:#1e3a0e;--vp:#EAF3DE;--vpm:#C0DD97;
+  --ocre:#C67F3E;--azul:#3B5A7D;--morado:#6B4E71;
+  --rojo:#9B2335;--rp:#FFF0F1;--rb:rgba(155,35,53,.18);
+  --amb:#B47A2E;--ap:#FFF8EE;
+  --beige:#F5F1E8;--bd:#EDE8D8;--bdd:#E0D9C5;
+  --paper:#FAF7F0;--ink:#2B2B2B;--inks:#4a4a42;--inkm:#7a7a6e;
+  --bor:rgba(45,80,22,.12);--borm:rgba(45,80,22,.2);
+  --fd:'Crimson Pro',Georgia,serif;--fb:'Lora',Georgia,serif;--fm:'IBM Plex Mono',monospace;
+  --r:10px;--rm:7px;
+}
+html{font-size:16px;-webkit-text-size-adjust:100%}
+body{font-family:var(--fb);background:var(--beige);color:var(--ink);line-height:1.5;overflow-x:hidden}
+
+/* ── DISCLAIMER ── */
+#disc{background:var(--ink);color:rgba(255,255,255,.88);padding:9px 1rem;font-size:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;line-height:1.4}
+#disc button{background:rgba(255,255,255,.14);border:none;color:rgba(255,255,255,.8);padding:3px 10px;border-radius:4px;cursor:pointer;font-size:11px;font-family:var(--fb)}
+
+/* ── HEADER ── */
+#hdr{background:var(--v);position:sticky;top:0;z-index:60}
+.hdr-top{padding:.85rem 1rem 0;display:flex;align-items:flex-start;gap:10px}
+.brand h1{font-family:var(--fd);font-size:1.25rem;font-weight:700;color:#fff;letter-spacing:-.01em}
+.brand p{font-size:10.5px;color:rgba(255,255,255,.48);font-style:italic;font-family:var(--fd);margin-top:1px}
+.hdr-meta{margin-left:auto;display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+.hdr-badge{font-size:10px;color:rgba(255,255,255,.6);background:rgba(255,255,255,.1);border-radius:20px;padding:3px 10px;font-family:var(--fm)}
+
+/* search */
+.search-wrap{position:relative;padding:.5rem 1rem 0}
+.si{width:100%;padding:9px 38px 9px 38px;font-family:var(--fb);font-size:14px;background:rgba(255,255,255,.13);border:1.5px solid rgba(255,255,255,.18);border-radius:8px;color:#fff;outline:none;transition:all .18s;-webkit-appearance:none}
+.si:focus{background:rgba(255,255,255,.2);border-color:rgba(255,255,255,.38)}
+.si::placeholder{color:rgba(255,255,255,.45);font-style:italic}
+.si-ic{position:absolute;left:24px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.5);font-size:15px;pointer-events:none}
+.si-x{position:absolute;right:22px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.15);border:none;color:rgba(255,255,255,.7);width:22px;height:22px;border-radius:50%;cursor:pointer;font-size:14px;display:none;align-items:center;justify-content:center}
+.si-x.vis{display:flex}
+
+/* nav tabs */
+.nav-tabs{display:flex;overflow-x:auto;scrollbar-width:none;padding:0 1rem;-webkit-overflow-scrolling:touch}
+.nav-tabs::-webkit-scrollbar{display:none}
+.ntab{font-family:var(--fd);font-size:13px;font-weight:600;color:rgba(255,255,255,.5);padding:8px 14px;border:none;background:transparent;cursor:pointer;border-bottom:2.5px solid transparent;transition:all .15s;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.ntab:hover{color:rgba(255,255,255,.82)}
+.ntab.on{color:#fff;border-bottom-color:var(--ocre)}
+
+/* uso filter tabs */
+.ftabs-wrap{overflow-x:auto;scrollbar-width:none;padding:0 1rem}
+.ftabs-wrap::-webkit-scrollbar{display:none}
+.ftabs{display:flex}
+.ftab{font-family:var(--fd);font-size:11.5px;font-weight:600;color:rgba(255,255,255,.5);padding:6px 12px;border:none;background:transparent;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;-webkit-tap-highlight-color:transparent}
+.ftab.on{color:#fff;border-bottom-color:var(--ocre)}
+
+/* sec filters */
+.sec-row{display:flex;align-items:center;gap:5px;overflow-x:auto;scrollbar-width:none;padding:.5rem 1rem;background:var(--bd);border-bottom:1px solid var(--bor)}
+.sec-row::-webkit-scrollbar{display:none}
+.sf{font-family:var(--fb);font-size:11px;padding:4px 11px;border-radius:20px;border:1px solid var(--bor);background:var(--paper);color:var(--inkm);cursor:pointer;transition:all .15s;white-space:nowrap;flex-shrink:0;-webkit-tap-highlight-color:transparent}
+.sf.on{background:var(--v);color:#fff;border-color:var(--v)}
+.sf.ra.on{background:var(--rojo);border-color:var(--rojo)}
+.sf.rm.on{background:var(--amb);border-color:var(--amb)}
+.sdiv{width:1px;height:18px;background:var(--bor);flex-shrink:0}
+
+/* results bar */
+.res-bar{display:flex;align-items:center;justify-content:space-between;padding:.4rem 1rem;background:var(--beige);border-bottom:1px solid var(--bor);gap:8px}
+.res-t{font-size:11.5px;color:var(--inkm)}.res-t strong{color:var(--ink)}
+.bar-r{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.sort-sel{font-family:var(--fb);font-size:11px;padding:4px 7px;border-radius:5px;border:1px solid var(--bor);background:var(--paper);color:var(--inkm);cursor:pointer;outline:none}
+.vbtn{width:30px;height:30px;border-radius:5px;border:1px solid var(--bor);background:var(--paper);cursor:pointer;font-size:12px;color:var(--inkm);display:flex;align-items:center;justify-content:center;transition:all .15s}
+.vbtn.on{background:var(--v);color:#fff;border-color:var(--v)}
+
+/* ── CATALOG GRID ── */
+#cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(195px,1fr));gap:8px;padding:.75rem 1rem 5rem}
+#cat-grid.lv{grid-template-columns:1fr;gap:4px}
+
+/* plant card */
+.pc{background:var(--paper);border:1px solid var(--bor);border-radius:var(--r);overflow:hidden;cursor:pointer;transition:transform .18s,box-shadow .18s,border-color .18s;-webkit-tap-highlight-color:transparent}
+@media(hover:hover){.pc:hover{border-color:var(--vpm);transform:translateY(-2px);box-shadow:0 6px 20px rgba(45,80,22,.1)}}
+.pc:active{transform:scale(.98)}
+
+/* card photo */
+.pc-photo{width:100%;height:120px;object-fit:cover;display:block;background:var(--bd)}
+.pc-photo-placeholder{width:100%;height:3px}
+
+/* risk bar */
+.rb{height:3px}
+.rb-alto{background:var(--rojo)}.rb-mod{background:var(--amb)}.rb-bajo{background:var(--v)}
+
+.pc-b{padding:10px 12px 9px}
+.pc-fam{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--inkm);margin-bottom:1px}
+.pc-n{font-family:var(--fd);font-size:1.05rem;font-weight:700;color:var(--ink);line-height:1.2;margin-bottom:1px}
+.pc-sci{font-family:var(--fd);font-style:italic;font-size:11px;color:var(--azul);margin-bottom:6px}
+.pc-usos{font-size:11px;color:var(--inks);line-height:1.5;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.pc-ft{display:flex;justify-content:space-between;align-items:center;padding-top:6px;border-top:1px solid var(--bor)}
+.pc-tags{display:flex;gap:3px;flex-wrap:wrap}
+.ctag{font-size:9px;padding:2px 7px;border-radius:9px}
+.ct-t{background:var(--bd);color:var(--inkm);border:1px solid var(--bor)}
+.ct-w{background:var(--rp);color:var(--rojo);border:1px solid var(--rb)}
+.ct-m{background:var(--vp);color:var(--vd);border:1px solid rgba(45,80,22,.2)}
+.ct-foto{background:#E6F1FB;color:#185FA5;border:1px solid rgba(59,90,125,.2)}
+.pc-ar{color:var(--v);opacity:.38;font-size:16px}
+
+/* list view */
+#cat-grid.lv .pc{border-radius:var(--rm);border-left:3px solid var(--v)}
+#cat-grid.lv .pc[data-r="alto"]{border-left-color:var(--rojo)}
+#cat-grid.lv .pc[data-r="moderado"]{border-left-color:var(--amb)}
+#cat-grid.lv .rb,#cat-grid.lv .pc-fam,#cat-grid.lv .pc-usos,#cat-grid.lv .pc-ft,#cat-grid.lv .pc-photo{display:none}
+#cat-grid.lv .pc-b{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:12px;padding:8px 12px}
+#cat-grid.lv .pc-n{font-size:.95rem;margin-bottom:0}
+#cat-grid.lv .pc-sci{margin-bottom:0;font-size:10.5px}
+#cat-grid.lv .lv-t{display:flex;gap:4px;flex-wrap:wrap}
+#cat-grid.lv .lv-a{color:var(--v);opacity:.42;font-size:14px;flex-shrink:0}
+
+.empty{grid-column:1/-1;text-align:center;padding:3rem 1rem;font-style:italic;color:var(--inkm)}
+.empty strong{color:var(--ink);font-style:normal}
+
+/* ── PAGES ── */
+.page{display:none;padding:0 0 5rem}
+.page.on{display:block}
+#cat-page{padding:0}
+.pg-hdr{padding:1.25rem 1rem .75rem;border-bottom:1px solid var(--bor)}
+.pg-hdr h2{font-family:var(--fd);font-size:1.4rem;font-weight:700;color:var(--v);margin-bottom:.2rem}
+.pg-hdr p{font-size:13px;color:var(--inkm)}
+
+/* ── PREPARACIONES ── */
+.prep-filters{display:flex;gap:5px;flex-wrap:wrap;padding:.55rem 1rem;border-bottom:1px solid var(--bor)}
+.prep-list{padding:.75rem 1rem 4rem;display:flex;flex-direction:column;gap:10px}
+.prep-card{background:var(--paper);border:1px solid var(--bor);border-radius:var(--r);overflow:hidden}
+.prep-hd{display:flex;justify-content:space-between;align-items:flex-start;padding:10px 14px;background:var(--bd);border-bottom:1px solid var(--bor);gap:8px;cursor:pointer}
+.prep-hd:hover{background:var(--bdd)}
+.prep-plant{font-size:11px;color:var(--inkm);font-style:italic;margin-bottom:1px}
+.prep-nom{font-family:var(--fd);font-size:14px;font-weight:700;color:var(--ink)}
+.prep-ind{font-size:11px;color:var(--inkm);margin-top:1px}
+.tbadge{font-size:10px;padding:2px 8px;border-radius:8px;background:rgba(59,90,125,.1);color:var(--azul);border:1px solid rgba(59,90,125,.2);flex-shrink:0}
+.prep-body{display:none;padding:12px 14px}
+.prep-body.open{display:block}
+.pasos-l{display:flex;flex-direction:column;gap:5px;margin-bottom:.75rem}
+.paso-r{display:flex;gap:8px;align-items:flex-start}
+.paso-n{width:20px;height:20px;border-radius:50%;background:var(--v);color:#fff;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--fm);margin-top:2px}
+.paso-t{font-size:12.5px;color:var(--inks);line-height:1.6}
+.dosis-g{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;background:var(--beige);border-radius:7px;border:1px solid var(--bor);padding:8px 12px}
+.di small{font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--inkm);display:block}
+.di span{font-size:12px;color:var(--ink);font-weight:500}
+.prep-warn{margin-top:8px;padding:7px 10px;border-radius:6px;background:var(--rp);border:1px solid var(--rb);font-size:11.5px;color:#8B1A26;display:flex;gap:6px}
+.prep-notas{margin-top:8px;padding:6px 10px;border-radius:6px;background:var(--beige);border:1px solid var(--bor);font-size:11.5px;color:var(--inks);font-style:italic}
+.prep-disc{margin-top:10px;padding:7px 12px;border-radius:6px;background:rgba(155,35,53,.06);border:1px solid rgba(155,35,53,.15);font-size:11px;color:var(--rojo);text-align:center}
+
+/* ── GLOSARIO ── */
+.glos-cats{display:flex;gap:5px;flex-wrap:wrap;padding:.55rem 0;border-bottom:1px solid var(--bor);margin-bottom:.75rem}
+.gcat{font-size:11px;padding:4px 11px;border-radius:20px;border:1px solid var(--bor);background:var(--paper);color:var(--inkm);cursor:pointer;transition:all .15s}
+.gcat.on{background:var(--v);color:#fff;border-color:var(--v)}
+.glos-list{display:flex;flex-direction:column;gap:6px}
+.glos-t{background:var(--paper);border:1px solid var(--bor);border-radius:7px;padding:10px 13px}
+.gt-n{font-family:var(--fm);font-size:13px;font-weight:500;color:var(--azul);margin-bottom:3px}
+.gt-cat{font-size:9.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--inkm);margin-bottom:4px}
+.gt-def{font-size:12.5px;color:var(--inks);line-height:1.6}
+
+/* ── APRENDIZAJE ── */
+.apr-hero{background:var(--v);border-radius:var(--r);padding:1.5rem 1.25rem;margin:1rem 0;color:#fff}
+.apr-hero h3{font-family:var(--fd);font-size:1.4rem;font-weight:700;margin-bottom:.4rem}
+.apr-hero p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6}
+.apr-s{margin-bottom:1.5rem}
+.apr-st{font-family:var(--fd);font-size:1.1rem;font-weight:700;color:var(--v);padding:.5rem 0;border-bottom:2px solid var(--vpm);margin-bottom:.75rem}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.75rem}
+.stat-c{background:var(--paper);border:1px solid var(--bor);border-radius:7px;padding:.75rem;text-align:center}
+.stat-n{font-family:var(--fd);font-size:2rem;font-weight:700;color:var(--v);line-height:1}
+.stat-l{font-size:11px;color:var(--inkm);margin-top:2px}
+.pillar-c{background:var(--paper);border:1px solid var(--bor);border-radius:var(--r);padding:1rem;margin-bottom:.6rem}
+.pillar-h{display:flex;align-items:center;gap:10px;margin-bottom:.5rem}
+.pillar-ic{font-size:22px;flex-shrink:0}
+.pillar-t{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--ink)}
+.pillar-st{font-size:11px;color:var(--inkm)}
+.pillar-body{font-size:13px;color:var(--inks);line-height:1.65}
+.cifi-card{background:var(--vp);border:1px solid rgba(45,80,22,.2);border-radius:var(--r);padding:1rem 1.25rem}
+.cifi-card h4{font-family:var(--fd);font-size:1rem;font-weight:700;color:var(--vd);margin-bottom:.4rem}
+.cifi-card p{font-size:12.5px;color:var(--inks);line-height:1.65}
+.risk-legend{display:flex;flex-direction:column;gap:6px}
+.rl-row{display:flex;align-items:flex-start;gap:10px;padding:8px 12px;background:var(--paper);border:1px solid var(--bor);border-radius:7px}
+.rl-dot{font-size:14px;flex-shrink:0;margin-top:1px}
+.rl-t{font-weight:600;font-size:13px;color:var(--ink)}
+.rl-d{font-size:12px;color:var(--inkm);margin-top:1px}
+
+/* ── MODAL ── */
+#moverlay{position:fixed;inset:0;background:rgba(20,20,15,.62);z-index:200;display:none;align-items:flex-start;justify-content:center;padding:1rem .75rem;overflow-y:auto;-webkit-overflow-scrolling:touch;backdrop-filter:blur(2px)}
+#moverlay.open{display:flex}
+.modal{background:var(--paper);border-radius:14px;width:100%;max-width:660px;box-shadow:0 24px 80px rgba(0,0,0,.22);overflow:hidden;animation:mIn .22s cubic-bezier(.25,.46,.45,.94);margin:auto}
+@keyframes mIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+/* modal header */
+.mhdr{background:var(--v);position:relative}
+.m-photo{width:100%;height:180px;object-fit:cover;display:block}
+.m-photo-placeholder{height:0}
+.mhdr-content{padding:.9rem 1.25rem .8rem}
+.mclose{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.2);border:none;color:#fff;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:17px;display:flex;align-items:center;justify-content:center}
+.mclose:hover{background:rgba(255,255,255,.32)}
+.m-sci{font-family:var(--fd);font-style:italic;font-size:11.5px;color:rgba(255,255,255,.55);margin-bottom:1px}
+.m-nom{font-family:var(--fd);font-size:1.55rem;font-weight:700;color:#fff;line-height:1.15;margin-bottom:5px}
+.m-risk{display:inline-flex;align-items:center;gap:5px;font-size:11px;padding:3px 11px;border-radius:20px}
+.mr-alto{background:rgba(155,35,53,.7);color:#FFD5D8}
+.mr-mod{background:rgba(180,122,46,.7);color:#FFE9C5}
+.mr-bajo{background:rgba(255,255,255,.12);color:rgba(255,255,255,.82)}
+.m-photo-attr{font-size:9px;color:rgba(255,255,255,.4);margin-top:4px;font-style:italic}
+
+/* warning */
+.mwarn{background:var(--rp);border-bottom:1px solid var(--rb);padding:9px 1.25rem;font-size:12px;color:#8B1A26;display:flex;gap:8px;align-items:flex-start;line-height:1.5}
+.mwarn.h{display:none}
+
+/* tabs */
+.mtabs{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--bor);background:var(--bd)}
+.mtab{padding:8px 4px;text-align:center;cursor:pointer;font-family:var(--fd);font-size:12px;font-weight:600;color:var(--inkm);border:none;background:transparent;border-right:1px solid var(--bor);transition:all .15s;display:flex;flex-direction:column;align-items:center;gap:1px;-webkit-tap-highlight-color:transparent}
+.mtab:last-child{border-right:none}
+.mtab:hover{background:var(--beige);color:var(--v)}
+.mtab.on{background:var(--paper);color:var(--v);border-bottom:2px solid var(--v)}
+.mtsub{font-size:8.5px;font-family:var(--fb);font-weight:400;opacity:.55;text-transform:uppercase;letter-spacing:.05em}
+
+/* modal body */
+.mbody{padding:1rem 1.25rem 1.25rem;min-height:260px;max-height:55vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.mtc{display:none}.mtc.on{display:block}
+.mdisc{background:var(--ink);color:rgba(255,255,255,.78);padding:7px 1.25rem;font-size:11px;text-align:center}
+.mfoot{padding:.55rem 1.25rem;border-top:1px solid var(--bor);background:var(--beige);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:5px}
+.mf-src{font-size:10px;color:var(--inkm);font-style:italic}
+.mf-d{font-size:10px;color:var(--rojo);background:var(--rp);padding:2px 8px;border-radius:5px;border:1px solid var(--rb)}
+
+/* modal content */
+.sh{font-size:10px;text-transform:uppercase;letter-spacing:.09em;color:var(--inkm);margin:.85rem 0 .4rem;padding-bottom:.3rem;border-bottom:1px solid var(--bor)}
+.sh:first-child{margin-top:0}
+.nom-row{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:.6rem}
+.nc{background:var(--bd);border:1px solid var(--bor);border-radius:6px;padding:4px 10px}
+.nc small{display:block;font-size:9px;color:var(--inkm);text-transform:uppercase;letter-spacing:.05em}
+.nc span{font-family:var(--fd);font-size:13px}
+.hist-q{font-style:italic;font-size:13px;color:var(--inks);border-left:3px solid var(--ocre);padding-left:11px;margin-bottom:.65rem;line-height:1.7}
+.sis-pills{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:.5rem}
+.spill{font-size:10.5px;padding:2px 9px;border-radius:20px;background:var(--bd);color:var(--morado);border:1px solid rgba(107,78,113,.2)}
+/* custodios */
+.cust-list{display:flex;flex-direction:column;gap:6px;margin-bottom:.65rem}
+.cust-c{background:var(--beige);border:1px solid var(--bor);border-radius:8px;padding:9px 12px}
+.cust-h{display:flex;align-items:center;gap:7px;margin-bottom:3px}
+.cust-ic{font-size:14px;flex-shrink:0}
+.cust-n{font-size:12.5px;font-weight:500;color:var(--ink);flex:1}
+.cust-rol{font-size:9.5px;padding:1px 7px;border-radius:8px;background:var(--vp);color:var(--vd);border:1px solid rgba(45,80,22,.2)}
+.cust-nota{font-size:12px;color:var(--inks);line-height:1.55;font-style:italic}
+
+.morfo{font-size:12.5px;color:var(--inks);line-height:1.65;background:var(--beige);border-radius:7px;padding:10px 12px;border:1px solid var(--bor);margin-bottom:.65rem}
+.clist{list-style:none;display:flex;flex-direction:column;gap:4px;margin-bottom:.65rem}
+.ci{display:flex;gap:8px;font-size:12.5px;color:var(--inks);align-items:flex-start;padding:5px 10px;background:var(--beige);border-radius:6px;border:1px solid var(--bor)}
+.cdot{width:6px;height:6px;border-radius:50%;background:var(--v);flex-shrink:0;margin-top:5px}
+.ppills{display:flex;flex-wrap:wrap;gap:4px}
+.pp{font-size:11px;padding:2px 10px;border-radius:20px;background:rgba(45,80,22,.07);color:var(--vl);border:1px solid rgba(45,80,22,.18)}
+.comp-list{display:flex;flex-direction:column;gap:6px;margin-bottom:.65rem}
+.comp-c{border:1px solid var(--bor);border-radius:8px;overflow:hidden}
+.comp-h{display:flex;gap:7px;align-items:center;padding:7px 11px;background:var(--bd);border-bottom:1px solid var(--bor)}
+.comp-nm{font-family:var(--fm);font-size:12px;font-weight:500;color:var(--azul);flex:1}
+.comp-cl{font-size:10px;padding:1px 7px;border-radius:8px;background:var(--paper);color:var(--inkm);border:1px solid var(--bor)}
+.comp-mec{font-size:12px;color:var(--inks);line-height:1.55;padding:7px 11px}
+.ind-list{display:flex;flex-direction:column;gap:4px}
+.ind-row{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--inks);padding:5px 9px;background:var(--beige);border-radius:6px;border:1px solid var(--bor)}
+.ind-c{flex:1}
+.ep{font-size:9.5px;padding:2px 6px;border-radius:8px;white-space:nowrap}
+.ep-r{background:#EAF3DE;color:#2D5016}.ep-e{background:#E6F1FB;color:#185FA5}
+.ep-a{background:#FAEEDA;color:#7A4800}.ep-i{background:#F5F0FA;color:#6B4E71}
+.ep-t{background:var(--bd);color:var(--inkm)}
+.prep-mc{border:1px solid var(--bor);border-radius:8px;overflow:hidden;margin-bottom:8px}
+.prep-mh{display:flex;justify-content:space-between;align-items:flex-start;padding:9px 12px;background:var(--bd);border-bottom:1px solid var(--bor);gap:8px}
+.prep-mt{font-family:var(--fd);font-size:13.5px;font-weight:700;color:var(--ink)}
+.prep-mi{font-size:11px;color:var(--inkm);margin-top:1px}
+.dosis-b{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;padding:7px 12px;border-top:1px solid var(--bor)}
+.ctri-l{display:flex;flex-direction:column;gap:5px;margin-bottom:.65rem}
+.ctri{display:flex;gap:7px;align-items:flex-start;padding:7px 10px;border-radius:7px;font-size:12px;line-height:1.5}
+.sv-abs{background:var(--rp);color:#8B1A26;border:1px solid var(--rb)}
+.sv-rel{background:var(--ap);color:#7A4800;border:1px solid rgba(198,127,62,.3)}
+.sv-pre{background:var(--beige);color:var(--inks);border:1px solid var(--bor)}
+.int-l{display:flex;flex-direction:column;gap:5px}
+.int-i{padding:7px 10px;border-radius:7px;font-size:12px;border:1px solid var(--bor);background:var(--beige)}
+.int-g{background:var(--rp);border-color:var(--rb)}.int-m{background:var(--ap);border-color:rgba(198,127,62,.3)}
+.int-mn{font-weight:600;font-size:12.5px;color:var(--ink);margin-bottom:2px}
+.int-g .int-mn{color:#8B1A26}.int-m .int-mn{color:#7A4800}
+.int-ef{color:var(--inks);font-size:11.5px}
+.dmax-b{margin-top:.6rem;padding:8px 12px;border-radius:7px;font-size:12px;color:var(--inks);background:var(--bd);border:1px solid var(--bor)}
+.wbox{background:var(--rp);border:1.5px solid var(--rb);border-radius:8px;padding:9px 12px;display:flex;gap:8px;align-items:flex-start;margin-bottom:.65rem}
+.wbox span{font-size:12.5px;color:#8B1A26;line-height:1.5}
+.cbadge{display:flex;align-items:center;gap:6px;margin-top:8px}
+.ctrack{width:60px;height:3px;background:var(--bdd);border-radius:2px;flex-shrink:0}
+.cfill{height:100%;border-radius:2px;background:var(--v)}
+.cbadge-t{font-size:10px;color:var(--inkm)}
+/* refs */
+.refs-l{display:flex;flex-direction:column;gap:4px;margin-top:.5rem}
+.ref-item{font-size:11px;color:var(--inkm);padding:4px 8px;background:var(--beige);border-radius:5px;border-left:3px solid var(--vpm);line-height:1.5}
+
+/* footer */
+#site-footer{background:var(--vd);color:rgba(255,255,255,.75);padding:1.75rem 1rem;text-align:center;font-size:12px;line-height:1.7}
+#site-footer h3{font-family:var(--fd);font-size:1.1rem;color:#fff;margin-bottom:.4rem}
+
+/* ── RESPONSIVE ── */
+@media(max-width:420px){
+  #cat-grid{grid-template-columns:1fr 1fr;gap:6px;padding:.6rem .75rem 5rem}
+  .pc-photo{height:90px}
+  .hdr-top{padding:.7rem .75rem 0}
+  .search-wrap{padding:.4rem .75rem 0}
+  .nav-tabs,.ftabs-wrap{padding:0 .75rem 0}
+  .sec-row{padding:.45rem .75rem}
+  .res-bar{padding:.4rem .75rem}
+  .dosis-b,.dosis-g{grid-template-columns:1fr}
+  .mtab .mtsub{display:none}
+  .m-nom{font-size:1.35rem}
+  .m-photo{height:140px}
+}
+@media(max-width:340px){#cat-grid{grid-template-columns:1fr}}
+@media(min-width:640px){#cat-grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
+@media(min-width:900px){#cat-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}}
+</style>
+</head>
+<body>
+
+<!-- DISCLAIMER -->
+<div id="disc">
+  <span>⚕ <strong>Aviso médico:</strong> Esta información es educativa y no sustituye diagnóstico ni tratamiento profesional. Consulta siempre a tu médico antes de usar plantas medicinales.</span>
+  <button onclick="this.parentElement.style.display='none'">Entendido</button>
+</div>
+
+<!-- HEADER -->
+<header id="hdr">
+  <div class="hdr-top">
+    <div class="brand">
+      <h1>🌿 Boticario Digital</h1>
+      <p>Plantas Medicinales de Puerto Rico · CIFI 4996</p>
+    </div>
+    <div class="hdr-meta">
+      <div class="hdr-badge" id="hdr-badge">101 plantas</div>
+      <div style="font-size:9px;color:rgba(255,255,255,.35);font-family:var(--fm)">UPR · 2022</div>
+    </div>
+  </div>
+  <div class="search-wrap" id="search-wrap">
+    <span class="si-ic">⌕</span>
+    <input class="si" id="si" placeholder="Buscar planta, uso, familia…" oninput="onSearch(this.value)" autocomplete="off" enterkeyhint="search">
+    <button class="si-x" id="si-x" onclick="clearSi()">×</button>
+  </div>
+  <div class="ftabs-wrap" id="ftabs-wrap">
+    <div class="ftabs">
+      <button class="ftab on" data-u="todas" onclick="setUso('todas',this)">Todas</button>
+      <button class="ftab" data-u="digestivo" onclick="setUso('digestivo',this)">Digestión</button>
+      <button class="ftab" data-u="nervioso" onclick="setUso('nervioso',this)">Nervios</button>
+      <button class="ftab" data-u="respiratorio" onclick="setUso('respiratorio',this)">Respiratorio</button>
+      <button class="ftab" data-u="musculoesqueletico" onclick="setUso('musculoesqueletico',this)">Dolores</button>
+      <button class="ftab" data-u="metabolico" onclick="setUso('metabolico',this)">Diabetes</button>
+      <button class="ftab" data-u="cardiovascular" onclick="setUso('cardiovascular',this)">Corazón</button>
+      <button class="ftab" data-u="dermatologico" onclick="setUso('dermatologico',this)">Piel</button>
+      <button class="ftab" data-u="inmune" onclick="setUso('inmune',this)">Inmune</button>
+      <button class="ftab" data-u="reproductivo" onclick="setUso('reproductivo',this)">Reproductivo</button>
+      <button class="ftab" data-u="urinario" onclick="setUso('urinario',this)">Urinario</button>
+    </div>
+  </div>
+  <nav class="nav-tabs">
+    <button class="ntab on" onclick="goPage('cat',this)">📋 Catálogo</button>
+    <button class="ntab" onclick="goPage('preps',this)">⚗️ Preparaciones</button>
+    <button class="ntab" onclick="goPage('glos',this)">📖 Glosario</button>
+    <button class="ntab" onclick="goPage('apr',this)">🌱 Aprendizaje</button>
+  </nav>
+</header>
+
+<!-- CATALOG -->
+<div id="cat-page" class="page on">
+  <div class="sec-row">
+    <button class="sf ra" data-r="alto" onclick="togR('alto',this)">🔴 Alto riesgo</button>
+    <button class="sf rm" data-r="moderado" onclick="togR('moderado',this)">🟡 Moderado</button>
+    <button class="sf" data-r="bajo" onclick="togR('bajo',this)">🟢 Seguras</button>
+    <div class="sdiv"></div>
+    <button class="sf" data-t="hierba" onclick="togT('hierba',this)">Hierbas</button>
+    <button class="sf" data-t="árbol" onclick="togT('árbol',this)">Árboles</button>
+    <button class="sf" data-t="arbusto" onclick="togT('arbusto',this)">Arbustos</button>
+    <button class="sf" data-t="trepadora" onclick="togT('trepadora',this)">Trepadoras</button>
+    <button class="sf" data-t="suculenta" onclick="togT('suculenta',this)">Suculentas</button>
+    <div class="sdiv"></div>
+    <button class="sf" data-mvp="1" onclick="togMVP(this)">⭐ MVP</button>
+  </div>
+  <div class="res-bar">
+    <div class="res-t" id="res-t"><strong>101</strong> plantas</div>
+    <div class="bar-r">
+      <select class="sort-sel" id="sort-sel" onchange="render()">
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+        <option value="riesgo">Mayor riesgo</option>
+        <option value="usos">Más usos</option>
+        <option value="completitud">Más completas</option>
+      </select>
+      <button class="vbtn on" id="vg" onclick="setV('grid')">⊞</button>
+      <button class="vbtn" id="vl" onclick="setV('list')">☰</button>
+    </div>
+  </div>
+  <div id="cat-grid"></div>
+</div>
+
+<!-- PREPARACIONES -->
+<div id="preps-page" class="page">
+  <div class="pg-hdr">
+    <h2>⚗️ Preparaciones medicinales</h2>
+    <p>Guías paso a paso para preparar remedios con las plantas del inventario CIFI 4996.</p>
+  </div>
+  <div class="prep-filters" id="prep-filters">
+    <button class="sf on" data-pt="todas" onclick="setPrepT('todas',this)">Todas</button>
+    <button class="sf" data-pt="infusion" onclick="setPrepT('infusion',this)">Infusión</button>
+    <button class="sf" data-pt="decoccion" onclick="setPrepT('decoccion',this)">Decocción</button>
+    <button class="sf" data-pt="aceite" onclick="setPrepT('aceite',this)">Aceite</button>
+    <button class="sf" data-pt="jugo" onclick="setPrepT('jugo',this)">Jugo</button>
+    <button class="sf" data-pt="bano" onclick="setPrepT('bano',this)">Baño</button>
+    <button class="sf" data-pt="cataplasma" onclick="setPrepT('cataplasma',this)">Cataplasma</button>
+    <button class="sf" data-pt="tintura" onclick="setPrepT('tintura',this)">Tintura</button>
+    <button class="sf" data-pt="vaporizacion" onclick="setPrepT('vaporizacion',this)">Vapor</button>
+  </div>
+  <div class="prep-list" id="prep-list"></div>
+</div>
+
+<!-- GLOSARIO -->
+<div id="glos-page" class="page">
+  <div class="pg-hdr">
+    <h2>📖 Glosario botánico y fitoquímico</h2>
+    <p>Términos esenciales para entender las fichas de plantas y la fitoquímica.</p>
+  </div>
+  <div style="padding:0 1rem 4rem" id="glos-content"></div>
+</div>
+
+<!-- APRENDIZAJE -->
+<div id="apr-page" class="page">
+  <div class="pg-hdr">
+    <h2>🌱 Aprendizaje y contexto cultural</h2>
+    <p>El Boticario Digital como herramienta de preservación del saber puertorriqueño.</p>
+  </div>
+  <div style="padding:0 1rem 4rem" id="apr-content"></div>
+</div>
+
+<!-- FOOTER -->
+<footer id="site-footer">
+  <h3>Boticario Digital de Plantas Medicinales de Puerto Rico</h3>
+  <div>Fuente: <em>Inventario de Plantas Medicinales para Puerto Rico</em><br>
+  Prof. Ricardo Juan Morales De Jesús · CIFI 4996 · Universidad de Puerto Rico, 2022</div>
+  <div style="margin-top:8px;font-size:11px;color:rgba(255,255,255,.45)">Uso educativo exclusivamente · No sustituye atención médica profesional<br>
+  Fotos: Wikimedia Commons (CC BY-SA) · Las plantas 🔴 requieren supervisión médica</div>
+</footer>
+
+<!-- MODAL -->
+<div id="moverlay" onclick="closeM(event)">
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="mhdr">
+      <button class="mclose" onclick="closeMD()">×</button>
+      <img class="m-photo" id="m-photo" src="" alt="" onerror="this.style.display='none'" style="display:none">
+      <div class="mhdr-content">
+        <div class="m-sci" id="m-sci"></div>
+        <div class="m-nom" id="m-nom"></div>
+        <div class="m-risk" id="m-risk"></div>
+        <div class="m-photo-attr" id="m-photo-attr"></div>
+      </div>
+    </div>
+    <div class="mwarn h" id="m-warn">
+      <span style="flex-shrink:0;font-size:14px">⚠</span>
+      <span id="m-warn-t"></span>
+    </div>
+    <div class="mtabs">
+      <button class="mtab on" id="mt0" onclick="mTab(0)">🌍 Tradición<span class="mtsub">Cultural</span></button>
+      <button class="mtab" id="mt1" onclick="mTab(1)">🌿 Botánica<span class="mtsub">Identificar</span></button>
+      <button class="mtab" id="mt2" onclick="mTab(2)">🔬 Fitoquímica<span class="mtsub">Ciencia</span></button>
+      <button class="mtab" id="mt3" onclick="mTab(3)">⚗️ Uso Práctico<span class="mtsub">Preparar</span></button>
+    </div>
+    <div class="mbody">
+      <div class="mtc on" id="mc0"></div>
+      <div class="mtc" id="mc1"></div>
+      <div class="mtc" id="mc2"></div>
+      <div class="mtc" id="mc3"></div>
+    </div>
+    <div class="mdisc">⚕ Información educativa · Consulta siempre a un profesional de salud</div>
+    <div class="mfoot">
+      <div class="mf-src">CIFI 4996 · Prof. R.J. Morales De Jesús · UPR, 2022</div>
+      <div class="mf-d">No sustituye consulta médica</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let PLANTAS=[];
+async function loadData(){
+  try{
+    const r=await fetch('plantas.json');
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    PLANTAS=await r.json();
+    render();
+    renderPreps();
+  } catch(e){
+    document.getElementById('cat-grid').innerHTML=
+      '<div class="empty"><strong>Error cargando datos.</strong><br>Asegúrate de que plantas.json está en la misma carpeta y de que estás usando un servidor web (no file://).</div>';
+    console.error('Error loading plantas.json:',e);
+  }
+}
+
+// ── Constants ──
+const MVP_IDS=new Set(['anamu','cundeamor','guanabana','sabila','jengibre-dulce','limoncillo','manzanilla','cariaquito','parcha','guayabo','yerba-buena','romero','canela','culantro-del-monte','malagueta']);
+const TL={infusion:"Infusión",decoccion:"Decocción",tintura:"Tintura",aceite:"Aceite",jugo:"Jugo",bano:"Baño",crema:"Gel",cataplasma:"Cataplasma",capsula:"Cápsula",vaporizacion:"Vapor"};
+const EC={revision_sistematica:"ep-r",ensayo_clinico:"ep-e",animal:"ep-a",in_vitro:"ep-i",tradicional:"ep-t"};
+const EL={revision_sistematica:"Rev. sistemática",ensayo_clinico:"Ensayo clínico",animal:"Animal",in_vitro:"In vitro",tradicional:"Tradicional"};
+const SL={"medicina_taína":"Med. Taína","medicina_africana":"Med. Africana","medicina_española_colonial":"Med. Española Colonial","medicina_china":"Med. China","ayurveda":"Ayurveda","medicina_caribeña":"Med. Caribeña","medicina_latinoamericana":"Med. Latinoamericana"};
+const IL={español_pr:"Español PR",taino:"Taíno",ingles:"Inglés",africano:"Africano",otro:"Otro"};
+const SVI={absoluta:"✕",relativa:"!",precaucion:"~"};
+const ROL_IC={custodio_indigena:"🪶",custodio_historico:"📜",custodio_comunitario:"🌿",custodio_academico:"🎓"};
+const ROL_L={custodio_indigena:"Custodio indígena",custodio_historico:"Custodio histórico",custodio_comunitario:"Custodio comunitario",custodio_academico:"Custodio académico"};
+const RO={alto:0,moderado:1,bajo:2};
+const norm=s=>s?s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase():'';
+
+// ── State ──
+let uso='todas',risk=null,tipo=null,mvpOnly=false,q='',view='grid',sort='az',prepT='todas',glosCat='todos',curPage='cat';
+
+// ── Nav ──
+function goPage(p,btn){
+  curPage=p;
+  document.querySelectorAll('.page').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.ntab').forEach(x=>x.classList.remove('on'));
+  document.getElementById(p+'-page').classList.add('on');
+  if(btn) btn.classList.add('on');
+  const isCat=p==='cat';
+  ['search-wrap','ftabs-wrap'].forEach(id=>document.getElementById(id).style.display=isCat?'block':'none');
+  document.getElementById('hdr-badge').style.display=isCat?'block':'none';
+  if(p==='preps') renderPreps();
+  if(p==='glos') renderGlos();
+  if(p==='apr') renderApr();
+}
+
+// ── Catalog ──
+function filtered(){
+  let l=PLANTAS.filter(p=>{
+    if(mvpOnly && !MVP_IDS.has(p.id)) return false;
+    if(q){
+      const qn=norm(q);
+      const hay=norm([p.n,p.sci,p.fam,...p.ind.map(i=>i.c),...p.nombres.map(x=>x.n)].join(' '));
+      if(!hay.includes(qn)) return false;
+    }
+    if(uso!=='todas'&&!p.ind.some(i=>i.s===uso)) return false;
+    if(risk&&p.risk!==risk) return false;
+    if(tipo&&p.tipo!==tipo) return false;
+    return true;
+  });
+  const s=document.getElementById('sort-sel').value;
+  if(s==='za') l.sort((a,b)=>norm(b.n).localeCompare(norm(a.n)));
+  else if(s==='riesgo') l.sort((a,b)=>(RO[a.risk]??2)-(RO[b.risk]??2));
+  else if(s==='usos') l.sort((a,b)=>b.ind.length-a.ind.length);
+  else if(s==='completitud') l.sort((a,b)=>b.completitud-a.completitud);
+  else l.sort((a,b)=>norm(a.n).localeCompare(norm(b.n)));
+  return l;
+}
+
+function render(){
+  const l=filtered();
+  document.getElementById('res-t').innerHTML=`<strong>${l.length}</strong>${l.length<PLANTAS.length?` de ${PLANTAS.length}`:''} plantas`;
+  const g=document.getElementById('cat-grid');
+  if(!l.length){g.innerHTML=`<div class="empty">Sin resultados para <strong>"${q||uso}"</strong></div>`;return;}
+  g.innerHTML=l.map(p=>buildCard(p)).join('');
+  g.className='cat-grid'+(view==='list'?' lv':'');
+}
+
+function buildCard(p){
+  const r=p.risk||'bajo';
+  const isMVP=MVP_IDS.has(p.id);
+  const dot={alto:'🔴',moderado:'🟡',bajo:'🟢'}[r];
+  const hasPhoto=!!(p.foto&&p.foto.thumb);
+  if(view==='list'){
+    const tags=p.ind.slice(0,3).map(i=>`<span class="ctag ct-t">${i.c}</span>`).join('');
+    return `<div class="pc" data-r="${r}" onclick="openM('${p.id}')">
+      <div class="pc-b">
+        <div><div class="pc-n">${dot} ${p.n}</div><div class="pc-sci">${p.sci}</div></div>
+        <div class="lv-t">${tags}</div>
+        <div class="lv-a">›</div>
+      </div></div>`;
+  }
+  const photoHtml=hasPhoto
+    ?`<img class="pc-photo" src="${p.foto.thumb}" alt="${p.n}" loading="lazy" onerror="this.parentElement.querySelector('.pc-photo-placeholder').style.height='3px';this.remove()">`
+    :`<div class="pc-photo-placeholder rb rb-${r==='moderado'?'mod':r}"></div>`;
+  return `<div class="pc" data-r="${r}" onclick="openM('${p.id}')">
+    ${photoHtml}
+    <div class="rb rb-${r==='moderado'?'mod':r}" style="${hasPhoto?'':'display:none'}"></div>
+    <div class="pc-b">
+      <div class="pc-fam">${p.fam||'—'}</div>
+      <div class="pc-n">${p.n}</div>
+      <div class="pc-sci">${p.sci}</div>
+      <div class="pc-usos">${p.ind.slice(0,3).map(i=>i.c).join(' · ')}</div>
+      <div class="pc-ft">
+        <div class="pc-tags">
+          <span class="ctag ct-t">${p.tipo}</span>
+          ${p.adv?'<span class="ctag ct-w">⚠</span>':''}
+          ${isMVP?'<span class="ctag ct-m">⭐</span>':''}
+          ${hasPhoto?'<span class="ctag ct-foto">📷</span>':''}
+        </div>
+        <span class="pc-ar">›</span>
+      </div>
+    </div></div>`;
+}
+
+function onSearch(v){q=v;document.getElementById('si-x').classList.toggle('vis',!!v);render();}
+function clearSi(){q='';document.getElementById('si').value='';document.getElementById('si-x').classList.remove('vis');render();}
+function setUso(v,btn){uso=v;document.querySelectorAll('[data-u]').forEach(b=>b.classList.toggle('on',b.dataset.u===v));render();}
+function togR(v,btn){risk=risk===v?null:v;document.querySelectorAll('[data-r]').forEach(b=>b.classList.remove('on'));if(risk)btn.classList.add('on');render();}
+function togT(v,btn){tipo=tipo===v?null:v;document.querySelectorAll('[data-t]').forEach(b=>b.classList.remove('on'));if(tipo)btn.classList.add('on');render();}
+function togMVP(btn){mvpOnly=!mvpOnly;btn.classList.toggle('on',mvpOnly);render();}
+function setV(v){view=v;document.getElementById('vg').classList.toggle('on',v==='grid');document.getElementById('vl').classList.toggle('on',v==='list');render();}
+document.getElementById('sort-sel').addEventListener('change',render);
+
+// ── Modal ──
+function openM(id){
+  const p=PLANTAS.find(x=>x.id===id);if(!p) return;
+  const r=p.risk||'bajo';
+
+  // Photo
+  const mPhoto=document.getElementById('m-photo');
+  const mAttr=document.getElementById('m-photo-attr');
+  if(p.foto&&p.foto.thumb){
+    mPhoto.src=p.foto.thumb;
+    mPhoto.alt=p.n;
+    mPhoto.style.display='block';
+    mAttr.textContent=p.foto.attr||'';
+  } else {
+    mPhoto.style.display='none';
+    mAttr.textContent='';
+  }
+
+  document.getElementById('m-sci').textContent=p.sci;
+  document.getElementById('m-nom').textContent=p.n;
+  const re=document.getElementById('m-risk');
+  re.className='m-risk mr-'+(r==='moderado'?'mod':r);
+  re.textContent={alto:'🔴 Riesgo alto',moderado:'🟡 Riesgo moderado',bajo:'🟢 Riesgo bajo'}[r];
+  const mw=document.getElementById('m-warn');
+  if(p.adv){mw.classList.remove('h');document.getElementById('m-warn-t').textContent=p.adv;}
+  else mw.classList.add('h');
+
+  // Tab 0 — Tradición
+  const noms=(p.nombres||[]).map(x=>`<div class="nc"><small>${IL[x.i]||x.i}</small><span>${x.n}</span></div>`).join('');
+  const sis=(p.sistemas||[]).map(s=>`<span class="spill">${SL[s]||s}</span>`).join('');
+  const custs=(p.custodios||[]).map(c=>`
+    <div class="cust-c">
+      <div class="cust-h">
+        <span class="cust-ic">${ROL_IC[c.rol]||'🌿'}</span>
+        <span class="cust-n">${c.nom}</span>
+        <span class="cust-rol">${ROL_L[c.rol]||c.rol}</span>
+      </div>
+      ${c.nota?`<div class="cust-nota">${c.nota}</div>`:''}
+    </div>`).join('');
+  const isMVP=MVP_IDS.has(p.id);
+  document.getElementById('mc0').innerHTML=`
+    <div class="sh">Nombres conocidos</div>
+    <div class="nom-row">${noms}</div>
+    <div class="sh">Historia y cultura</div>
+    <div class="hist-q">${p.hist||'Documentada en inventario CIFI 4996 (2022).'}</div>
+    <div class="sh">Sistemas médicos</div>
+    <div class="sis-pills">${sis||'<span class="spill">Medicina caribeña</span>'}</div>
+    ${custs?`<div class="sh">Custodios del conocimiento</div><div class="cust-list">${custs}</div>`:''}
+    <div class="sh">Origen geográfico</div>
+    <div style="font-size:12.5px;color:var(--inks)">${p.origen||'—'}</div>
+    <div class="cbadge">
+      <div class="ctrack"><div class="cfill" style="width:${p.completitud}%"></div></div>
+      <span class="cbadge-t">${p.completitud}% completa${isMVP?' · ⭐ MVP':''}</span>
+    </div>`;
+
+  // Tab 1 — Botánica
+  const claves=(p.claves||[]).map(c=>`<li class="ci"><div class="cdot"></div>${c}</li>`).join('');
+  const partes=(p.partes||['hojas']).map(pt=>`<span class="pp">${pt}</span>`).join('');
+  document.getElementById('mc1').innerHTML=`
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:.6rem">
+      <div><div class="sh" style="margin-top:0">Familia</div><div style="font-size:13px;font-weight:600">${p.fam||'—'}</div></div>
+      <div><div class="sh" style="margin-top:0">Tipo</div><div style="font-size:13px;font-weight:600">${p.tipo||'—'}</div></div>
+    </div>
+    <div class="sh">Morfología</div>
+    <div class="morfo">${p.morfo||'Ver inventario CIFI 4996.'}</div>
+    ${claves?`<div class="sh">Claves de identificación</div><ul class="clist">${claves}</ul>`:''}
+    <div class="sh">Partes utilizadas</div>
+    <div class="ppills">${partes}</div>`;
+
+  // Tab 2 — Fitoquímica
+  const comps=(p.comp||[]).map(c=>`<div class="comp-c"><div class="comp-h"><span class="comp-nm">${c.n}</span><span class="comp-cl">${c.cl}</span></div><div class="comp-mec">${c.m}</div></div>`).join('');
+  const inds=p.ind.map(i=>`<div class="ind-row"><span class="ind-c">${i.c}</span><span class="ep ${EC[i.e]||'ep-t'}">${EL[i.e]||i.e}</span></div>`).join('');
+  document.getElementById('mc2').innerHTML=`
+    <div class="sh">Compuestos bioactivos</div>
+    ${comps||`<div style="font-size:12.5px;color:var(--inkm);font-style:italic;margin-bottom:.65rem">Fitoquímica pendiente. Consultar PubChem y Dr. Duke's Phytochemical DB.</div>`}
+    <div class="sh">Indicaciones por nivel de evidencia</div>
+    <div class="ind-list">${inds}</div>`;
+
+  // Tab 3 — Uso Práctico
+  const wt=p.adv?`<div class="wbox"><span style="font-size:14px;flex-shrink:0">⚠</span><span>${p.adv}</span></div>`:'';
+  const prepsHtml=(p.preps||[]).map(pr=>{
+    const pasos=(pr.pasos||[]).map(s=>`<div class="paso-r"><div class="paso-n">${s.o}</div><div class="paso-t">${s.i}</div></div>`).join('');
+    return `<div class="prep-mc">
+      <div class="prep-mh"><div><div class="prep-mt">${pr.nom}</div><div class="prep-mi">${pr.ind}</div></div><span class="tbadge">${TL[pr.tipo]||pr.tipo}</span></div>
+      <div class="pasos-l">${pasos}</div>
+      <div class="dosis-b">
+        <div class="di"><small>Cantidad</small><span>${pr.dosis?.c||'—'}</span></div>
+        <div class="di"><small>Frecuencia</small><span>${pr.dosis?.f||'—'}</span></div>
+        <div class="di"><small>Duración</small><span>${pr.dosis?.d||'—'}</span></div>
+      </div>
+      ${pr.notas?`<div style="padding:6px 12px;font-size:11.5px;color:var(--inks);font-style:italic;border-top:1px solid var(--bor)">📝 ${pr.notas}</div>`:''}
+    </div>`;
+  }).join('');
+  const ctri=(p.contraind||[]).map(c=>`<div class="ctri sv-${c.s}"><span style="flex-shrink:0">${SVI[c.s]||'!'}</span>${c.d}</div>`).join('');
+  const intHtml=(p.interacc||[]).length
+    ?(p.interacc||[]).map(i=>`<div class="int-i int-${i.s==='grave'?'g':i.s==='moderada'?'m':''}"><div class="int-mn">${i.med}</div><div class="int-ef">${i.ef}</div></div>`).join('')
+    :`<div style="font-size:12px;color:var(--inkm);font-style:italic">No hay interacciones documentadas.</div>`;
+  const refsHtml=(p.refs||[]).filter(Boolean).length
+    ?`<div class="sh">Referencias bibliográficas</div><div class="refs-l">${(p.refs||[]).filter(Boolean).map(r=>`<div class="ref-item">${r}</div>`).join('')}</div>`:'';
+  document.getElementById('mc3').innerHTML=`
+    ${wt}
+    <div class="sh">Preparaciones</div>${prepsHtml}
+    ${ctri?`<div class="sh">Contraindicaciones</div><div class="ctri-l">${ctri}</div>`:''}
+    <div class="sh">Interacciones medicamentosas</div>
+    <div class="int-l">${intHtml}</div>
+    ${p.dmax?`<div class="dmax-b"><strong>Dosis máxima:</strong> ${p.dmax}</div>`:''}
+    ${refsHtml}`;
+
+  mTab(0);
+  document.getElementById('moverlay').classList.add('open');
+  document.querySelector('.mbody').scrollTop=0;
+}
+
+function closeM(e){if(e.target===document.getElementById('moverlay'))closeMD();}
+function closeMD(){document.getElementById('moverlay').classList.remove('open');}
+function mTab(i){[0,1,2,3].forEach(j=>{document.getElementById('mt'+j).classList.toggle('on',j===i);document.getElementById('mc'+j).classList.toggle('on',j===i);});}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMD();});
+
+// ── Preparaciones ──
+function renderPreps(){
+  const list=document.getElementById('prep-list');
+  const all=[];
+  PLANTAS.forEach(p=>{(p.preps||[]).forEach(pr=>{if(prepT==='todas'||pr.tipo===prepT) all.push({p,pr});});});
+  if(!all.length){list.innerHTML='<div style="color:var(--inkm);font-style:italic;padding:1rem">No hay preparaciones de este tipo.</div>';return;}
+  list.innerHTML=all.map(({p,pr},i)=>{
+    const pasos=(pr.pasos||[]).map(s=>`<div class="paso-r"><div class="paso-n">${s.o}</div><div class="paso-t">${s.i}</div></div>`).join('');
+    return `<div class="prep-card">
+      <div class="prep-hd" onclick="togglePrep(${i})">
+        <div><div class="prep-plant">${p.n} · <em style="color:var(--azul)">${p.sci}</em></div><div class="prep-nom">${pr.nom}</div><div class="prep-ind">${pr.ind}</div></div>
+        <span class="tbadge">${TL[pr.tipo]||pr.tipo}</span>
+      </div>
+      <div class="prep-body" id="pb${i}">
+        <div class="pasos-l">${pasos}</div>
+        <div class="dosis-g">
+          <div class="di"><small>Cantidad</small><span>${pr.dosis?.c||'—'}</span></div>
+          <div class="di"><small>Frecuencia</small><span>${pr.dosis?.f||'—'}</span></div>
+          <div class="di"><small>Duración</small><span>${pr.dosis?.d||'—'}</span></div>
+        </div>
+        ${pr.notas?`<div class="prep-notas">📝 ${pr.notas}</div>`:''}
+        ${p.adv?`<div class="prep-warn"><span>⚠</span>${p.adv}</div>`:''}
+        <div class="prep-disc">⚕ Información educativa. Consulta a un profesional de salud antes de aplicarla.</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+function togglePrep(i){document.getElementById('pb'+i).classList.toggle('open');}
+function setPrepT(v,btn){prepT=v;document.querySelectorAll('[data-pt]').forEach(b=>b.classList.toggle('on',b.dataset.pt===v));renderPreps();}
+
+// ── Glosario ──
+const GLOSARIO=[
+  {n:"Acemannan",cat:"fitoquimica",def:"Polisacárido de la sábila con propiedades inmunomoduladoras, cicatrizantes y antivirales."},
+  {n:"Alicina",cat:"fitoquimica",def:"Compuesto organosulfurado del ajo formado al cortarlo. Principal responsable de su actividad antimicrobiana y cardioprotectora."},
+  {n:"Antraquinonas",cat:"fitoquimica",def:"Clase de compuestos fenólicos con efecto laxante. Presentes en sábila (látex), sen, cáscara sagrada."},
+  {n:"Apigenina",cat:"fitoquimica",def:"Flavonoide de la manzanilla que actúa como agonista de receptores GABA-A, produciendo efecto ansiolítico."},
+  {n:"Astringente",cat:"accion",def:"Que provoca contracción de tejidos y mucosas. Útil para diarrea, heridas y hemorroides. Ejemplo: guayabo, tamarindo."},
+  {n:"Ayurveda",cat:"sistema",def:"Sistema médico tradicional de India, uno de los más antiguos del mundo. Basado en equilibrio de doshas (vata, pitta, kapha)."},
+  {n:"Carminativo",cat:"accion",def:"Que favorece la expulsión de gases intestinales. Ejemplo: anís de grano, hinojo, jengibre, yerba buena."},
+  {n:"Camazuleno",cat:"fitoquimica",def:"Sesquiterpeno azul de la manzanilla. Potente antiinflamatorio; inhibe ciclooxigenasa y lipooxigenasa."},
+  {n:"Citral",cat:"fitoquimica",def:"Mezcla de dos isómeros terpénicos responsables del aroma a limón del limoncillo. Antimicrobiano y antiinflamatorio."},
+  {n:"Contraindicación",cat:"seguridad",def:"Condición que hace que un tratamiento no deba administrarse. Puede ser absoluta (nunca) o relativa (con precaución)."},
+  {n:"Custodio del conocimiento",cat:"cultura",def:"Persona, familia o comunidad que preserva y transmite conocimiento herbolario de generación en generación."},
+  {n:"Decocción",cat:"preparacion",def:"Preparación en que la planta se hierve por un período prolongado (10-30 min). Para partes duras: raíces, cortezas, semillas."},
+  {n:"Demulcente",cat:"accion",def:"Que calma e hidrata membranas mucosas irritadas. Ejemplos: malva, maranta, sábila."},
+  {n:"Diurético",cat:"accion",def:"Que aumenta la producción de orina. Útil para hipertensión, edemas y cálculos renales. Ejemplo: maíz (estigmas), ortiga."},
+  {n:"Emenagogo",cat:"accion",def:"Que estimula o regulariza el flujo menstrual. Muchos son contraindicados en embarazo. Ejemplo: ruda, poleo."},
+  {n:"Etnobotánica",cat:"ciencia",def:"Ciencia que estudia las relaciones entre las plantas y las culturas humanas: uso, clasificación, manejo y significado cultural."},
+  {n:"Eugenol",cat:"fitoquimica",def:"Fenilpropanoide principal en clavos de especia y malagueta. Antiséptico, anestésico local y antiinflamatorio."},
+  {n:"Evidencia in vitro",cat:"evidencia",def:"Resultados obtenidos en laboratorio (células, tubos de ensayo). Prometedores pero no garantizan efecto igual en humanos."},
+  {n:"Flavonoide",cat:"fitoquimica",def:"Gran familia de polifenoles vegetales con actividad antioxidante, antiinflamatoria e inmunomoduladora."},
+  {n:"Galactagogo",cat:"accion",def:"Que estimula o aumenta la producción de leche materna. Ejemplo: anís, hinojo, fenogreco."},
+  {n:"Gingerol",cat:"fitoquimica",def:"Compuesto fenólico del jengibre fresco responsable del sabor picante. Antiinflamatorio y antiemético."},
+  {n:"Hipoglucémico",cat:"accion",def:"Que reduce los niveles de glucosa en sangre. Puede interactuar con insulina o antidiabéticos orales."},
+  {n:"Infusión",cat:"preparacion",def:"Preparación en que se vierte agua caliente sobre la planta sin hervir. Para hojas, flores y partes delicadas."},
+  {n:"Interacción medicamentosa",cat:"seguridad",def:"Efecto alterado de un medicamento cuando se combina con otra sustancia (planta, alimento u otro fármaco)."},
+  {n:"Licopeno",cat:"fitoquimica",def:"Carotenoide rojo con potente actividad antioxidante. Presente en guayaba (más que en tomate) y tomate rojo."},
+  {n:"Macerar",cat:"preparacion",def:"Dejar partes de plantas en reposo en líquido (agua, alcohol, aceite) por tiempo prolongado para extraer sus compuestos activos."},
+  {n:"Medicina taína",cat:"sistema",def:"Sistema médico de los taínos, pueblo originario de Puerto Rico. Basado en plantas nativas y rituales de curación del behíque."},
+  {n:"Mecanismo de acción",cat:"fitoquimica",def:"Proceso biológico específico a través del cual un compuesto produce su efecto en el organismo."},
+  {n:"Mentol",cat:"fitoquimica",def:"Monoterpeno de las mentas. Activa receptores TRPM8 produciendo sensación de frío, analgesia y descongestionamiento."},
+  {n:"Monoterpeno",cat:"fitoquimica",def:"Terpeno de 10 carbonos. Componentes aromáticos principales en aceites esenciales de plantas medicinales."},
+  {n:"Nivel de evidencia",cat:"evidencia",def:"Jerarquía de calidad científica: Rev. sistemática > Ensayo clínico > Animal > In vitro > Uso tradicional."},
+  {n:"Organosulfurado",cat:"fitoquimica",def:"Compuesto que contiene azufre. Responsable del olor del ajo y el anamú. Actividad antimicrobiana y cardioprotectora."},
+  {n:"Papaína",cat:"fitoquimica",def:"Enzima proteolítica de la papaya. Digiere proteínas, es antiinflamatoria y cicatrizante."},
+  {n:"Polifenol",cat:"fitoquimica",def:"Amplia clase de compuestos vegetales con múltiples grupos hidroxilo fenólico. Incluye flavonoides, taninos y ácidos fenólicos."},
+  {n:"Revisión sistemática",cat:"evidencia",def:"Síntesis rigurosa de toda la evidencia científica disponible sobre un tema. El nivel más alto de evidencia médica."},
+  {n:"Rizoma",cat:"botanica",def:"Tallo subterráneo horizontal que almacena nutrientes. En jengibre y cúrcuma es la parte medicinal principal."},
+  {n:"Sesquiterpeno",cat:"fitoquimica",def:"Terpeno de 15 carbonos presente en aceites esenciales. Responsable de aromas complejos y muchas actividades farmacológicas."},
+  {n:"Tanino",cat:"fitoquimica",def:"Polifenol con propiedad astringente. Precipita proteínas. Presente en guayabo, tamarindo, té. Antidiarreico natural."},
+  {n:"Tintura",cat:"preparacion",def:"Extracto de planta en alcohol (etanol al 40-70%). Larga vida útil. Permite concentrar compuestos poco solubles en agua."},
+  {n:"Uterotónico",cat:"seguridad",def:"Que estimula las contracciones del útero. Las plantas uterotónicas están CONTRAINDICADAS en embarazo. Ejemplo: ruda, anamú."},
+];
+const GCATS={fitoquimica:"Fitoquímica",accion:"Acción farmacológica",preparacion:"Preparaciones",seguridad:"Seguridad",botanica:"Botánica",cultura:"Cultura",sistema:"Sistema médico",evidencia:"Evidencia",ciencia:"Ciencia"};
+
+function renderGlos(){
+  const c=document.getElementById('glos-content');
+  const cats=['todos',...Object.keys(GCATS)];
+  const filtered=glosCat==='todos'?GLOSARIO:GLOSARIO.filter(g=>g.cat===glosCat);
+  const sorted=[...filtered].sort((a,b)=>a.n.localeCompare(b.n,'es'));
+  c.innerHTML=`
+    <div class="glos-cats">
+      ${cats.map(cat=>`<button class="gcat${glosCat===cat?' on':''}" onclick="setGlosCat('${cat}',this)">${cat==='todos'?'Todos':GCATS[cat]||cat}</button>`).join('')}
+    </div>
+    <div class="glos-list">
+      ${sorted.map(g=>`<div class="glos-t"><div class="gt-n">${g.n}</div><div class="gt-cat">${GCATS[g.cat]||g.cat}</div><div class="gt-def">${g.def}</div></div>`).join('')}
+    </div>`;
+}
+function setGlosCat(v,btn){glosCat=v;renderGlos();}
+
+// ── Aprendizaje ──
+function renderApr(){
+  const c=document.getElementById('apr-content');
+  const risks={alto:PLANTAS.filter(p=>p.risk==='alto').length,mod:PLANTAS.filter(p=>p.risk==='moderado').length,bajo:PLANTAS.filter(p=>p.risk==='bajo').length};
+  const totalInd=PLANTAS.reduce((s,p)=>s+p.ind.length,0);
+  const withComp=PLANTAS.filter(p=>p.comp&&p.comp.length>0).length;
+  const mvpCount=PLANTAS.filter(p=>MVP_IDS.has(p.id)).length;
+  const mvpAvg=Math.round(PLANTAS.filter(p=>MVP_IDS.has(p.id)).reduce((s,p)=>s+p.completitud,0)/mvpCount);
+  c.innerHTML=`
+    <div class="apr-hero">
+      <h3>🌿 Preservar es honrar</h3>
+      <p>Puerto Rico tiene una riqueza botánica extraordinaria y una tradición herbolaria que fusiona el conocimiento taíno, africano y español. Este Boticario Digital existe para que ese conocimiento no se pierda.</p>
+    </div>
+    <div class="apr-s">
+      <div class="apr-st">📊 Estadísticas del inventario</div>
+      <div class="stat-grid">
+        <div class="stat-c"><div class="stat-n">${PLANTAS.length}</div><div class="stat-l">Plantas documentadas</div></div>
+        <div class="stat-c"><div class="stat-n">${mvpCount}</div><div class="stat-l">Plantas MVP (${mvpAvg}% avg)</div></div>
+        <div class="stat-c"><div class="stat-n">${totalInd}</div><div class="stat-l">Indicaciones medicinales</div></div>
+        <div class="stat-c"><div class="stat-n">${withComp}</div><div class="stat-l">Con fitoquímica completa</div></div>
+        <div class="stat-c"><div class="stat-n">11</div><div class="stat-l">Sistemas corporales</div></div>
+        <div class="stat-c"><div class="stat-n">47</div><div class="stat-l">Familias botánicas</div></div>
+      </div>
+    </div>
+    <div class="apr-s">
+      <div class="apr-st">⚠️ Sistema de seguridad</div>
+      <div class="risk-legend">
+        <div class="rl-row"><div class="rl-dot">🔴</div><div><div class="rl-t">Alto riesgo — ${risks.alto} plantas</div><div class="rl-d">Contraindicadas en embarazo o con efectos tóxicos. Requieren supervisión médica. Incluye: Anamú, Cundeamor, Ruda, Tártago, Pasote, Árnica, Alcanfor, Ipecacuana.</div></div></div>
+        <div class="rl-row"><div class="rl-dot">🟡</div><div><div class="rl-t">Riesgo moderado — ${risks.mod} plantas</div><div class="rl-d">Requieren precaución en ciertos grupos o dosis. Usar con conocimiento de contraindicaciones.</div></div></div>
+        <div class="rl-row"><div class="rl-dot">🟢</div><div><div class="rl-t">Bajo riesgo — ${risks.bajo} plantas</div><div class="rl-d">Generalmente seguras a dosis normales para adultos sanos. Siempre confirmar con profesional de salud.</div></div></div>
+      </div>
+    </div>
+    <div class="apr-s">
+      <div class="apr-st">🏛️ Los tres pilares culturales</div>
+      <div class="pillar-c"><div class="pillar-h"><div class="pillar-ic">🪶</div><div><div class="pillar-t">Herencia Taína</div><div class="pillar-st">Pueblo originario de Puerto Rico</div></div></div><div class="pillar-body">Los taínos desarrollaron un sistema médico sofisticado basado en plantas nativas de la isla. El behíque (médico-chamán) era el custodio de ese conocimiento. Plantas como el guayabo, la parcha, el recao, el icaco, el jagua y la malagueta tienen profundas raíces en esta tradición. Muchos nombres de plantas en Puerto Rico son de origen taíno.</div></div>
+      <div class="pillar-c"><div class="pillar-h"><div class="pillar-ic">🌍</div><div><div class="pillar-t">Herencia Africana</div><div class="pillar-st">Medicina afrocaribeña y de la diáspora</div></div></div><div class="pillar-body">Las personas de origen africano trajeron su profundo conocimiento herbolario. Plantas como el anamú, la malagueta, el ajonjolí y muchas hierbas del solar tienen conexión directa con tradiciones medicinales de África occidental. Esta medicina vive hoy en botánicas, curanderos y abuelas de toda la isla.</div></div>
+      <div class="pillar-c"><div class="pillar-h"><div class="pillar-ic">⚓</div><div><div class="pillar-t">Herencia Española y Europea</div><div class="pillar-st">Medicina colonial y mediterránea</div></div></div><div class="pillar-body">La colonización española introdujo plantas mediterráneas que hoy son esenciales: manzanilla, romero, ruda, canela, toronjil, mejorana, llantén. La fusión de los tres sistemas médicos creó la herbolaria puertorriqueña única.</div></div>
+    </div>
+    <div class="apr-s">
+      <div class="apr-st">📚 Fuente: CIFI 4996</div>
+      <div class="cifi-card">
+        <h4>Inventario de Plantas Medicinales para Puerto Rico</h4>
+        <p><strong>Autor:</strong> Prof. Ricardo Juan Morales De Jesús<br>
+        <strong>Institución:</strong> Universidad de Puerto Rico<br>
+        <strong>Código:</strong> CIFI 4996 · <strong>Año:</strong> 2022<br><br>
+        Este inventario documenta 101 plantas medicinales usadas en Puerto Rico, combinando conocimiento etnobotánico tradicional con datos científicos de taxonomía, preparación y seguridad. Es la fuente primaria de todos los datos de este Boticario Digital.</p>
+      </div>
+    </div>`;
+}
+
+// ── Init ──
+loadData();
+goPage('cat',document.querySelector('.ntab'));
+</script>
+</body>
+</html>
