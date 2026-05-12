@@ -1,0 +1,16 @@
+{
+  "stylesheet": [],
+  "css": "body { font-family: Georgia, 'Times New Roman', serif; font-size: 11pt; line-height: 1.7; color: #2B2B2B; max-width: 800px; margin: 0 auto; padding: 0 20px; } h1 { font-family: Georgia, serif; font-size: 22pt; color: #2D5016; border-bottom: 3px solid #2D5016; padding-bottom: 8px; margin-top: 40px; } h2 { font-family: Georgia, serif; font-size: 16pt; color: #2D5016; border-bottom: 2px solid #C0DD97; padding-bottom: 5px; margin-top: 32px; } h3 { font-family: Georgia, serif; font-size: 13pt; color: #3a6b1c; margin-top: 24px; } h4 { font-family: Georgia, serif; font-size: 11pt; color: #1e3a0e; margin-top: 16px; } table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 10pt; } th { background: #2D5016; color: #fff; padding: 8px 12px; text-align: left; font-family: Georgia, serif; } td { padding: 6px 12px; border: 1px solid #C0DD97; vertical-align: top; } tr:nth-child(even) { background: #EAF3DE; } code { font-family: 'Courier New', monospace; font-size: 9pt; background: #F5F1E8; padding: 1px 5px; border-radius: 3px; } pre { background: #F5F1E8; border: 1px solid #C0DD97; border-left: 4px solid #2D5016; padding: 14px 18px; font-size: 9pt; line-height: 1.5; overflow-x: auto; border-radius: 5px; } pre code { background: none; padding: 0; } blockquote { border-left: 4px solid #C67F3E; margin-left: 0; padding-left: 16px; color: #4a4a42; font-style: italic; } hr { border: none; border-top: 1px solid #C0DD97; margin: 32px 0; } strong { color: #1e3a0e; }",
+  "pdf_options": {
+    "format": "Letter",
+    "margin": {
+      "top": "70px",
+      "bottom": "70px",
+      "left": "60px",
+      "right": "60px"
+    },
+    "displayHeaderFooter": true,
+    "headerTemplate": "<div style=\"font-size:9px;font-family:Georgia,serif;color:#2D5016;width:100%;padding:0 60px;box-sizing:border-box;display:flex;justify-content:space-between\"><span>Boticario Digital · Plantas Medicinales de Puerto Rico</span><span>v2.0 · 2026</span></div>",
+    "footerTemplate": "<div style=\"font-size:9px;font-family:Georgia,serif;color:#7a7a6e;width:100%;padding:0 60px;box-sizing:border-box;display:flex;justify-content:space-between\"><span>Universidad de Puerto Rico · CIFI 4996 / ESGE 4995</span><span>Página <span class=\"pageNumber\"></span> de <span class=\"totalPages\"></span></span></div>"
+  }
+}

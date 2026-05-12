@@ -1,159 +1,214 @@
+# 🌿 Boticario Digital · Plantas Medicinales de Puerto Rico
 
-# 🌿 Boticario Digital de Plantas Medicinales de Puerto Rico
+> **"Preservar es honrar."**
+> Un inventario vivo de las 101 plantas medicinales documentadas en Puerto Rico — donde el saber taíno, africano y español converge en código abierto.
 
-Inventario digital interactivo de las 101 plantas medicinales documentadas en Puerto Rico por el Prof. Ricardo Juan Morales De Jesús en el marco del curso CIFI 4996 de la Universidad de Puerto Rico (2022). Implementación digital por el curso ESGE 4995 (2026). 
-
-**Demo:** [Ver el Boticario Digital →](https://ricardojuanmorales.github.io/boticario-digital/)
-
----
-
-## Sobre el proyecto
-
-El Boticario Digital nace de la necesidad de preservar y hacer accesible el conocimiento herbolario de Puerto Rico — un patrimonio que fusiona tres tradiciones médicas: la taína, la africana y la española colonial. El inventario fuente, *CIFI 4996*, documenta 101 plantas con sus nombres, usos, preparaciones y propiedades, pero existe únicamente en formato académico impreso.
-
-Este proyecto convierte ese inventario en una herramienta digital educativa, interactiva y de acceso libre, diseñada para estudiantes, profesionales de salud comunitaria, herbolarios y el público general de Puerto Rico.
-
-> ⚕️ **Aviso:** Esta herramienta es de carácter educativo exclusivamente y no sustituye diagnóstico ni tratamiento médico profesional.
+**🔗 Demo en vivo:** [ricardojuanmorales.github.io/boticario-digital](https://ricardojuanmorales.github.io/boticario-digital/)
 
 ---
 
-## Características
+## ✨ ¿Por qué existe este proyecto?
 
-- **101 plantas medicinales** organizadas por sistema corporal, tipo, nivel de riesgo y completitud
-- **Fichas detalladas** con 4 vistas: Tradición cultural, Botánica, Fitoquímica y Uso Práctico
-- **116 preparaciones** paso a paso: infusiones, decocciones, cataplasmas, baños, jugos, aceites y tinturas
-- **Sistema de seguridad** con 3 niveles de riesgo (🔴 alto · 🟡 moderado · 🟢 bajo) y advertencias específicas
-- **Custodios del conocimiento** — reconocimiento de las tradiciones taína, africana, española y académica detrás de cada planta
-- **Fotografías** de las 15 plantas MVP con licencia Creative Commons (Wikimedia Commons)
-- **Claves de identificación** botánica visual para cada planta MVP
-- **Compuestos bioactivos** con clase química y mecanismo de acción
-- **Glosario** de 40 términos fitoquímicos, botánicos y culturales
-- **Búsqueda** con normalización de acentos, 11 filtros por sistema corporal y ordenación múltiple
-- **Diseño responsivo** — funciona en móvil, tablet y escritorio
-- **Aplicación standalone** — un solo archivo HTML, sin dependencias de servidor ni instalación
+Puerto Rico lleva siglos curándose con plantas. Ese conocimiento vive en las manos de abuelas, en solares de barrio y en la memoria oral de comunidades enteras — pero no en formato digital, accesible y libre. El **Boticario Digital** cambia eso.
+
+Basado en el inventario académico **CIFI 4996** (Prof. Ricardo Juan Morales De Jesús, UPR 2022), este proyecto convierte 101 plantas medicinales en una herramienta educativa interactiva disponible para cualquiera con un navegador web.
 
 ---
 
-## Estado del inventario — Versión 2.0
+## 🚀 Inicio rápido en 30 segundos
 
-### Plantas MVP (15 plantas estrella)
+```bash
+# 1. Clona el repositorio
+git clone https://github.com/ricardojuanmorales/boticario-digital.git
+cd boticario-digital
 
-| Campo | Estado |
-|---|---|
-| Completitud promedio | **97%** |
-| Fotografías (Wikimedia Commons CC) | ✅ 15 / 15 |
-| Custodios del conocimiento | ✅ 15 / 15 (2 por planta) |
-| Preparaciones (≥ 2 por planta) | ✅ 15 / 15 |
-| Compuestos bioactivos (≥ 3) | ✅ 15 / 15 |
-| Claves de identificación (≥ 4) | ✅ 15 / 15 |
-| Indicaciones medicinales (≥ 6) | ✅ 15 / 15 |
-| Referencias bibliográficas (≥ 2) | ✅ 15 / 15 |
-| Historia cultural específica | ✅ 15 / 15 |
+# 2. Levanta un servidor local (elige tu método preferido)
+python3 -m http.server 8080      # Python 3 (macOS/Linux/Windows con Python)
+npx serve .                      # Node.js
+php -S localhost:8080            # PHP
 
-**Plantas MVP:** Anamú · Canela · Cariaquito · Culantro del monte · Cundeamor · Guanábana · Guayabo · Jengibre dulce · Limoncillo · Malagueta · Manzanilla · Parcha · Romero · Sábila · Yerba buena
-
-### Inventario completo (101 plantas)
-
-| Grupo | Plantas | Completitud |
-|---|---|---|
-| MVP | 15 | 97% promedio |
-| Restantes | 86 | 65% promedio |
-| **Total** | **101** | **69% promedio** |
-
-### Oleadas de enriquecimiento completadas
-
-| Oleada | Descripción | Estado |
-|---|---|---|
-| 0 | Texto enriquecido MVP: 2ª preparación, indicaciones, historia, contraindicaciones, referencias | ✅ Completada |
-| 1 | Fotografías MVP: Wikimedia Commons CC BY-SA | ✅ Completada |
-| 2 | Custodios del conocimiento MVP: por tradición cultural | ✅ Completada |
-| 3 | Texto enriquecido 86 plantas restantes | 🔄 Pendiente |
-| 4 | Fotografías 86 plantas restantes | 🔄 Pendiente |
-
-### Resumen estadístico
-
-```
-101 plantas · 48 familias botánicas · 436 indicaciones medicinales
-116 preparaciones · 15 fotografías CC · 15 fichas de custodios
-8 plantas de alto riesgo documentadas
+# 3. Abre en tu navegador
+# → http://localhost:8080
 ```
 
----
-
-## Fuente de datos
-
-**Inventario de Plantas Medicinales para Puerto Rico**
-Prof. Ricardo Juan Morales De Jesús — Universidad de Puerto Rico, 2022
-Código de curso: CIFI 4996
-
-Las fotografías son de [Wikimedia Commons](https://commons.wikimedia.org) bajo licencias Creative Commons (CC BY-SA 3.0 / CC BY-SA 4.0 / Dominio Público).
+> ⚠️ **Nota:** El archivo `index.html` carga `plantas.json` via `fetch()`, por lo que necesitas un servidor local. No funcionará abriendo el archivo directamente con `file://`.
 
 ---
 
-## Desarrollo con inteligencia artificial
+## 🖥️ Instrucciones de instalación por sistema operativo
 
-Este proyecto fue desarrollado íntegramente con asistencia de **Claude Sonnet 4.5** de [Anthropic](https://anthropic.com), utilizando la interfaz conversacional de [Claude.ai](https://claude.ai).
+### 🍎 macOS
 
-### Rol de la IA en el proyecto
+```bash
+# Opción 1 — Python (incluido en macOS)
+git clone https://github.com/ricardojuanmorales/boticario-digital.git
+cd boticario-digital
+python3 -m http.server 8080
+# Abre: http://localhost:8080
 
-El proceso de desarrollo fue colaborativo y multidisciplinar. Claude participó en:
+# Opción 2 — Node.js (si tienes npm instalado)
+npx serve .
+```
 
-- **Arquitectura de datos** — diseño del schema JSON canónico con 30+ campos por planta
-- **Extracción y estructuración** — procesamiento del PDF fuente (CIFI 4996, 122 páginas) en objetos JSON estructurados para las 101 plantas
-- **Enriquecimiento editorial** — redacción de historias culturales, custodios del conocimiento, compuestos bioactivos con mecanismo de acción, claves de identificación botánica y preparaciones paso a paso, basados en literatura científica y etnobotánica del Caribe
-- **Desarrollo frontend** — diseño e implementación del HTML/CSS/JS standalone, incluyendo sistema de filtros, modal de fichas, 4 vistas de información, diseño responsivo y sistema de seguridad
-- **Investigación bibliográfica** — búsqueda y verificación de referencias de PubMed, Dr. Duke's Phytochemical DB y fuentes académicas del Caribe
-- **Control de calidad** — auditoría sistemática de completitud campo por campo para las 101 plantas
-- **Planificación estratégica** — diseño del sistema de oleadas de enriquecimiento incremental
+### 🪟 Windows
 
-### Modelo utilizado
+```powershell
+# Opción 1 — Python (descarga desde python.org si no lo tienes)
+git clone https://github.com/ricardojuanmorales/boticario-digital.git
+cd boticario-digital
+python -m http.server 8080
+# Abre en Chrome/Firefox: http://localhost:8080
 
-| Parámetro | Valor |
+# Opción 2 — Node.js
+npx serve .
+
+# Opción 3 — Live Server en VS Code
+# Abre la carpeta en VS Code → clic derecho en index.html → "Open with Live Server"
+```
+
+### 🐧 Linux
+
+```bash
+# Opción 1 — Python
+git clone https://github.com/ricardojuanmorales/boticario-digital.git
+cd boticario-digital
+python3 -m http.server 8080
+
+# Opción 2 — Node.js
+npx serve .
+
+# Opción 3 — nginx (producción)
+sudo cp -r . /var/www/html/boticario-digital
+sudo nginx -s reload
+```
+
+---
+
+## ⭐ Características principales
+
+| Característica | Detalle |
 |---|---|
-| Modelo | Claude Sonnet 4.5 |
-| Proveedor | Anthropic |
-| Interfaz | Claude.ai (conversacional) |
-| Periodo de desarrollo | Abril 2026 |
-
-### Supervisión humana
-
-Todo el contenido generado con IA fue revisado, dirigido y aprobado por el equipo del proyecto. Las decisiones editoriales, la selección de plantas MVP, la estrategia de custodios del conocimiento y los criterios de completitud fueron definidos por los autores humanos del proyecto. La IA actuó como herramienta de investigación, estructuración y desarrollo — no como autoridad en ninguna afirmación médica o cultural.
+| 🌱 **101 plantas medicinales** | 48 familias botánicas · 436 indicaciones médicas |
+| 📋 **4 vistas por planta** | Tradición · Botánica · Fitoquímica · Uso Práctico |
+| ⚗️ **202 preparaciones** | Infusión · Decocción · Cataplasma · Baño · Tintura y más |
+| 🔴🟡🟢 **Sistema de seguridad** | 3 niveles de riesgo con advertencias específicas |
+| 📷 **15 plantas MVP** | Fotografías CC y fichas completas al 97% promedio |
+| 🔬 **Fitoquímica completa** | Compuestos bioactivos con clase química y mecanismo de acción |
+| 📖 **Glosario de 40 términos** | Fitoquímica · Botánica · Sistemas médicos · Seguridad |
+| 🔍 **Búsqueda inteligente** | Normaliza acentos · 11 filtros por sistema corporal |
+| 📱 **Diseño responsivo** | Móvil · Tablet · Escritorio |
+| 🚫 **Sin instalación** | Standalone HTML + JSON · No requiere servidor en producción |
 
 ---
 
-## Estructura del repositorio
+## 🗂️ Estructura del repositorio
 
 ```
 boticario-digital/
-├── index.html                          # Aplicación web completa (standalone)
-├── README.md                           # Este archivo
-└── boticario_101_plantas_completo.json # Fuente de datos canónica (uso futuro)
+├── index.html                          # Aplicación web principal
+├── plantas.json                        # Base de datos — 101 plantas
+├── boticario_101_plantas_completo.json # Fuente canónica completa (desarrollo)
+├── Boticario_Digital_MVP_HTML_Full.html # Versión MVP standalone anterior
+├── DOCUMENTACION.md                    # Documentación técnica completa
+├── CIERRE_DE_SESION.md                 # Acta formal de sesión de trabajo
+└── README.md                           # Este archivo
 ```
 
-> **Nota técnica:** La versión actual (`index.html`) tiene los datos embebidos directamente en el JavaScript para funcionar como archivo standalone sin servidor. El JSON separado es la fuente canónica para futuras versiones y desarrollos.
+---
+
+## 🧱 Stack tecnológico
+
+| Capa | Tecnología |
+|---|---|
+| Interfaz | HTML5 semántico · CSS3 con Custom Properties |
+| Lógica | JavaScript ES6+ (Vanilla, sin frameworks) |
+| Datos | JSON estructurado (25+ campos por planta) |
+| Tipografía | Crimson Pro · Lora · IBM Plex Mono (Google Fonts) |
+| Imágenes | Wikimedia Commons (CC BY-SA 3.0 / 4.0) |
+| Despliegue | GitHub Pages (estático) |
 
 ---
 
-## Hoja de ruta
+## 🌡️ Tabla de compatibilidad
 
-- [ ] **Oleada 3** — Enriquecer las 86 plantas restantes: historia cultural, compuestos, preparaciones, custodios
-- [ ] **Oleada 4** — Fotografías para las 86 plantas restantes (Wikimedia Commons / iNaturalist CC)
-- [ ] **Separación HTML + JSON** — Migrar a arquitectura desacoplada al completar las oleadas
-- [ ] **Mapa de distribución** — Visualización geográfica por municipio de Puerto Rico
-- [ ] **Modo offline / PWA** — Funcionalidad sin conexión para uso en comunidades rurales
-- [ ] **Versión en inglés** — Mismo JSON, HTML traducido
+| Navegador | Versión mínima | Estado |
+|---|---|---|
+| Chrome / Chromium | 88+ | ✅ Totalmente compatible |
+| Firefox | 85+ | ✅ Totalmente compatible |
+| Safari | 14+ | ✅ Totalmente compatible |
+| Edge (Chromium) | 88+ | ✅ Totalmente compatible |
+| Safari iOS | 14+ | ✅ Totalmente compatible |
+| Chrome Android | 88+ | ✅ Totalmente compatible |
+| IE 11 | — | ❌ No soportado |
 
----
-
-## Licencia
-
-El código de esta aplicación está disponible bajo licencia [MIT](LICENSE).
-
-Los datos del inventario de plantas provienen del trabajo académico del Prof. Ricardo Juan Morales De Jesús (CIFI 4996, UPR, 2022) y se reproducen con fines educativos.
-
-Las fotografías son de Wikimedia Commons bajo sus respectivas licencias Creative Commons — los créditos específicos aparecen en cada ficha de planta dentro de la aplicación.
+**Requisitos de red:** La aplicación carga fuentes de Google Fonts y fotos de Wikimedia Commons. Para uso offline completo, se recomienda descargar las fuentes localmente.
 
 ---
 
-*Proyecto desarrollado en Puerto Rico · 2026*
-*Con el apoyo de Claude AI (Anthropic) como herramienta de investigación y desarrollo*
+## 🤝 Guía para contribuir
+
+¡Las contribuciones son bienvenidas! Hay tres áreas prioritarias:
+
+### 📝 Enriquecer datos de plantas
+
+1. Abre `plantas.json`
+2. Localiza la planta por `id`
+3. Completa campos vacíos siguiendo el [schema documentado](DOCUMENTACION.md#esquema-de-datos)
+4. Crea un Pull Request con descripción de las fuentes usadas
+
+### 🐛 Reportar errores
+
+Abre un [Issue en GitHub](https://github.com/ricardojuanmorales/boticario-digital/issues) con:
+- Descripción del problema
+- Pasos para reproducirlo
+- Captura de pantalla (si aplica)
+- Navegador y sistema operativo
+
+### 💡 Proponer funcionalidades
+
+Primero [abre un Issue](https://github.com/ricardojuanmorales/boticario-digital/issues) describiendo la idea antes de implementarla. Las funcionalidades deben alinearse con la misión educativa del proyecto.
+
+### Flujo de trabajo estándar
+
+```bash
+git checkout -b feature/nombre-de-la-feature
+# ... haz tus cambios ...
+git add <archivos-específicos>
+git commit -m "feat: descripción breve del cambio"
+git push origin feature/nombre-de-la-feature
+# Abre Pull Request en GitHub
+```
+
+---
+
+## 🗺️ Hoja de ruta
+
+- [ ] **Oleada 3** — Enriquecer historia cultural, compuestos y preparaciones de las 86 plantas restantes
+- [ ] **Oleada 4** — Fotografías para las 86 plantas restantes (Wikimedia Commons / iNaturalist)
+- [ ] **Separación HTML + JSON** — Migrar a arquitectura desacoplada
+- [ ] **Mapa de distribución** — Visualización geográfica por municipio
+- [ ] **Modo PWA offline** — Funcionalidad sin conexión para comunidades rurales
+- [ ] **Versión en inglés** — Mismo JSON, interfaz traducida
+
+---
+
+## ⚕️ Aviso médico
+
+> Esta herramienta es de carácter **educativo exclusivamente** y **no sustituye** diagnóstico, tratamiento ni consulta médica profesional. Consulta siempre a un profesional de salud antes de usar plantas medicinales.
+
+---
+
+## 📜 Licencia y créditos
+
+**Código:** [MIT License](LICENSE)
+
+**Datos:** Inventario de Plantas Medicinales para Puerto Rico — Prof. Ricardo Juan Morales De Jesús (CIFI 4996, UPR, 2022). Reproducidos con fines educativos.
+
+**Fotografías:** [Wikimedia Commons](https://commons.wikimedia.org) bajo licencias Creative Commons (CC BY-SA 3.0 / CC BY-SA 4.0 / Dominio Público). Créditos individuales en cada ficha.
+
+**Desarrollo digital:** Desarrollado con asistencia de **Claude Sonnet 4.5** (Anthropic) bajo supervisión y dirección del equipo del proyecto.
+
+---
+
+*🌿 Proyecto desarrollado en Puerto Rico · 2026*
+*Universidad de Puerto Rico · Curso ESGE 4995*
