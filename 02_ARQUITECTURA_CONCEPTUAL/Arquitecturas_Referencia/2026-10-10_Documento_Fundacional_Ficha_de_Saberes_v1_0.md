@@ -1,7 +1,7 @@
 # 🌿 La Ficha de Saberes · Documento fundacional
 
 **Versión:** 1.0 · **Fecha:** 2026-10-10
-**Estado:** CANDIDATO A CANON. Requiere gate humano de Ricardo (D-A27) para entrar en vigor.
+**Estado:** ✅ **CANON VIGENTE**, aprobado por Ricardo Juan Morales De Jesús el 2026-10-10 (D-A27). Se usa de ahora en adelante.
 **Describe:** la Ficha de Saberes, estructura v0.3 (decisiones D-A20 a D-A26)
 **Autoría:** Ricardo Juan Morales De Jesús (autor y curador), con asistencia de IA (Claude). El linaje de autoría está en §3.
 **Ubicación canónica:** `02_ARQUITECTURA_CONCEPTUAL/Arquitecturas_Referencia/`
@@ -168,6 +168,8 @@ FICHAS DE ESPECIES            → los casos reales, el primero es el anamú
 4. N2 define qué ve el público escolar, lo que avanza el riesgo R-01;
 5. la carga de trabajo es razonable.
 
+**Autoría de la ficha del anamú:** Ricardo Juan Morales De Jesús y Guersom J. Báez Fonseca, **coautores** (D-A28).
+
 **Al cerrar:** con lo que aprendamos, la estructura pasa a **v1.0 estable** o a una v0.4 con ajustes.
 
 ## 11. Glosario
@@ -183,7 +185,7 @@ FICHAS DE ESPECIES            → los casos reales, el primero es el anamú
 ## 12. Historial
 | Versión | Fecha | Cambio | Decisión |
 |---|---|---|---|
-| 1.0 | 2026-10-10 | Primera redacción, candidata a canon | D-A27 (pendiente) |
+| 1.0 | 2026-10-10 | Primera redacción, aprobada como canon vigente; coautoría de Guersom en §10 | D-A27 · D-A28 |
 
 ## Referencias
 - Delgado, F. y Rist, S. (Eds.) (2016). *Ciencias, diálogo de saberes y transdisciplinariedad: aportes teórico metodológicos para la sustentabilidad alimentaria y del desarrollo*. AGRUCO / Plural editores. ISBN 978-99954-1-728-4. Incluye: Max-Neef, "Los cimientos de la transdisciplinariedad"; Argueta, "El diálogo de saberes, una utopía realista"; Ishizawa, "Comunidades epistémicas para el diálogo de saberes"; Tapia, "El diálogo de saberes y la investigación participativa revalorizadora"; Rosendahl, Zanella, Rist y Weigelt, "Conocimiento científico situado: la objetividad fuerte en transdisciplinariedad".

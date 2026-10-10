@@ -12,8 +12,8 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 | 3 | ✅ **FW-1** · Prototipo del Framework | Framework V5.1 instalado en la rama, con la excepción registrada | D-A16 |
 | 4 | ✅ **Paso 4** · Activación | El Boticario activado en modo INTEGRATE, N3, con PH, IT y AT | D-A17 a D-A19 |
 | 5 | ✅ **FICHA-2** · Auditoría y ficha | Ficha de Saberes v0.2, y luego v0.3 con activación proporcional | D-A20 a D-A26 |
-| 6 | 👉 **AQUÍ** · Documentación humana | La plantilla de uso de la ficha y este primer | — |
-| 7 | ⏭ **FICHA-3** · Validar con el anamú | La primera ficha real llena, y qué faltó o sobró | — |
+| 6 | ✅ **Documentación humana** | El documento fundacional (**canon vigente**), la plantilla de uso y este primer | D-A27 a D-A29 |
+| 7 | 👉 **AQUÍ** · **FICHA-3** · Anamú | La primera ficha real y el informe de validación: la estructura funciona, con 6 aprendizajes | autorización pendiente |
 | 8 | Después | El esquema de datos (JSON Schema, contrato obligatorio por D-A07) y, más tarde, la app | — |
 
 ## Una aclaración: 35 no es el número de campos
@@ -40,6 +40,9 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 ## Dónde está cada cosa
 | Qué | Dónde |
 |---|---|
+| **Documento fundacional de la ficha** (qué es, origen, influencias, principios, cómo se edita) · **canon vigente** | `02_ARQUITECTURA_CONCEPTUAL/Arquitecturas_Referencia/2026-10-10_Documento_Fundacional_Ficha_de_Saberes_v1_0.md` |
+| **Ficha del anamú (primer caso)** | `13_INVESTIGACION_Y_EVIDENCIA/Sintesis_Evidencia/2026-10-10_Ficha_Saberes_Petiveria_alliacea_Anamu_v0_1.md` |
+| **Informe de validación FICHA-3** | `15_EVALUACION_CALIDAD_Y_AUDITORIA/Evidencias_Validacion/2026-10-10_Informe_Validacion_FICHA_3_Anamu_v0_1.md` |
 | **Plantilla de la ficha (para trabajar)** | `07_PLANTILLAS_Y_MODELOS/Plantillas_Documentos/2026-10-10_Plantilla_Ficha_de_Saberes_v0_3.md` |
 | Spec completa de la ficha (el porqué) | `00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_3.md` |
 | Registro de decisiones D-A01 a D-A26 | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/` y, en el Proyecto, `claude/D-A01_Decisiones_Apertura_BD101.md` |
@@ -53,16 +56,17 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 - **Rama:** `prototipo/framework-v5.1.0`, solo en tu computadora y **sin subir a GitHub**.
 - **`main` está intacto** y el MVP del Boticario sigue accesible en línea, como pediste.
 
+## Lo que te toca ahora
+1. **Autorizar la activación del anamú** (D-A25). Es el último paso para que su ficha quede vigente.
+2. **Los aprendizajes A1 a A6** del informe de FICHA-3. Los de forma van a una plantilla v0.4; los de estructura requieren decisión.
+3. **¿Declarar la ficha v1.0 estable** ahora, o después de un segundo caso alimentario como el jengibre?
+
 ## Pendientes sin urgencia
 1. ⏰ **La revisión de la excepción D-A16 vence ahora**, porque la condición era "al cerrar FICHA-2 o antes de fusionar a main". Basta con decidir si se mantiene.
-2. El rol de Guersom J. Báez Fonseca: la Ficha de Ingrediente v3 lo nombra coautor; D-A12 lo registró como revisor.
-3. El formato del identificador común de cada especie.
-4. Cuándo subir la rama a GitHub; eso lo haces tú desde VS Code.
-5. Borrar la carpeta de pruebas `boticario-digital-101/_staging` (112 MB) cuando quieras.
-6. R-01, menores y contenido de salud, sigue abierto. Se cierra en G7, antes de programar la capa pedagógica.
+2. El formato del identificador común de cada especie.
+3. Cuándo subir la rama a GitHub; eso lo haces tú desde VS Code.
+4. Borrar la carpeta de pruebas `boticario-digital-101/_staging` (112 MB) cuando quieras.
+5. R-01, menores y contenido de salud, sigue abierto. Se cierra en G7, antes de programar la capa pedagógica.
 
 ## Lo que sigue
-**FICHA-3:**
-1. Las reglas de la ficha proponen qué módulos encender para el anamú, y tú lo autorizas.
-2. Yo lleno la ficha con el documento actualizado, el repositorio y tus fuentes.
-3. Medimos cuánto pesa la ficha en la práctica y qué ajustar antes de escribir el esquema de datos.
+Con tus decisiones sobre A1–A6 sale la **plantilla v0.4 o la v1.0**. Después viene el **esquema de datos (JSON Schema)**, que es el contrato que validará cada ficha. Luego se llenan las demás plantas, empezando por las 8 de riesgo alto.

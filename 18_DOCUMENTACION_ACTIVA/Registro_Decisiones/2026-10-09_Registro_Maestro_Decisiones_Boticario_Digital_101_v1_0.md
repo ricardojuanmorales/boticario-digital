@@ -4,7 +4,7 @@
 **Marco rector:** Framework Genérico V4.1.0 Integral Autosostenido
 **Arquetipo de referencia:** AI StoryLab 1 v1.0.0
 **Estado:** activo
-**Nota de formato:** D-A06 queda reemplazada por D-A17. Las decisiones D-A01 a D-A26 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
+**Nota de formato:** D-A06 queda reemplazada por D-A17 y D-A12 por D-A28. Las decisiones D-A01 a D-A29 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
 
 ---
 
@@ -85,7 +85,7 @@
 **Decisión:** se aceptan ilustraciones generadas con IA en la galería.
 **Consecuencias:** se mantiene obligatorio el rótulo "ilustración generada con [herramienta]; no sustituye la identificación botánica por ejemplar o especialista". El esquema añade `imagen.origen` (`foto` | `ilustracion_ia`) y `imagen.herramienta`. Queda pendiente decidir la licencia de esas imágenes cuando se resuelva D-08.
 
-### D-A12 · Atribución de Guersom J. Báez Fonseca
+### D-A12 · Atribución de Guersom J. Báez Fonseca · **REEMPLAZADA por D-A28**
 **Fecha:** 2026-10-09
 **Decisión:** figura como **revisor/a** de la evidencia de la ficha de Anamú, en el módulo M9 (custodia y atribución).
 
@@ -192,6 +192,23 @@
 ### D-A26 · Custodia por módulo
 **Fecha:** 2026-10-10
 **Decisión:** diferida. Se decide al integrar las bases entre repositorios.
+
+### D-A28 · Rol de Guersom J. Báez Fonseca (reemplaza a D-A12)
+**Fecha:** 2026-10-10
+**Decisión:** Guersom J. Báez Fonseca es **coautor**.
+**Justificación:** es coautor de la Ficha de Ingrediente Natural v3, la fuente principal del linaje de la Ficha de Saberes, y destinatario de la ficha actualizada del anamú.
+**Consecuencias:** la ficha del anamú (FICHA-3) lleva la coautoría de Ricardo Juan Morales De Jesús y Guersom J. Báez Fonseca en T0. El documento fundacional lo registra en §10.
+### D-A27 · Canonización del documento fundacional de la Ficha de Saberes
+**Fecha:** 2026-10-10
+**Decisión:** Ricardo aprueba los documentos de la ficha. El **Documento fundacional v1.0** pasa a **canon vigente** y se usa de ahora en adelante.
+- Ubicación: `02_ARQUITECTURA_CONCEPTUAL/Arquitecturas_Referencia/2026-10-10_Documento_Fundacional_Ficha_de_Saberes_v1_0.md`.
+- Se aprueban junto con él la Plantilla v0.3, la Spec FICHA-2 v0.3 y el primer de continuidad.
+**Consecuencias:** el fundacional gobierna el propósito y los principios, y la spec gobierna la estructura. Cualquier cambio sigue sus reglas de evolución (§9).
+
+### D-A29 · Identificador provisional de especie
+**Fecha:** 2026-10-10
+**Decisión:** mientras se define el formato definitivo, el identificador es el nombre científico aceptado en minúsculas con guion. Para el anamú: `petiveria-alliacea`.
+**Consecuencias:** es provisional. El formato definitivo se decide antes del JSON Schema.
 
 ---
 
