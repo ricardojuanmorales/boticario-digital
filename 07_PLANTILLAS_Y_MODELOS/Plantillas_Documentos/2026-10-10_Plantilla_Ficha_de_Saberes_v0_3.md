@@ -18,6 +18,7 @@
 🔒 **Obligatorio**: sin esto no se publica · ⚡ **Condicional**: pasa a obligatorio si se cumple su condición · ➕ **Opcional** · 💤 **Durmiente**: existe, pero está apagado para esta especie
 
 **Estado del módulo** (lo decides tú, para cada especie):
+
 | Marca | Estado | Qué debe llevar |
 |---|---|---|
 | ✅ | activo · completo | fuentes |
@@ -96,6 +97,7 @@
 - ⚠️ **Nombres confusos u homónimos** (especies que comparten nombre común): ________
 
 ### E2 · Nombres y voces 🔒 · Estado: ___
+
 | Nombre | Lengua | Región | Comunidad | Fuente |
 |---|---|---|---|---|
 | | | | | |
@@ -117,11 +119,13 @@
 
 ### E6 · Usos y evidencia T/E/H 🔒 · Estado: ___
 **T** = tradición · **E** = evidencia experimental o preclínica · **H** = evidencia en humanos (di el tipo: ensayo, ex vivo, protocolo, ninguno)
+
 | Condición | Uso tradicional (T) | Experimental (E) | Humana (H) | Redacción permitida | Fuentes |
 |---|---|---|---|---|---|
 | | | | | | |
 
 ### E7 · Registro de fuentes 🔒 · Estado: ___
+
 | ID | Cita | Tipo | DOI/URL | Preparación estudiada | Verificada (fecha) |
 |---|---|---|---|---|---|
 | F1 | | | | | |
@@ -137,6 +141,7 @@
 - Secado y conservación: ________ · Vida útil: ________ · Toxinas naturales y cómo mitigarlas: ________
 
 ### P3 · Preparaciones tradicionales ⚡ · Estado: ___
+
 | Preparación | Parte | Vía | Pasos | Dosis + **estatus** (validada / tradicional reportada) | Advertencia | Fuente |
 |---|---|---|---|---|---|---|
 | | | | | | | |
@@ -149,6 +154,7 @@
 ## NIVEL NORMATIVO · ¿Qué queremos hacer?
 
 ### N1 · Seguridad con certeza 🔒 · Estado: ___
+
 | Tipo | Descripción | Población | Severidad | Certeza (documentada / precautoria) | Fuente |
 |---|---|---|---|---|---|
 | Contraindicación | | | | | |
@@ -166,6 +172,7 @@
 ## NIVEL DE VALORES · ¿Qué deberíamos hacer?
 
 ### V1 · Custodia y reciprocidad 🔒 · Estado: ___
+
 | Custodio (comunidad o persona) | Rol | ¿Consentimiento? (fecha) | Cómo se reconoce o se retribuye |
 |---|---|---|---|
 | | | | |
@@ -181,6 +188,7 @@ Marca las dimensiones del bienestar con que se relaciona esta especie **como pr�
 ## EJES QUE ATRAVIESAN LOS NIVELES
 
 ### X1 · Voces de tradición ⚡ · Una línea de estado por voz
+
 | Voz | Estado | Lo que dice, en sus propios términos | Fuente |
 |---|---|---|---|
 | Taína y afrocaribeña (uso, contexto, custodio) | | | |
@@ -204,6 +212,7 @@ Marca las dimensiones del bienestar con que se relaciona esta especie **como pr�
 ---
 
 ## Anexo · Las 35 dimensiones auditadas y dónde viven en la ficha
+
 | Dimensiones de FICHA-2 | Módulo |
 |---|---|
 | Metadatos, fecha de búsqueda, historial | T0 |

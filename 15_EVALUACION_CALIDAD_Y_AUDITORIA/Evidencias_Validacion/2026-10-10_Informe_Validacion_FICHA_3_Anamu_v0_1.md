@@ -4,6 +4,7 @@
 **Pregunta:** ¿la ficha v0.3 funciona con un caso real y difícil? (Documento fundacional §10)
 
 ## 1. Resultado frente a los 5 criterios
+
 | # | Criterio | Resultado | Evidencia |
 |---|---|---|---|
 | 1 | El panel de activación propone bien qué encender | ✅ **Sí.** Las 7 preguntas activaron 15 de los 17 módulos. Dejaron 3 en "no aplica" (P2, P4 y la nutrición de E5) y 4 durmientes (las voces ayurvédica, china y andina, y el eje X4). Las etiquetas del inventario activaron la voz taína y afrocaribeña, como se esperaba. | §A de la ficha |
@@ -24,6 +25,7 @@
 
 ## 3. Aprendizajes candidatos para la plantilla (hacia v0.4 o v1.0)
 Por la regla del fundacional (§9), ninguno entra en vigor sin tu decisión.
+
 | # | Hallazgo | Propuesta | Tipo de cambio |
 |---|---|---|---|
 | A1 | Hizo falta declarar una **divergencia entre fuentes** (la familia botánica) | Añadir la marca ⚠️ "divergencia" a E1 y E7 | forma |

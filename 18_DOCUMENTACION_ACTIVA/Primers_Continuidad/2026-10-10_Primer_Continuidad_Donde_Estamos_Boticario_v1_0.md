@@ -5,6 +5,7 @@
 Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.3) y el **Framework V5.1 instalado y activado** en el Boticario. El siguiente paso es **probar la ficha con el anamú**.
 
 ## El camino recorrido
+
 | # | Bloque | Qué produjo | Decisiones |
 |---|---|---|---|
 | 1 | ✅ **FICHA-B1** · Diagnóstico del anamú | Comparación entre el repo y el documento actualizado; las 13 referencias verificadas | D-A09 a D-A12 |
@@ -38,6 +39,7 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 - Las dosis tradicionales van rotuladas y se ocultan en modo escolar (D-A09). Cada advertencia declara su certeza (D-A10).
 
 ## Dónde está cada cosa
+
 | Qué | Dónde |
 |---|---|
 | **Documento fundacional de la ficha** (qué es, origen, influencias, principios, cómo se edita) · **canon vigente** | `02_ARQUITECTURA_CONCEPTUAL/Arquitecturas_Referencia/2026-10-10_Documento_Fundacional_Ficha_de_Saberes_v1_0.md` |

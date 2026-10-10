@@ -102,6 +102,7 @@ Cada app conserva su ficha y su voz. El identificador común las conecta, como e
 **T0 · Metadatos y procedencia** (transversal): versión, estado, autoría, revisores, fecha de búsqueda, historial de cambios, nivel de evidencia por sección y licencias.
 
 **EMPÍRICO · ¿qué existe y qué sabemos?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | E1 | Identidad taxonómica | nombre aceptado y autor, familia vigente, sinónimos, **certeza de identificación**, voucher, **nombres confusos** | DOCX · ING 0.0 |
@@ -113,6 +114,7 @@ Cada app conserva su ficha y su voz. El identificador común las conecta, como e
 | E7 | Registro de fuentes | id, tipo, DOI o URL, preparación estudiada, fecha y estado de verificación (esquema FW) | DOCX §10 · ING 12 · FW |
 
 **PRAGMÁTICO · ¿qué podemos hacer?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | P1 | Cultivo y manejo agroecológico | condiciones, propagación, calendario, manejo de plagas, cosecha, **rol en diseño permacultural** | ING 3–6 · AGRO §4 · REPO |
@@ -121,6 +123,7 @@ Cada app conserva su ficha y su voz. El identificador común las conecta, como e
 | P4 | Cocina y recetas | perfil sensorial, técnicas, **sinergias**, recetas vinculadas por id | ING 8 · REC 11 |
 
 **NORMATIVO · ¿qué queremos hacer?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | N1 | Seguridad con certeza | contraindicaciones, interacciones, efectos y restricciones dietéticas, cada uno documentado o precautorio | DOCX §4.3, §5 · ING 11 · D-A10 |
@@ -128,6 +131,7 @@ Cada app conserva su ficha y su voz. El identificador común las conecta, como e
 | N3 | Sostenibilidad y trazabilidad | cosecha responsable, huella, origen, estatus legal | ING 0.1.2 · REC 9 · REPO |
 
 **VALORES · ¿qué deberíamos hacer?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | V1 | Custodia y reciprocidad | custodios **con consentimiento**, atribución, reciprocidad y ética de documentación | AGRO §20 · REPO custodios |
@@ -135,6 +139,7 @@ Cada app conserva su ficha y su voz. El identificador común las conecta, como e
 | V3 | Buen vivir | vínculo con los pilares de bienestar, la relación con la tierra y el hábitat sostenible | AGRO §9 · Guía holística · Hábitat sostenible |
 
 ### 4.3 Ejes transversales
+
 | ID | Eje | Qué hace |
 |---|---|---|
 | X1 | Voces de tradición | Cada voz tiene su propia gramática y sus fuentes. Por ejemplo, el Ayurveda usa sabor, potencia y efecto posdigestivo; la medicina china, naturaleza térmica y sabor; la voz taína y afrocaribeña, uso, contexto y custodios. La biomedicina habla mediante E6 (T/E/H). |
@@ -143,6 +148,7 @@ Cada app conserva su ficha y su voz. El identificador común las conecta, como e
 | X4 | Valoración 0–5 (opcional) | Matriz de presencia por dimensión (AGRO §13) |
 
 ### 4.4 Reglas transversales
+
 | Regla | Enunciado | Origen |
 |---|---|---|
 | R1 | Toda afirmación apunta a un id de E7, o declara "No documentado / requiere verificación (búsqueda AAAA-MM-DD)" | DOCX · ING 12.2.2 |
@@ -161,6 +167,7 @@ Cada app conserva su ficha y su voz. El identificador común las conecta, como e
 - **Perfil Cultivo (Yocahú):** núcleo + E4, P1, P2, N3, V2.
 
 ### 4.6 De la v0.1 a la v0.2
+
 | v0.1 | → v0.2 |
 |---|---|
 | M0 Metadatos | T0 |

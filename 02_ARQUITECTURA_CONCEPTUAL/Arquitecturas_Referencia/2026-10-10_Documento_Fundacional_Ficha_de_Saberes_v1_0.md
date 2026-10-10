@@ -122,6 +122,7 @@ La estructura es completa para todas las especies, pero **cada especie solo enci
 - **Imagen de trabajo:** el campo durmiente es una semilla en latencia. Está guardado, no se pierde, y germina cuando hay condiciones.
 
 ## 8. Quién hace qué
+
 | Rol | Responsabilidad |
 |---|---|
 | **Curador/a** | Llena la ficha, autoriza qué se activa y responde por su calidad |
@@ -183,6 +184,7 @@ FICHAS DE ESPECIES            → los casos reales, el primero es el anamú
 - **Canon:** la referencia vigente y revisable, no una verdad eterna.
 
 ## 12. Historial
+
 | Versión | Fecha | Cambio | Decisión |
 |---|---|---|---|
 | 1.0 | 2026-10-10 | Primera redacción, aprobada como canon vigente; coautoría de Guersom en §10 | D-A27 · D-A28 |

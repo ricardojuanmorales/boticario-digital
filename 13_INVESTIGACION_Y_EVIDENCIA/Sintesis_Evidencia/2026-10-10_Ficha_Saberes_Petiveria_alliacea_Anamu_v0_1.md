@@ -11,6 +11,7 @@
 **Autorización de la activación (D-A25):** ⏳ *las reglas proponen, Ricardo autoriza*
 
 **Preguntas que encienden módulos:**
+
 | Pregunta | Respuesta | Fuente | Efecto propuesto |
 |---|---|---|---|
 | ¿Es alimento o condimento? | **No** | [F13] [F16] | E5 nutrición, P2 y P4 → ⛔ no aplica |
@@ -73,6 +74,7 @@
 - ⚠️ **Nombres confusos:** nombres populares basados en el olor, como "zorrillo" o "skunkweed" [F14], tienden a repetirse entre especies distintas. **No se verificaron homónimos concretos (pendiente).** Recomendación: identificar siempre por nombre científico.
 
 ### E2 · Nombres y voces 🔒 · ◐
+
 | Nombre | Lengua | Región | Fuente |
 |---|---|---|---|
 | Anamú | español | Puerto Rico y Caribe | [F13] [F14] [F16] |
@@ -106,6 +108,7 @@
 
 ### E6 · Usos y evidencia T/E/H 🔒 · ◐
 **T** = tradición · **E** = experimental o preclínica · **H** = humana
+
 | Condición | T · uso tradicional | E · experimental | H · humana | Redacción permitida | Fuentes |
 |---|---|---|---|---|---|
 | Digestivo (dolor de estómago, gases) | hoja en decocción; raíz en infusión | limitada | **no se identificaron ensayos** | "Uso tradicional documentado; no sustituye evaluación médica" | [F12] [F1] |
@@ -123,6 +126,7 @@
 *Lectura:* los primeros 7 usos tienen búsqueda al 2026-09-29 [F16]. Los últimos 4 vienen solo del inventario y **falta buscar su evidencia**.
 
 ### E7 · Registro de fuentes 🔒 · ✅
+
 | ID | Cita | Tipo | DOI / URL | Preparación estudiada | Verificada |
 |---|---|---|---|---|---|
 | F1 | Conceição et al. (2023). *Plants* 12(18):3343 | **revisión bibliométrica** (no "revisión crítica") | 10.3390/plants12183343 | — | 2026-10-09 |
@@ -160,6 +164,7 @@
 
 ### P3 · Preparaciones tradicionales ⚡ activo · ✅
 ⚠️ **No existe una dosis de anamú respaldada por ensayos clínicos** [F16] [F2]. Toda dosis que aparece aquí es **tradicional reportada y no validada** (D-A09). **Se oculta en el modo escolar.**
+
 | Preparación | Parte | Vía | Dosis y **estatus** | Advertencia | Fuente |
 |---|---|---|---|---|---|
 | Infusión ("té de anamú") | hojas frescas | oral | 1 taza, 2 o 3 veces al día, máximo 2 semanas · **tradicional reportada, no validada** | sin dosis clínica; no usar utensilios de aluminio | [F13] [F12] |
@@ -174,6 +179,7 @@
 ## NIVEL NORMATIVO · ¿Qué queremos hacer?
 
 ### N1 · Seguridad con certeza 🔒 reforzado · ✅
+
 | Tipo | Descripción | Severidad | Certeza | Fuente |
 |---|---|---|---|---|
 | Contraindicación | **Embarazo e intento de concebir:** uso tradicional abortivo; actividad uterotónica y estrogénica en rata; sin datos de seguridad | absoluta | **documentada (preclínica)** | [F11] [F1] |
@@ -217,6 +223,7 @@
 ## NIVEL DE VALORES · ¿Qué deberíamos hacer?
 
 ### V1 · Custodia y reciprocidad 🔒 · ◐
+
 | Custodio | Rol | Consentimiento | Reconocimiento |
 |---|---|---|---|
 | Tradición taína y afrocaribeña de Puerto Rico | custodio comunitario | no aplica a una tradición colectiva | ⏳ **reciprocidad por definir con la comunidad** |
@@ -240,6 +247,7 @@ Relación **como práctica**, no como afirmación de salud:
 ## EJES
 
 ### X1 · Voces de tradición ⚡
+
 | Voz | Estado | Lo que dice, en sus propios términos | Fuente |
 |---|---|---|---|
 | Taína y afrocaribeña | ◐ | Planta inconfundible por su olor a ajo, de uso medicinal y espiritual de limpieza | [F13] · falta fuente primaria |

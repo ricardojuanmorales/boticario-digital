@@ -7,6 +7,7 @@
 **Modo Framework:** INTEGRATE
 
 ## 1. Reglas canónicas que se exceptúan
+
 | Regla | Fuente | Qué dice |
 |---|---|---|
 | Antipatrón de proliferación | `10_REPOSITORIOS_Y_FLUJO_TECNICO/2026-09-22_Modelo_Portable_Proyecto_Portafolio_Schemas_V5_v0_1.md` §22 | "copiar 00–21 dentro de cada proyecto" |

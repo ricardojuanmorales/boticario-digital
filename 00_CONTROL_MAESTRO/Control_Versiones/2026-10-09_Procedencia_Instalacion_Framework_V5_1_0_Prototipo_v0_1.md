@@ -7,6 +7,7 @@
 **Decisión de ubicación:** Ricardo eligió instalar mezclado en la raíz (00–21 + 99 junto a los archivos del MVP), desde su clon local existente.
 
 ## Origen
+
 | Campo | Valor |
 |---|---|
 | Release | Framework Genérico V5.1.0 · "estabilización arquitectónica, pedagógica y de distribución" |
@@ -18,6 +19,7 @@
 | Base del Boticario | commit `adbb520` (MVP, igual a `origin/main` al instalar) |
 
 ## Regla de instalación: nada del Boticario se sobrescribe
+
 | Elemento del release | Dónde quedó | Por qué |
 |---|---|---|
 | Carpetas 00–21, 99, `apps/`, `legacy/`, `.release/`, `.obsidian/`, `.gitignore`, documentos raíz | Raíz, sin cambios | No chocaban con archivos del Boticario |

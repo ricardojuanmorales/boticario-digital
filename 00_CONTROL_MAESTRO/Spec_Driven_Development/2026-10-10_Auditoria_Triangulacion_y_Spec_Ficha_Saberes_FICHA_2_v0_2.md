@@ -104,6 +104,7 @@ ESPECIE (identificador común, nombre científico aceptado)
 **T0 · Metadatos y procedencia** (transversal): versión, estado, autoría, revisores, fecha de búsqueda, historial de cambios, nivel de evidencia por sección y licencias.
 
 **EMPÍRICO · ¿qué existe y qué sabemos?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | E1 | Identidad taxonómica | nombre aceptado y autor, familia vigente, sinónimos, **certeza de identificación**, voucher, **nombres confusos** | DOCX · ING 0.0 |
@@ -115,6 +116,7 @@ ESPECIE (identificador común, nombre científico aceptado)
 | E7 | Registro de fuentes | id, tipo, DOI o URL, preparación estudiada, fecha y estado de verificación (esquema FW) | DOCX §10 · ING 12 · FW |
 
 **PRAGMÁTICO · ¿qué podemos hacer?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | P1 | Cultivo y manejo agroecológico | condiciones, propagación, calendario, manejo de plagas, cosecha, **rol en diseño permacultural** | ING 3–6 · AGRO §4 · REPO |
@@ -123,6 +125,7 @@ ESPECIE (identificador común, nombre científico aceptado)
 | P4 | Cocina y recetas | perfil sensorial, técnicas, **sinergias**, recetas vinculadas por id | ING 8 · REC 11 |
 
 **NORMATIVO · ¿qué queremos hacer?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | N1 | Seguridad con certeza | contraindicaciones, interacciones, efectos y restricciones dietéticas, cada uno documentado o precautorio | DOCX §4.3, §5 · ING 11 · D-A10 |
@@ -130,6 +133,7 @@ ESPECIE (identificador común, nombre científico aceptado)
 | N3 | Sostenibilidad y trazabilidad | cosecha responsable, huella, origen, estatus legal | ING 0.1.2 · REC 9 · REPO |
 
 **VALORES · ¿qué deberíamos hacer?**
+
 | ID | Módulo | Contenido | Viene de |
 |---|---|---|---|
 | V1 | Custodia y reciprocidad | custodios **con consentimiento**, atribución, reciprocidad y ética de documentación | AGRO §20 · REPO custodios |
@@ -137,6 +141,7 @@ ESPECIE (identificador común, nombre científico aceptado)
 | V3 | Buen vivir (D-A23) | vínculo con el **mapa de 13 dimensiones del bienestar** (§4.3.2), la relación con la tierra y el hábitat sostenible | Guía holística (IBP) · 8 dimensiones · AGRO §9 · Hábitat sostenible |
 
 ### 4.3 Ejes transversales
+
 | ID | Eje | Qué hace |
 |---|---|---|
 | X1 | Voces de tradición (D-A22) | Cinco voces, cada una con su propia gramática y sus fuentes (detalle en §4.3.1). Atraviesan los cuatro niveles. |
@@ -145,6 +150,7 @@ ESPECIE (identificador común, nombre científico aceptado)
 | X4 | Valoración 0–5 (opcional) | Matriz de presencia por dimensión (AGRO §13) |
 
 #### 4.3.1 Primer círculo de voces (D-A22)
+
 | Voz | Su gramática propia (campos) | Fuentes esperadas |
 |---|---|---|
 | **Taína y afrocaribeña** (voz local) | nombre local, uso, preparación, contexto (quién, cuándo, para qué), dimensión ritual o espiritual (V2), custodio con consentimiento (V1) | tradición oral documentada con consentimiento; etnobotánica caribeña (p. ej., TRAMIL); inventario CIFI 4996 |
@@ -177,6 +183,7 @@ Los 10 pilares del IBP, más las tres dimensiones que el IBP no tenía y que son
 **Cómo se usa en la ficha:** V3 dice con qué dimensiones se relaciona la especie como **práctica de buen vivir**: cultivarla, cocinarla, compartirla o usarla en un ritual. Eso no es una afirmación de salud. Cualquier efecto sobre la salud sigue la regla T/E/H de E6.
 
 ### 4.4 Reglas transversales
+
 | Regla | Enunciado | Origen |
 |---|---|---|
 | R1 | Toda afirmación apunta a un id de E7, o declara "No documentado / requiere verificación (búsqueda AAAA-MM-DD)" | DOCX · ING 12.2.2 |
@@ -194,6 +201,7 @@ Los 10 pilares del IBP, más las tres dimensiones que el IBP no tenía y que son
 - **La completitud se mide por módulo, no como un porcentaje global.** El campo `completitud: 100` del REPO no distinguía lo documentado de lo vacío.
 
 ### 4.6 De la v0.1 a la v0.2
+
 | v0.1 | → v0.2 |
 |---|---|
 | M0 Metadatos | T0 |
@@ -213,6 +221,7 @@ Los 10 pilares del IBP, más las tres dimensiones que el IBP no tenía y que son
 **FICHA-3 · validar la v0.2 con el anamú.** Se llena la ficha completa con el DOCX, el REPO y tus fuentes. Cada módulo declara su estado, y se registra lo que la ficha no pudo contener o lo que sobró. Solo después se escribe el JSON Schema (D-04), que es contrato obligatorio por D-A07.
 
 ## 6. Decisiones de Ricardo (2026-10-10)
+
 | ID | Decisión |
 |---|---|
 | D-A20 | **Una ficha única completa** para todas las apps, sin perfiles por dominio. Ningún módulo se omite; los vacíos declaran su estado. |
