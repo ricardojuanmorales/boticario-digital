@@ -4,7 +4,7 @@
 **Marco rector:** Framework Genérico **V5.1.0** (D-A14). El registro nació bajo V4.1.0; D-A05 y D-A06 se releyeron con V5.1 (D-A17, D-A18).
 **Arquetipo de referencia:** AI StoryLab 1 v1.0.0
 **Estado:** activo
-**Nota de formato:** D-A06 queda reemplazada por D-A17 y D-A12 por D-A28. Las decisiones D-A01 a D-A29 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
+**Nota de formato:** D-A06 queda reemplazada por D-A17 y D-A12 por D-A28. Las decisiones D-A01 a D-A30 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
 
 ---
 
@@ -209,6 +209,17 @@
 **Fecha:** 2026-10-10
 **Decisión:** mientras se define el formato definitivo, el identificador es el nombre científico aceptado en minúsculas con guion. Para el anamú: `petiveria-alliacea`.
 **Consecuencias:** es provisional. El formato definitivo se decide antes del JSON Schema.
+
+### D-A30 · Kit de cierre en el repositorio, activado por referencia
+**Fecha:** 2026-10-10
+**Decisión:** el kit de cierre de sesión **se guarda en el repositorio** y se **activa por referencia** desde el prompt de activación. **No se genera un ZIP** para subirlo después. Ricardo declara superado el §4 "Entrega estándar" del Protocolo de Cierre V4.1.1.
+**Verificación:** en el Framework instalado no existe todavía un protocolo de cierre V5 escrito; el único es el de V4.1.1 (2026-05-28), que pide el ZIP. La decisión es coherente con la V5.1: el repositorio del proyecto es la fuente versionada de verdad (Arquitectura de distribución V5.1.0).
+**Alcance:** no afecta el expediente portable (`00_CONTROL_MAESTRO/Manifiestos/..._Paquete_Proyecto_..._v1_1.zip`), que es el formato de importación de la app del Framework (Modelo Portable) y no un paquete de entrega.
+**Consecuencias:**
+- El prompt de activación lista las rutas del kit más reciente.
+- El manifest conserva las huellas SHA-256 del kit.
+- Se abre la transferencia candidata **T-004** al maestro: escribir el Protocolo de Cierre V5.
+- El ZIP generado por error en esta sesión (`~/boticario-digital-101/Entregas_FICHA-3/2026-10-10_Paquete_Cierre_Sesion_Boticario.zip`) queda fuera del repositorio y puede borrarse.
 
 ---
 

@@ -25,7 +25,7 @@ Hubo un giro central. Ricardo pidió profundizar la ficha **antes** del anamú y
 | **FICHA-2** · auditoría y spec | 35 dimensiones contra 7 fuentes: la v0.1 cubría 14, y los 15 vacíos ya estaban resueltos en fuentes de Ricardo. Salieron la v0.2 y luego la v0.3 con activación proporcional. | D-A20 a D-A26 |
 | **Documentación humana** | Se escribieron la plantilla de uso, el primer y el **documento fundacional**, que es hoy canon vigente. | D-A27 a D-A29 |
 | **FICHA-3** · anamú | Se llenó la primera ficha real y se emitió un informe de validación: 5 de 5 criterios cumplidos y 6 aprendizajes candidatos. | — |
-| **Cierre** | Los 10 productos del Protocolo de Cierre del Framework, más el manifest y el ZIP. | — |
+| **Cierre** | Kit de cierre **guardado en el repositorio** y activable por referencia desde el prompt de activación. Sin ZIP: Ricardo declara superado el §4 del protocolo V4.1.1 (D-A30). | D-A30 |
 
 ## 3. Hallazgos principales
 1. **El material de Ricardo ya convergía.** La Ficha de Ingrediente v3 sola cubre 24 de 35 dimensiones. La ficha nueva **ensambla**, no inventa.

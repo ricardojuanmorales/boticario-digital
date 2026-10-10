@@ -19,7 +19,11 @@ LEE PRIMERO (en este orden)
 1. 18_DOCUMENTACION_ACTIVA/Primers_Continuidad/2026-10-10_Primer_Continuidad_Donde_Estamos_Boticario_v1_0.md
 2. 18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md
 3. 02_ARQUITECTURA_CONCEPTUAL/Arquitecturas_Referencia/2026-10-10_Documento_Fundacional_Ficha_de_Saberes_v1_0.md  (canon)
-4. 18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Cierres_Sesion/ (el cierre más reciente)
+4. EL KIT DE CIERRE MÁS RECIENTE, que se activa por referencia (D-A30):
+   - 18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Cierres_Sesion/2026-10-10_Cierre_Sesion_Boticario_v1_0.md
+   - 18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Bitacoras/2026-10-10_Bitacora_Sesion_Ficha_Saberes_Plano_Buen_Vivir_Framework_V5_1_v1_0.md
+   - 18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/2026-10-10_Prompt_Sesion_FICHA_4_Decisiones_y_v1_0_v1_0.md
+   - 00_CONTROL_MAESTRO/Manifiestos/2026-10-10_Manifest_Cierre_Sesion_Boticario_v1_0.json  (huellas SHA-256 del kit)
 
 REGLAS QUE NO SE NEGOCIAN
 - main y el MVP publicado no se tocan sin decisión explícita; se trabaja en rama.
@@ -29,6 +33,7 @@ REGLAS QUE NO SE NEGOCIAN
 - Seguridad con audiencia K-12 (D-A07, riesgo R-01): nada de dosis ni preparaciones en modo escolar.
 - Los documentos se ubican según las reglas canónicas del Framework (00–21 + 99), sin carpetas nuevas sin decisión.
 - Toda decisión se numera D-Axx y se registra antes de ejecutarse.
+- El kit de cierre se guarda en el repo y se activa por referencia; no se generan ZIP (D-A30).
 - Responde en español.
 
 Antes de proponer nada, dime en 3 líneas dónde estamos y qué decisiones están pendientes.

@@ -134,7 +134,7 @@
         "type": "milestone",
         "createdAt": "2026-10-10T01:30:00.000Z",
         "title": "Cierre de sesión 2026-10-09/10",
-        "summary": "Cierre según el Protocolo de Cierre de Sesión del Framework: 10 productos, manifest y paquete ZIP. 18_DOCUMENTACION_ACTIVA/Cierres_Reportes/."
+        "summary": "Kit de cierre guardado en el repositorio y activable por referencia desde el prompt de activación (D-A30); manifest con huellas SHA-256. 18_DOCUMENTACION_ACTIVA/Cierres_Reportes/."
       }
     ],
     "decisions": [
@@ -398,6 +398,15 @@
         "authority": "human",
         "reversible": "yes",
         "createdAt": "2026-10-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A30",
+        "question": "¿Cómo se entrega el kit de cierre de sesión?",
+        "decision": "Se guarda en el repositorio y se activa por referencia desde el prompt de activación; sin ZIP. Supera el §4 del Protocolo de Cierre V4.1.1.",
+        "reason": "El repositorio del proyecto es la fuente versionada de verdad (V5.1). No existe todavía un protocolo de cierre V5 escrito.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-10T12:00:00.000Z"
       }
     ],
     "transfers": [
@@ -435,6 +444,17 @@
         "purpose": "Interoperabilidad del ecosistema del buen vivir.",
         "limits": [
           "Decisión de Ricardo al trabajar esa app"
+        ],
+        "state": "proposed"
+      },
+      {
+        "id": "T-004",
+        "origin": "Boticario Digital 101",
+        "destination": "Framework maestro",
+        "object": "Aprendizaje candidato: Protocolo de Cierre de Sesión V5, con el kit en el repositorio activado por referencia desde el prompt de activación y sin ZIP (D-A30).",
+        "purpose": "Actualizar el protocolo V4.1.1, cuyo §4 ya no refleja la práctica.",
+        "limits": [
+          "Requiere contraste y gate humano en el maestro"
         ],
         "state": "proposed"
       }

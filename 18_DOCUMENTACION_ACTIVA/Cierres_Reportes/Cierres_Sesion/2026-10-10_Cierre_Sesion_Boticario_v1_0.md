@@ -1,6 +1,6 @@
 # Cierre de sesión · Boticario Digital 101 · 2026-10-10
-**Protocolo:** `00_CONTROL_MAESTRO/Protocolos_Cierre_Sesion/2026-05-28_Protocolo_Cierre_Sesion_Framework_Generico_V4_1_1_v0-1.md`
-**Sesión:** 2026-10-09, 20:59, a 2026-10-10, ~01:30 (PR) · **Decisiones registradas:** D-A09 a D-A29 · **Commits:** 11 en `prototipo/framework-v5.1.0`
+**Protocolo:** `00_CONTROL_MAESTRO/Protocolos_Cierre_Sesion/2026-05-28_Protocolo_Cierre_Sesion_Framework_Generico_V4_1_1_v0-1.md`, con el §4 "Entrega estándar" (ZIP) **superado por D-A30**: el kit se guarda en el repositorio y se activa por referencia.
+**Sesión:** 2026-10-09, 20:59, a 2026-10-10, ~01:30 (PR) · **Decisiones registradas:** D-A09 a D-A30 · **Commits:** 11 en `prototipo/framework-v5.1.0`
 
 ## 1. Estado al cerrar
 
@@ -25,7 +25,7 @@
 | `2026-10-09_Ficha_Activacion_Compacta_Boticario_Digital_101_v1_0.md` | Activación | `03_METODOLOGIA_Y_FLUJO_DE_TRABAJO/Ciclo_Vida_Proyectos/` | Nuevo | Guardado |
 | `2026-10-09_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_0.json` y `.zip` | Paquete | `00_CONTROL_MAESTRO/Manifiestos/` | Reemplazado por v1.1 | Conservar (R8) |
 | `2026-10-10_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_1.json` y `.zip` | Paquete | `00_CONTROL_MAESTRO/Manifiestos/` | Nuevo | Guardado · importable en la app |
-| `2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md` | Registro de decisiones | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/` | Actualizar | Actualizado (D-A01 a D-A29) |
+| `2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md` | Registro de decisiones | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/` | Actualizar | Actualizado (D-A01 a D-A30) |
 | `..._Spec_Ficha_Saberes_FICHA_2_v0_1.md` y `v0_2.md` | Spec | `00_CONTROL_MAESTRO/Spec_Driven_Development/` | Reemplazados | Conservar (R8) |
 | `..._Spec_Ficha_Saberes_FICHA_2_v0_3.md` | Spec | `00_CONTROL_MAESTRO/Spec_Driven_Development/` | Nuevo | Guardado · vigente |
 | `2026-10-10_Documento_Fundacional_Ficha_de_Saberes_v1_0.md` | Fundamento (canon) | `02_ARQUITECTURA_CONCEPTUAL/Arquitecturas_Referencia/` | Nuevo | Guardado · canon |
@@ -41,7 +41,7 @@
 | `2026-10-10_Prompt_Sesion_FICHA_4_Decisiones_y_v1_0_v1_0.md` | Prompt de sesión | `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/` | Nuevo | Usar en la próxima sesión |
 | `2026-10-10_WIKI_SYNC_Ficha_Saberes_v1_0.md` | WIKI_SYNC | `18_DOCUMENTACION_ACTIVA/WIKI_SYNC/` | Nuevo | Atender en G11 |
 | `2026-10-10_Manifest_Cierre_Sesion_Boticario_v1_0.json` | Manifest | `00_CONTROL_MAESTRO/Manifiestos/` | Nuevo | Guardado |
-| `2026-10-10_Paquete_Cierre_Sesion_Boticario.zip` | Paquete | `~/boticario-digital-101/Entregas_FICHA-3/` (fuera del repo) | Nuevo | Archivar |
+| *(sin ZIP de entrega)* | — | — | No aplica | El kit vive en el repo y se activa por referencia (D-A30) |
 
 ## 3. Gates (§10 del marco original, leídos con V5.1)
 
@@ -69,6 +69,7 @@
 4. **Revisión de la excepción D-A16**, vencida.
 5. **Reconocer o descartar el candidato caleidoscópico** de la bitácora §5.
 6. **Formato definitivo del identificador de especie**, antes del JSON Schema.
+7. **Protocolo de cierre V5:** escribir la versión que formaliza D-A30 (aprendizaje candidato T-004 para el maestro).
 
 ## 5. Acciones manuales de Ricardo (fuera del alcance de la IA)
 - **Push de la rama** desde VS Code, cuando lo decidas: `git push -u origin prototipo/framework-v5.1.0`. Esto no toca `main`.

@@ -4,7 +4,7 @@ Base: `adbb520` (MVP v0.9.0, igual a `origin/main`). Nada de esto está fusionad
 ## [sin versión] · 2026-10-10 · Cierre de sesión
 ### Añadido
 - Productos de cierre según el Protocolo del Framework: bitácora, compendio, cierre, changelog, prompt de activación, prompt de sesión, WIKI_SYNC y manifest.
-- Expediente portable **v1.1**: 29 decisiones, 10 entradas de portafolio y 3 transferencias (T-002 y T-003 propuestas). Validado por la app del Framework.
+- Expediente portable **v1.1**: 30 decisiones, 10 entradas de portafolio y 4 transferencias (T-002, T-003 y T-004 propuestas). Validado por la app del Framework.
 ### Cambiado
 - Registro de decisiones: el marco rector pasa a V5.1.0; se actualizan los gates G5, G10, G11, G12 y G13, y el avance de R-01.
 - Primer de continuidad al estado final.

@@ -23,7 +23,7 @@ BLOQUES (uno a la vez, con mi confirmación)
    documento fundacional §9. Las versiones anteriores se conservan (R8).
 3. Si decido un segundo caso, llenar la ficha del jengibre (Zingiber officinale) para probar
    E5 nutrición, P2 y P4.
-4. Cerrar con el protocolo de cierre del Framework (10 productos, manifest y ZIP).
+4. Cerrar dejando el kit de cierre en el repositorio, activable por referencia desde el prompt de activación (D-A30). Sin ZIP.
 
 Entregables en .md y .pdf. Commit en la rama prototipo/framework-v5.1.0; nunca en main.
 ```

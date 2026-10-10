@@ -15,7 +15,7 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 | 5 | ✅ **FICHA-2** · Auditoría y ficha | Ficha de Saberes v0.2, y luego v0.3 con activación proporcional | D-A20 a D-A26 |
 | 6 | ✅ **Documentación humana** | El documento fundacional (**canon vigente**), la plantilla de uso y este primer | D-A27 a D-A29 |
 | 7 | ✅ **FICHA-3** · Anamú | La primera ficha real y el informe de validación: la estructura funciona, con 6 aprendizajes | autorización pendiente |
-| 8 | ✅ **Cierre de sesión** (2026-10-10) | Los 10 productos del protocolo del Framework, el manifest y el ZIP | — |
+| 8 | ✅ **Cierre de sesión** (2026-10-10) | Kit de cierre en el repo, activable por referencia desde el prompt de activación (D-A30) | — |
 | 9 | 👉 **PRÓXIMA SESIÓN · FICHA-4** | Decisiones pendientes y Ficha v1.0. Usa el prompt de sesión FICHA-4 | — |
 | 10 | Después | El esquema de datos (JSON Schema, contrato obligatorio por D-A07) y, más tarde, la app | — |
 

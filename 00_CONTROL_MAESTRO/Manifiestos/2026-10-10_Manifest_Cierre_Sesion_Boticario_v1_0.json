@@ -11,8 +11,8 @@
     "maestro_docs_fundamento": "62eb6c8",
     "procedencia": "00_CONTROL_MAESTRO/Control_Versiones/2026-10-09_Procedencia_Instalacion_Framework_V5_1_0_Prototipo_v0_1.md"
   },
-  "decisiones": "D-A09..D-A29",
-  "protocolo": "00_CONTROL_MAESTRO/Protocolos_Cierre_Sesion/2026-05-28_Protocolo_Cierre_Sesion_Framework_Generico_V4_1_1_v0-1.md",
+  "decisiones": "D-A09..D-A30",
+  "protocolo": "00_CONTROL_MAESTRO/Protocolos_Cierre_Sesion/2026-05-28_Protocolo_Cierre_Sesion_Framework_Generico_V4_1_1_v0-1.md (§4 Entrega estándar con ZIP superado por D-A30)",
   "productos": [
     {
       "ruta": "00_CONTROL_MAESTRO/Control_Versiones/2026-10-09_Procedencia_Instalacion_Framework_V5_1_0_Prototipo_v0_1.md",
@@ -35,20 +35,20 @@
     {
       "ruta": "00_CONTROL_MAESTRO/Manifiestos/2026-10-10_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_1.json",
       "tipo": "paquete_portable",
-      "bytes": 22449,
-      "sha256": "d2335aa7c823db5d89c5ff374ae21c0498ee9b27fb683bc037d9a93543bda348"
+      "bytes": 23532,
+      "sha256": "390ae66d1b52fdff64ba698fa0c88a9b4339b2b57fcf3590a956661f768b4c3f"
     },
     {
       "ruta": "00_CONTROL_MAESTRO/Manifiestos/2026-10-10_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_1.zip",
       "tipo": "paquete_portable",
-      "bytes": 13410,
-      "sha256": "8711cc6d5859c4050d8456a66cbf3cac7d4128602a3b8d53a4b2fe6ca8bb2aee"
+      "bytes": 13692,
+      "sha256": "7c2f0b8a5a77df5da79089c4070b926dceb44ccfceba83c0377f0aa76fd5ceb5"
     },
     {
       "ruta": "00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md",
       "tipo": "prompt_activacion",
-      "bytes": 2108,
-      "sha256": "53de31279fe8fd054cff6a0a6f62de78b8607b61195403e27211b10ced25ad9a"
+      "bytes": 2654,
+      "sha256": "e8bfa8659348226a999fd3eef36fe32b320f1efd32238fc3edfaac325ee8cc77"
     },
     {
       "ruta": "00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_1.md",
@@ -113,32 +113,32 @@
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Changelog/2026-10-10_Changelog_Boticario_Prototipo_Framework_Ficha_Saberes_v1_0.md",
       "tipo": "changelog",
-      "bytes": 2406,
-      "sha256": "695d9aba40838be5cabc29e16ab31e2b3cad6c22ef6e96c9fb197bbc3f6e9fdf"
+      "bytes": 2413,
+      "sha256": "a3343942c403f71726e93d4df833445672af7aaa6fb8d2f0b03d79c775e83074"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Bitacoras/2026-10-10_Bitacora_Sesion_Ficha_Saberes_Plano_Buen_Vivir_Framework_V5_1_v1_0.md",
       "tipo": "bitacora",
-      "bytes": 5959,
-      "sha256": "39546fc368f62bbdcca447c3f72bc13987c3f0a9a97194a77c75d28bdfc9204c"
+      "bytes": 6053,
+      "sha256": "4b424987ca5872bd42f5929c1056118303227701ccdbdcab25015afb04bb0e24"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Cierres_Sesion/2026-10-10_Cierre_Sesion_Boticario_v1_0.md",
       "tipo": "cierre",
-      "bytes": 6429,
-      "sha256": "99c42b8ba49789ed83706abbc74e0b75af809730ebbb9caba19a83dc1d9b9d2f"
+      "bytes": 6639,
+      "sha256": "cae4f278436ca5e971d149b2ec8e8c5b542f59f06ba157cdae294756d1080c41"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Compendios/2026-10-10_Compendio_Sesion_Ficha_Saberes_Boticario_v1_0.md",
       "tipo": "compendio",
-      "bytes": 4562,
-      "sha256": "4780dad61328aea5e7b92056cc0990bfef064951ae6f53a10570da7f1d64ab21"
+      "bytes": 4607,
+      "sha256": "cf7e8353e0c82a99c47e7fc4bdab0164fe331e1241de2460931629dec1905259"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Primers_Continuidad/2026-10-10_Primer_Continuidad_Donde_Estamos_Boticario_v1_0.md",
       "tipo": "primer",
-      "bytes": 6613,
-      "sha256": "5ffe1e91b8084e1479bd64766037b94726a90314c3e8b191c4381f5bafa2e76f"
+      "bytes": 6636,
+      "sha256": "7d8a9e8ad32d23ee282f08e240a159931a0f14e641fa5e07f2f1fbf9076a07de"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Prompts_Activacion/2026-10-09_Hoja_Activacion_INTEGRATE_Boticario_borrador_v0_1.md",
@@ -149,14 +149,14 @@
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/2026-10-10_Prompt_Sesion_FICHA_4_Decisiones_y_v1_0_v1_0.md",
       "tipo": "prompt_sesion",
-      "bytes": 1605,
-      "sha256": "d34183ed899b9487e7438c4354ba472bec65b75dfef0df30831f031472242c66"
+      "bytes": 1650,
+      "sha256": "ed05beec41a7a46546ce9fbc9c64e749f20649bf9c388835b55d0b8996825c3a"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md",
       "tipo": "registro_decisiones",
-      "bytes": 18681,
-      "sha256": "3f6b321085abed0437056b510d36bb4eba7fd8b53506772255af3525130c1b44"
+      "bytes": 19974,
+      "sha256": "f5f2ee7cdcef95f133d9c2c059e06936243e856464655a881f33a8289a334311"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/WIKI_SYNC/2026-10-10_WIKI_SYNC_Ficha_Saberes_v1_0.md",
@@ -165,5 +165,11 @@
       "sha256": "fdf96224c904e44ee075b8fac6d7c1aea2c0d2c7a6cb30a6424554cd9d51692e"
     }
   ],
-  "nota": "Los 718 archivos del Framework no se listan aquí; su integridad consta en la procedencia. El manifest no se incluye a sí mismo."
+  "nota": "Los 718 archivos del Framework no se listan aquí; su integridad consta en la procedencia. El manifest no se incluye a sí mismo.",
+  "entrega": {
+    "modo": "kit en el repositorio, activado por referencia",
+    "zip": false,
+    "decision": "D-A30",
+    "activacion": "00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md"
+  }
 }

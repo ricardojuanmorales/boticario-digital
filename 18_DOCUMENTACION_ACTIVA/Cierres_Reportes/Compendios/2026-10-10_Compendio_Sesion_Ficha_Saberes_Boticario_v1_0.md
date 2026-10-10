@@ -29,7 +29,7 @@
 
 | Documento | Ruta |
 |---|---|
-| Registro maestro de decisiones D-A01 a D-A29 | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md` |
+| Registro maestro de decisiones D-A01 a D-A30 | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md` |
 | Primer "dónde estamos" | `18_DOCUMENTACION_ACTIVA/Primers_Continuidad/2026-10-10_Primer_Continuidad_Donde_Estamos_Boticario_v1_0.md` |
 | Bitácora de sesión | `18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Bitacoras/2026-10-10_Bitacora_Sesion_Ficha_Saberes_Plano_Buen_Vivir_Framework_V5_1_v1_0.md` |
 | Este compendio | `18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Compendios/` |
@@ -48,4 +48,4 @@
 | Diagnóstico del anamú (FICHA-B1) | Proyecto: `claude/FICHA-B1_Diagnostico_Anamu.md` |
 | Copias de los documentos clave | Proyecto `boticario-digital-101`, carpeta `claude/` |
 | PDF para evaluar | `~/boticario-digital-101/Entregas_FICHA-3/` |
-| Paquete ZIP de cierre | `~/boticario-digital-101/Entregas_FICHA-3/2026-10-10_Paquete_Cierre_Sesion_Boticario.zip` |
+| Activación del kit | por referencia desde `00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md` (D-A30), sin ZIP |
