@@ -1,0 +1,187 @@
+{
+  "manifest": "cierre_sesion",
+  "proyecto": "Boticario Digital 101",
+  "sesion": "2026-10-09T20:59-04:00/2026-10-10T01:35-04:00",
+  "rama": "prototipo/framework-v5.1.0",
+  "base": "adbb520",
+  "framework": {
+    "version": "5.1.0",
+    "release_zip_sha256": "96e09accaa46b4393e0dbb866b810509531eb1fab82668143f320f2e18be3193",
+    "archivos": 718,
+    "maestro_docs_fundamento": "62eb6c8",
+    "procedencia": "00_CONTROL_MAESTRO/Control_Versiones/2026-10-09_Procedencia_Instalacion_Framework_V5_1_0_Prototipo_v0_1.md"
+  },
+  "decisiones": "D-A09..D-A32",
+  "protocolo": "00_CONTROL_MAESTRO/Protocolos_Cierre_Sesion/2026-05-28_Protocolo_Cierre_Sesion_Framework_Generico_V4_1_1_v0-1.md (§4 Entrega estándar con ZIP superado por D-A30)",
+  "productos": [
+    {
+      "ruta": "00_CONTROL_MAESTRO/Control_Versiones/2026-10-09_Procedencia_Instalacion_Framework_V5_1_0_Prototipo_v0_1.md",
+      "tipo": "procedencia",
+      "bytes": 3584,
+      "sha256": "719b90d97def14931c0d382c416ea34a120a1d1e2184877488f37e748a8e67f9"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Manifiestos/2026-10-09_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_0.json",
+      "tipo": "paquete_portable",
+      "bytes": 15359,
+      "sha256": "d62b5fc04cdc3759a0a298ae00ecf06a42c22e25fb641706fe6e8ee7da626d41"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Manifiestos/2026-10-09_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_0.zip",
+      "tipo": "paquete_portable",
+      "bytes": 11401,
+      "sha256": "c7373dfcecf303827a095304a5fd436c4b6b2499111b96a75f946092ac089538"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Manifiestos/2026-10-10_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_1.json",
+      "tipo": "paquete_portable",
+      "bytes": 23532,
+      "sha256": "390ae66d1b52fdff64ba698fa0c88a9b4339b2b57fcf3590a956661f768b4c3f"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Manifiestos/2026-10-10_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_1.zip",
+      "tipo": "paquete_portable",
+      "bytes": 13692,
+      "sha256": "7c2f0b8a5a77df5da79089c4070b926dceb44ccfceba83c0377f0aa76fd5ceb5"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md",
+      "tipo": "prompt_activacion",
+      "bytes": 2781,
+      "sha256": "a81bfd9ba3c9bbf31e843858d8dab2a93012f06f3dbf6180ab9853a1a8e9f873"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_1.md",
+      "tipo": "spec",
+      "bytes": 16362,
+      "sha256": "62e0e13a54e817f80375bfada7a3d65e129f1c1c837a652c59f91d949f0558bd"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_2.md",
+      "tipo": "spec",
+      "bytes": 19960,
+      "sha256": "8e877f816bf6916eaedcb6a2e28d20634053ee5870ced59cbf009eeb89912b6e"
+    },
+    {
+      "ruta": "00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_3.md",
+      "tipo": "spec",
+      "bytes": 25572,
+      "sha256": "ad9cbf1f0042ed88c3b89926e38429053dc465614ee8b78d4bb2e56f5a94a4ff"
+    },
+    {
+      "ruta": "02_ARQUITECTURA_CONCEPTUAL/Arquitecturas_Referencia/2026-10-10_Documento_Fundacional_Ficha_de_Saberes_v1_0.md",
+      "tipo": "fundamento_canon",
+      "bytes": 14382,
+      "sha256": "dbf6fce766f8669629a06b177a484328765dfefab4a84d8c3b6090a4e65c27c6"
+    },
+    {
+      "ruta": "03_METODOLOGIA_Y_FLUJO_DE_TRABAJO/Ciclo_Vida_Proyectos/2026-10-09_Ficha_Activacion_Compacta_Boticario_Digital_101_v1_0.md",
+      "tipo": "activacion",
+      "bytes": 4525,
+      "sha256": "ca13f47e7ba9939d0ef50d95ce6187c74dac707e9865a690e345ab75be7f3902"
+    },
+    {
+      "ruta": "04_GOBERNANZA_ETICA_Y_RIESGOS/Registro_Excepciones/2026-10-09_Excepcion_Copia_Completa_Framework_V5_1_0_Boticario_v0_1.md",
+      "tipo": "excepcion",
+      "bytes": 4654,
+      "sha256": "d03a8f1dd8aa4544df84a474eef2e39e191fa7331306dfae2dd3f8a43fddfbf7"
+    },
+    {
+      "ruta": "07_PLANTILLAS_Y_MODELOS/Plantillas_Documentos/2026-10-10_Plantilla_Ficha_de_Saberes_v0_3.md",
+      "tipo": "plantilla",
+      "bytes": 12204,
+      "sha256": "10c6d3dc26da8d36e4637f9c109722ac2a374b55541c2cff5301a07bd151014a"
+    },
+    {
+      "ruta": "10_REPOSITORIOS_Y_FLUJO_TECNICO/CI_CD/Workflows_Framework_V5_1_0_Inactivos/README.md",
+      "tipo": "tecnico",
+      "bytes": 954,
+      "sha256": "7dfa9c4017a4c725fd87e5b9ac7e3e7fa0d941f005189581c00ba82b448f9e62"
+    },
+    {
+      "ruta": "13_INVESTIGACION_Y_EVIDENCIA/Sintesis_Evidencia/2026-10-10_Ficha_Saberes_Petiveria_alliacea_Anamu_v0_1.md",
+      "tipo": "ficha_especie",
+      "bytes": 21972,
+      "sha256": "235aeda88eff2f7f885e932382882b426daa905f16da1b7598fbd12ede041734"
+    },
+    {
+      "ruta": "15_EVALUACION_CALIDAD_Y_AUDITORIA/Evidencias_Validacion/2026-10-10_Informe_Validacion_FICHA_3_Anamu_v0_1.md",
+      "tipo": "informe_validacion",
+      "bytes": 4963,
+      "sha256": "0ae0efaec81e139f44c3d76cee98d9abc262b4ee93fd8aa88aabcd30bc40843f"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Changelog/2026-10-10_Changelog_Boticario_Prototipo_Framework_Ficha_Saberes_v1_0.md",
+      "tipo": "changelog",
+      "bytes": 2987,
+      "sha256": "4624e1a015c492c82503dd791b02f117023fd692da04f499d18388db8a0ebd4f"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Bitacoras/2026-10-10_Bitacora_Sesion_Ficha_Saberes_Plano_Buen_Vivir_Framework_V5_1_v1_0.md",
+      "tipo": "bitacora",
+      "bytes": 6053,
+      "sha256": "4b424987ca5872bd42f5929c1056118303227701ccdbdcab25015afb04bb0e24"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Cierres_Sesion/2026-10-10_Cierre_Sesion_Boticario_v1_0.md",
+      "tipo": "cierre",
+      "bytes": 6803,
+      "sha256": "d79bccab81f9b919f25fc4c613f071c033cf519ba4cf773e0f16d603c859898a"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Compendios/2026-10-10_Compendio_Sesion_Ficha_Saberes_Boticario_v1_0.md",
+      "tipo": "compendio",
+      "bytes": 4662,
+      "sha256": "bff6d3408a9434dec0b5869dc42901566c609f88ae358d6713ba9a41604e9e50"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Primers_Continuidad/2026-10-10_Primer_Continuidad_Donde_Estamos_Boticario_v1_0.md",
+      "tipo": "primer",
+      "bytes": 6977,
+      "sha256": "9a2fc577d5b73f8703dde8b5f76ebca7eef7f156cf02c09d033af73d714fbef9"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Prompts_Activacion/2026-10-09_Hoja_Activacion_INTEGRATE_Boticario_borrador_v0_1.md",
+      "tipo": "prompt_activacion",
+      "bytes": 2911,
+      "sha256": "67f7579a9037137529c089f60acb64195d59316d3562df8c0070fb57d598fc11"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/2026-10-10_Prompt_Sesion_FICHA_4_Decisiones_y_v1_0_v1_0.md",
+      "tipo": "prompt_sesion",
+      "bytes": 1705,
+      "sha256": "afd5b02667709f8d62b5e5929174700ea14ca4560f6fb1076f5aceaba4d239d0"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md",
+      "tipo": "registro_decisiones",
+      "bytes": 22040,
+      "sha256": "57a55d403b661e2b21f7f0f723475f629cc7f50fab1cd61a8f66bee8dac5cb39"
+    },
+    {
+      "ruta": "18_DOCUMENTACION_ACTIVA/WIKI_SYNC/2026-10-10_WIKI_SYNC_Ficha_Saberes_v1_0.md",
+      "tipo": "wiki_sync",
+      "bytes": 1748,
+      "sha256": "fdf96224c904e44ee075b8fac6d7c1aea2c0d2c7a6cb30a6424554cd9d51692e"
+    },
+    {
+      "ruta": "README.md",
+      "tipo": "portada",
+      "sha256": "6b63af74356fe9a2b3b708b23d4e0cb0a3fb7423679902d890c1b544fcf99737",
+      "bytes": 15647
+    }
+  ],
+  "nota": "Los 718 archivos del Framework no se listan aquí; su integridad consta en la procedencia. El manifest no se incluye a sí mismo.",
+  "entrega": {
+    "modo": "kit en el repositorio, activado por referencia",
+    "zip": false,
+    "decision": "D-A30",
+    "activacion": "00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md"
+  },
+  "integracion": {
+    "decision": "D-A32",
+    "etiqueta_mvp": "v0.9.0-mvp-historico",
+    "base": "adbb520",
+    "modo": "merge --no-ff en main; archivos del MVP sin cambios"
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "packageType": "framework_project",
+  "packageVersion": "0.1.0",
+  "exportedAt": "2026-10-09T23:30:00.000Z",
+  "project": {
+    "schemaVersion": "0.1.0",
+    "id": "boticario-digital-101",
+    "name": "Boticario Digital 101",
+    "mode": "INTEGRATE",
+    "status": "active",
+    "frameworkVersion": "5.1.0",
+    "createdAt": "2026-10-09T23:30:00.000Z",
+    "updatedAt": "2026-10-09T23:30:00.000Z",
+    "state": {
+      "problem": "En Puerto Rico, quienes consultan plantas medicinales, incluidas personas menores de edad, encuentran información dispersa y sin fuentes trazables. Esa información no distingue entre uso tradicional, evidencia experimental y evidencia clínica. El MVP del Boticario reproduce parte de ese problema: da dosis numéricas sin respaldo clínico, cita fuentes comerciales y atribuye saberes culturales sin documentarlos.",
+      "context": "Parte del inventario académico CIFI 4996 (UPR, 2022), con 101 plantas medicinales de Puerto Rico. El MVP está publicado en GitHub Pages y en uso: debe seguir accesible. Está vinculado al curso ESGE 4995. La audiencia incluye K-12 y colaboradores externos, y la comunidad de práctica es puertorriqueña. Es una isla del ecosistema del buen vivir, junto a Recetario, Yocahú, Wellbe, Índice y Tablero. Referencia de calidad: AI StoryLab 1 v1.0.0.",
+      "purpose": "Convertir el Boticario en un nodo de saberes del buen vivir, con fichas estandarizadas y transdisciplinarias que escuchen cada tradición en sus propios términos. Cada afirmación debe tener evidencia trazable, la seguridad debe ajustarse a la audiencia, y cada persona debe tener un portafolio propio que pueda interoperar con las demás apps del ecosistema.",
+      "activeProfiles": [
+        "PH",
+        "IT",
+        "AT"
+      ],
+      "latentProfiles": [],
+      "projectLevel": "N3",
+      "autonomyLevel": "N3",
+      "methodsInvoked": [
+        "Spec-Driven Development (modelo AI StoryLab 1)",
+        "Diálogo de saberes e investigación participativa revalorizadora",
+        "Transdisciplinariedad en cuatro niveles (Max-Neef)",
+        "Escala de evidencia T/E/H",
+        "Pluralismo sin equivalencia"
+      ],
+      "knowledgeInvoked": [
+        "Arquitectura Conceptual Integrada del Framework v1.0 (2026-10-08)",
+        "Repositorio Epistemológico Fundacional v1.0 (2026-10-08)",
+        "Delgado y Rist (2016), Ciencias, diálogo de saberes y transdisciplinariedad",
+        "Ficha de ingrediente natural v3; Ficha técnica de receta holística; Plantilla de proyectos agroecológicos",
+        "Inventario CIFI 4996 (2022)"
+      ],
+      "risks": [
+        "R-01 CRÍTICO: menores frente a contenido sanitario de alto riesgo (dosis y preparaciones).",
+        "D-05: superficie XSS por innerHTML en el MVP.",
+        "Atribución cultural y custodios sin consentimiento documentado.",
+        "Identidad documental: los cartapacios mezclan documentos del Framework maestro y del Boticario.",
+        "Romper el MVP publicado durante la transición."
+      ],
+      "gates": [
+        "G7 Ética y derechos: R-01, custodia y licencia",
+        "G9 Calidad: XSS, JSON Schema y monolito",
+        "Gate constitucional de preimplementación (modelo AI StoryLab 1)",
+        "Gate de publicación con autorización humana separada"
+      ],
+      "nextStep": "Plano del Buen Vivir · FICHA-2: auditar la ficha estándar por triangulación de fuentes y proponer la ficha v0.2 como spec de objeto de dominio, para validarla después con el caso del anamú.",
+      "source": {
+        "description": "MVP v0.9.0 de una sola página (index.html con plantas.json), publicado y en uso. Debe preservarse accesible y luego archivarse como MVP histórico disponible (D-A01, D-A03). Registro de decisiones D-A01 a D-A15 en el Proyecto boticario-digital-101.",
+        "repositoryUrl": "https://github.com/ricardojuanmorales/boticario-digital",
+        "existingArtifacts": [
+          "index.html",
+          "Boticario_Digital_MVP_HTML_Full.html",
+          "plantas.json",
+          "boticario_101_plantas_completo.json",
+          "DOCUMENTACION.md",
+          "README.md"
+        ],
+        "preservationRule": "preserve_source"
+      }
+    },
+    "portfolio": [
+      {
+        "id": "P-001",
+        "type": "evidence",
+        "createdAt": "2026-10-09T21:30:00.000Z",
+        "title": "FICHA-B1 · Diagnóstico comparado del anamú",
+        "summary": "Comparación entre el registro del MVP y la ficha actualizada con evidencia clínica. Se verificaron 13 referencias y se identificaron 11 problemas en el repositorio. Proyecto: claude/FICHA-B1_Diagnostico_Anamu.md."
+      },
+      {
+        "id": "P-002",
+        "type": "artifact",
+        "createdAt": "2026-10-09T22:30:00.000Z",
+        "title": "Plano del Buen Vivir v0.1",
+        "summary": "Plano conceptual del ecosistema: cinco preguntas, archipiélago, ficha en cuatro niveles de Max-Neef, voces de tradición, hallazgos y posibilidades. Proyecto: claude/FICHA-B1.5_Plano_Conceptual_Buen_Vivir.md."
+      },
+      {
+        "id": "P-003",
+        "type": "milestone",
+        "createdAt": "2026-10-09T23:00:00.000Z",
+        "title": "Framework V5.1.0 instalado como prototipo",
+        "summary": "Rama prototipo/framework-v5.1.0. 718 archivos idénticos al release, más 3 documentos de fundamento del 8 de octubre. Nada del MVP se sobrescribió. La app del Framework pasó su verificación: 28/28 pruebas y auditorías en verde."
+      },
+      {
+        "id": "P-004",
+        "type": "milestone",
+        "createdAt": "2026-10-09T23:55:00.000Z",
+        "title": "Activación INTEGRATE autorizada (Paso 4 cerrado)",
+        "summary": "Ficha compacta del Contrato de Activación V5 aprobada por Ricardo (D-A19). El expediente se produjo en diálogo humano–IA, sin usar la app, y la app lo valida y lo reimporta sin pérdida."
+      }
+    ],
+    "decisions": [
+      {
+        "id": "D-A01",
+        "question": "¿En qué repositorio ocurre la refactorización?",
+        "decision": "En el repositorio existente github.com/ricardojuanmorales/boticario-digital.",
+        "reason": "Preserva la historia, la URL publicada y los enlaces externos. El MVP se preserva con tag, archivo histórico y ruta pública de legado.",
+        "authority": "human",
+        "reversible": "partial",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A02",
+        "question": "¿Cuál es el alcance de la v1.0?",
+        "decision": "Ruta completa: catálogo auditado más pedagogía lúdica (misiones, herbario personal y portafolio con export/import).",
+        "reason": "Une contenido confiable y experiencia de aprendizaje. El portafolio se reencuadra con D-A15.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A03",
+        "question": "¿Cómo se numeran las versiones?",
+        "decision": "El MVP se congela como v0.9.0-mvp-historico; la ruta SDD abre en v0.4.0 hasta v1.0.0, con los nombres de fase de AI StoryLab 1.",
+        "reason": "Simetría con el arquetipo validado.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A04",
+        "question": "¿Qué ritmo de trabajo seguimos?",
+        "decision": "Avance por bloques sin fecha fija; cada bloque abre cuando el anterior cierra con decisión humana registrada.",
+        "reason": "Carga cognitiva baja y control humano.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A05",
+        "question": "¿Qué nivel de activación tiene el proyecto?",
+        "decision": "N3 avanzado, con ruta declarada a N4.",
+        "reason": "Tomada con el Framework V4.1. En V5.1, N1–N4 mide madurez operacional situada: requiere relectura.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A06",
+        "question": "¿Qué modo de Caleidoscopio se declara?",
+        "decision": "C4 base con C5 (pedagógico) y C6 (comunitario) concurrentes.",
+        "reason": "Tomada con el Framework V4.1. En V5.1 el Caleidoscopio es una propiedad emergente que se reconoce, no un modo que se declara: requiere relectura.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A07",
+        "question": "¿Quién es la audiencia?",
+        "decision": "Incluye menores (K-12) y se esperan colaboradores externos vía PR.",
+        "reason": "Eleva el JSON Schema a contrato obligatorio, activa revisión humana de datos de plantas y abre el riesgo R-01.",
+        "authority": "human",
+        "reversible": "no",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A08",
+        "question": "¿Para quién se escribe la continuidad?",
+        "decision": "Para un colega docente sin contexto previo.",
+        "reason": "Hace obligatoria la wiki humana (21) y la transferibilidad como arquetipo.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-09-10T12:00:00.000Z"
+      },
+      {
+        "id": "D-A09",
+        "question": "¿Qué hacemos con dosis sin respaldo clínico?",
+        "decision": "Se conservan rotuladas como tradicionales y no validadas, con fuente, solo para adultos; se ocultan en modo escolar.",
+        "reason": "Respeta la tradición sin convertirla en promesa clínica; avanza R-01.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A10",
+        "question": "¿Cómo se trata la seguridad más severa que la evidencia?",
+        "decision": "Se conserva la severidad y se añade el campo de certeza: documentada o precautoria por falta de datos.",
+        "reason": "Ninguna advertencia se debilita y cada una declara su base.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A11",
+        "question": "¿Se aceptan ilustraciones generadas con IA?",
+        "decision": "Sí, con rótulo obligatorio de herramienta y aviso de que no sustituyen la identificación botánica.",
+        "reason": "Valor pedagógico con transparencia; la licencia queda pendiente con D-08.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A12",
+        "question": "¿Qué rol tiene Guersom J. Báez Fonseca en la ficha del anamú?",
+        "decision": "Revisor/a de la evidencia.",
+        "reason": "Pendiente de contraste: la Ficha de ingrediente v3 lo nombra coautor.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A13",
+        "question": "¿Qué arquitectura de datos tiene el ecosistema?",
+        "decision": "Todas las aplicaciones serán local-first.",
+        "reason": "Privacidad por defecto, autonomía y audiencia K-12.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A14",
+        "question": "¿Cómo se integra el Framework?",
+        "decision": "Cada repositorio integra el Framework V5.1 dentro de sí, como lenguaje común y estructura de trabajo.",
+        "reason": "Prepara la integración posterior del ecosistema del buen vivir.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A15",
+        "question": "¿Cuál es la fuente de trabajo y cómo son los portafolios?",
+        "decision": "La app del Framework, adaptada por las personas usuarias; cada repositorio da un portafolio del tema, interoperable en el futuro.",
+        "reason": "El esquema de portafolio del Framework es el candidato a contrato común.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A16",
+        "question": "¿Qué forma toma el Framework dentro del repositorio del Boticario?",
+        "decision": "Copia completa del Framework V5.1.0, con excepción registrada en 04_GOBERNANZA_ETICA_Y_RIESGOS/Registro_Excepciones.",
+        "reason": "Lenguaje común y estructura sólida para la integración posterior (D-A14). Exceptúa el antipatrón de copiar 00–21 y la materialización proporcional. Se revisa al cerrar FICHA-2 o antes de fusionar a main.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A17",
+        "question": "¿Cómo se relee D-A06 (Caleidoscopio C4+C5+C6) con la V5.1?",
+        "decision": "Reemplaza a D-A06: PH, IT y AT activos; lo pedagógico (antes C5) y lo comunitario (antes C6) se conservan como focos de gobierno; el Caleidoscopio se registra como evento cuando el contraste entre lentes produzca algo nuevo.",
+        "reason": "En V5.1 el Caleidoscopio es una propiedad emergente que se reconoce, no un modo que se declara. La intención de D-A06 se conserva.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A18",
+        "question": "¿Qué niveles N1–N4 tienen el producto esperado y la autonomía?",
+        "decision": "Producto esperado v1.0: N3, con ruta declarada a N4. Autonomía: N3.",
+        "reason": "Autonomía significativa con revisión humana en lo material. Confirma D-A05 en el lenguaje de la V5.1 (madurez operacional situada).",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      },
+      {
+        "id": "D-A19",
+        "question": "¿Se autoriza la activación del Boticario según la ficha compacta?",
+        "decision": "Sí. Se aprueban tal cual el modo INTEGRATE y las redacciones de problema, contexto, propósito, métodos, conocimiento, riesgos y gates.",
+        "reason": "Cierra el Paso 4 conforme al Contrato de Activación V5 (§8). El expediente queda guardado en el repositorio.",
+        "authority": "human",
+        "reversible": "yes",
+        "createdAt": "2026-10-09T12:00:00.000Z"
+      }
+    ],
+    "transfers": [
+      {
+        "id": "T-001",
+        "origin": "Framework maestro (framework-proyecto-generico-ia-1, commit 62eb6c8)",
+        "destination": "Boticario Digital 101 (rama prototipo/framework-v5.1.0)",
+        "object": "Release V5.1.0 completo, más Arquitectura Conceptual Integrada, Repositorio Epistemológico Fundacional y bitácora de cierre V5.1.0.",
+        "purpose": "Dar al Boticario el lenguaje común y la estructura de trabajo del ecosistema (D-A14).",
+        "limits": [
+          "No sobrescribe archivos del MVP",
+          "Workflows del Framework inactivos",
+          "Prototipo: no fusionado a main",
+          "Copia completa bajo excepción registrada (D-A16)"
+        ],
+        "state": "completed"
+      }
+    ],
+    "knowledgeInvocations": [],
+    "caleidoscopeEvents": []
+  }
+}
