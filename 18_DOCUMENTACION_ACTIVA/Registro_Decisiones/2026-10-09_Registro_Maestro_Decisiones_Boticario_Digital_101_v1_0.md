@@ -4,7 +4,7 @@
 **Marco rector:** Framework Genérico **V5.1.0** (D-A14). El registro nació bajo V4.1.0; D-A05 y D-A06 se releyeron con V5.1 (D-A17, D-A18).
 **Arquetipo de referencia:** AI StoryLab 1 v1.0.0
 **Estado:** activo
-**Nota de formato:** D-A06 queda reemplazada por D-A17 y D-A12 por D-A28. Las decisiones D-A01 a D-A30 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
+**Nota de formato:** D-A06 queda reemplazada por D-A17 y D-A12 por D-A28. Las decisiones D-A01 a D-A32 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
 
 ---
 
@@ -123,7 +123,7 @@
 **Consecuencias:**
 - Exceptúa el antipatrón "copiar 00–21 dentro de cada proyecto" y la regla de materialización proporcional.
 - El maestro sigue siendo la fuente canónica; las copias se declaran espejo físico.
-- Se revisa al cerrar FICHA-2 o antes de fusionar a `main`.
+- Se revisa al cerrar FICHA-2 o antes de fusionar a `main`. **Revisada el 2026-10-10: se mantiene (D-A31).**
 - Es reversible a una capa mínima canónica en un solo commit.
 - Abre un aprendizaje candidato para el maestro: qué significa "integrar dentro de sí".
 
@@ -221,6 +221,28 @@
 - Se abre la transferencia candidata **T-004** al maestro: escribir el Protocolo de Cierre V5.
 - El ZIP generado por error en esta sesión (`~/boticario-digital-101/Entregas_FICHA-3/2026-10-10_Paquete_Cierre_Sesion_Boticario.zip`) queda fuera del repositorio y puede borrarse.
 
+### D-A31 · Revisión de la excepción D-A16: se mantiene la copia completa
+**Fecha:** 2026-10-10
+**Decisión:** se **mantiene** la copia completa del Framework V5.1.0. La revisión pendiente queda cerrada.
+**Evidencia de la revisión** (preguntas del §5 de la excepción):
+- ¿Se usó el lenguaje común del Framework? **Sí:** el trabajo del Boticario se ubicó en los cartapacios 00, 02, 03, 04, 07, 13, 15 y 18, y usó gates, niveles N1–N4 y lentes.
+- ¿La copia generó confusión de identidad o de rutas? **Menor**, toda de la IA y corregida en la misma sesión (propuesta de prefijo `BD101_`, subcarpeta creada sin decisión).
+- ¿Hubo divergencia con el maestro? **No:** ningún archivo del release se editó después de la instalación (`14534b9`).
+**Consecuencias:** la copia completa entra a `main` con la integración (D-A32). La excepción sigue vigente y su aprendizaje candidato para el maestro se mantiene.
+
+### D-A32 · Integración de la rama del prototipo en `main`
+**Fecha:** 2026-10-10
+**Decisión:** se integra `prototipo/framework-v5.1.0` en `main` ahora, **conservando los archivos del MVP en su lugar** para que la app publicada siga funcionando.
+**Cómo se hizo:**
+- Antes de fusionar se crea la etiqueta `v0.9.0-mvp-historico` sobre `adbb520` (D-A01, D-A03).
+- Fusión `--no-ff`, para que la integración quede como un solo evento trazable.
+- La rama solo cambia un archivo del MVP: `README.md`. `index.html`, `plantas.json` y los demás archivos de la app no cambian.
+- Verificaciones previas: no hay workflows activos, ningún archivo pasa de 20 MB, y no hay sintaxis Liquid ni front matter inválido que rompa la publicación en GitHub Pages.
+**Consecuencias:**
+- `main` publica el Boticario en GitHub Pages y ahora contiene también el Framework y la Ficha de Saberes.
+- El trabajo sigue en ramas; integrar a `main` requiere autorización explícita de Ricardo.
+- Quedan pendientes de D-A01 la copia en `99_ARCHIVO_HISTORICO/MVP_2026_05/` y la ruta pública `/legado/`.
+
 ---
 
 ## Riesgos abiertos
@@ -267,7 +289,7 @@
 | G9 Calidad | 🔴 | **Sí — XSS, schema, monolito** |
 | G10 Documentación | 🟢 cierre de sesión completo (2026-10-10) | |
 | G11 Wiki / transferencia | 🟡 documento fundacional, plantilla y primer humanos; wiki 21 pendiente (ver WIKI_SYNC) | |
-| G12 Archivo | 🟡 decidido, no ejecutado (tag del MVP y `/legado/` pendientes) | |
+| G12 Archivo | 🟡 etiqueta `v0.9.0-mvp-historico` creada (D-A32); copia en 99 y `/legado/` pendientes | |
 | G13 Continuidad | 🟢 primer, prompts de activación y de sesión, y cierre (2026-10-10) | |
 | G14 Estabilización | 🔴 destino de la ruta | |
 
@@ -275,4 +297,4 @@
 
 *Registro abierto en el Bloque 1. Toda decisión posterior se numera D-Axx y se registra aquí antes de ejecutarse.*
 
-**Pendientes al cierre del 2026-10-10:** autorizar la activación del anamú (D-A25) · aprendizajes A1–A6 · ¿ficha v1.0? · revisión de la excepción D-A16 (vencida) · formato definitivo del identificador de especie.
+**Pendientes al cierre del 2026-10-10:** autorizar la activación del anamú (D-A25) · aprendizajes A1–A6 · ¿ficha v1.0? · formato definitivo del identificador de especie · Protocolo de Cierre V5 (T-004).

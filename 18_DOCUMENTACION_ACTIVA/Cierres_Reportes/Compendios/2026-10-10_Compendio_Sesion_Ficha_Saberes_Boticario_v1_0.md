@@ -1,5 +1,5 @@
 # Compendio de sesión · 2026-10-09/10 · Boticario Digital 101
-Índice de todo lo producido en la sesión, ordenado por función. Las rutas son relativas al repositorio `boticario-digital`, rama `prototipo/framework-v5.1.0`.
+Índice de todo lo producido en la sesión, ordenado por función. Las rutas son relativas al repositorio `boticario-digital`, rama `prototipo/framework-v5.1.0`, integrada en `main` (D-A32).
 
 ## A. Ficha de Saberes (núcleo de la sesión)
 
@@ -16,9 +16,9 @@
 
 | Documento | Ruta | Estado |
 |---|---|---|
-| Release V5.1.0 (718 archivos) más 3 documentos de fundamento del 8 de octubre | raíz, 00–21 + 99, `apps/`, `legacy/` | instalado (D-A16) |
+| Release V5.1.0 (718 archivos) más 3 documentos de fundamento del 8 de octubre | raíz, 00–21 + 99, `apps/`, `legacy/` | instalado (D-A16), mantenido (D-A31) |
 | Procedencia de la instalación | `00_CONTROL_MAESTRO/Control_Versiones/2026-10-09_Procedencia_Instalacion_Framework_V5_1_0_Prototipo_v0_1.md` | vigente |
-| Excepción por copia completa | `04_GOBERNANZA_ETICA_Y_RIESGOS/Registro_Excepciones/2026-10-09_Excepcion_Copia_Completa_Framework_V5_1_0_Boticario_v0_1.md` | aprobada; **revisión vencida** |
+| Excepción por copia completa | `04_GOBERNANZA_ETICA_Y_RIESGOS/Registro_Excepciones/2026-10-09_Excepcion_Copia_Completa_Framework_V5_1_0_Boticario_v0_1.md` | aprobada; revisada y mantenida (D-A31) |
 | Workflows del Framework, inactivos | `10_REPOSITORIOS_Y_FLUJO_TECNICO/CI_CD/Workflows_Framework_V5_1_0_Inactivos/` | inactivos |
 | Ficha compacta de activación v1.0 | `03_METODOLOGIA_Y_FLUJO_DE_TRABAJO/Ciclo_Vida_Proyectos/2026-10-09_Ficha_Activacion_Compacta_Boticario_Digital_101_v1_0.md` | autorizada (D-A19) |
 | Expediente portable v1.0 | `00_CONTROL_MAESTRO/Manifiestos/2026-10-09_Paquete_Proyecto_Framework_Boticario_Digital_101_v1_0.json` y `.zip` | reemplazado por v1.1 |
@@ -29,7 +29,7 @@
 
 | Documento | Ruta |
 |---|---|
-| Registro maestro de decisiones D-A01 a D-A30 | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md` |
+| Registro maestro de decisiones D-A01 a D-A32 | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md` |
 | Primer "dónde estamos" | `18_DOCUMENTACION_ACTIVA/Primers_Continuidad/2026-10-10_Primer_Continuidad_Donde_Estamos_Boticario_v1_0.md` |
 | Bitácora de sesión | `18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Bitacoras/2026-10-10_Bitacora_Sesion_Ficha_Saberes_Plano_Buen_Vivir_Framework_V5_1_v1_0.md` |
 | Este compendio | `18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Compendios/` |

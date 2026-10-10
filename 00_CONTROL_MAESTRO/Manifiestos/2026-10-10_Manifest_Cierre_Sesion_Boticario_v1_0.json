@@ -11,7 +11,7 @@
     "maestro_docs_fundamento": "62eb6c8",
     "procedencia": "00_CONTROL_MAESTRO/Control_Versiones/2026-10-09_Procedencia_Instalacion_Framework_V5_1_0_Prototipo_v0_1.md"
   },
-  "decisiones": "D-A09..D-A30",
+  "decisiones": "D-A09..D-A32",
   "protocolo": "00_CONTROL_MAESTRO/Protocolos_Cierre_Sesion/2026-05-28_Protocolo_Cierre_Sesion_Framework_Generico_V4_1_1_v0-1.md (§4 Entrega estándar con ZIP superado por D-A30)",
   "productos": [
     {
@@ -47,8 +47,8 @@
     {
       "ruta": "00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md",
       "tipo": "prompt_activacion",
-      "bytes": 2654,
-      "sha256": "e8bfa8659348226a999fd3eef36fe32b320f1efd32238fc3edfaac325ee8cc77"
+      "bytes": 2781,
+      "sha256": "a81bfd9ba3c9bbf31e843858d8dab2a93012f06f3dbf6180ab9853a1a8e9f873"
     },
     {
       "ruta": "00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_1.md",
@@ -83,8 +83,8 @@
     {
       "ruta": "04_GOBERNANZA_ETICA_Y_RIESGOS/Registro_Excepciones/2026-10-09_Excepcion_Copia_Completa_Framework_V5_1_0_Boticario_v0_1.md",
       "tipo": "excepcion",
-      "bytes": 3930,
-      "sha256": "f226f59ffa954372c9716ca7b87a5738140772106b6ab063e14e41633dcc1e69"
+      "bytes": 4654,
+      "sha256": "d03a8f1dd8aa4544df84a474eef2e39e191fa7331306dfae2dd3f8a43fddfbf7"
     },
     {
       "ruta": "07_PLANTILLAS_Y_MODELOS/Plantillas_Documentos/2026-10-10_Plantilla_Ficha_de_Saberes_v0_3.md",
@@ -113,8 +113,8 @@
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Changelog/2026-10-10_Changelog_Boticario_Prototipo_Framework_Ficha_Saberes_v1_0.md",
       "tipo": "changelog",
-      "bytes": 2413,
-      "sha256": "a3343942c403f71726e93d4df833445672af7aaa6fb8d2f0b03d79c775e83074"
+      "bytes": 2987,
+      "sha256": "4624e1a015c492c82503dd791b02f117023fd692da04f499d18388db8a0ebd4f"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Bitacoras/2026-10-10_Bitacora_Sesion_Ficha_Saberes_Plano_Buen_Vivir_Framework_V5_1_v1_0.md",
@@ -125,20 +125,20 @@
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Cierres_Sesion/2026-10-10_Cierre_Sesion_Boticario_v1_0.md",
       "tipo": "cierre",
-      "bytes": 6639,
-      "sha256": "cae4f278436ca5e971d149b2ec8e8c5b542f59f06ba157cdae294756d1080c41"
+      "bytes": 6803,
+      "sha256": "d79bccab81f9b919f25fc4c613f071c033cf519ba4cf773e0f16d603c859898a"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Compendios/2026-10-10_Compendio_Sesion_Ficha_Saberes_Boticario_v1_0.md",
       "tipo": "compendio",
-      "bytes": 4607,
-      "sha256": "cf7e8353e0c82a99c47e7fc4bdab0164fe331e1241de2460931629dec1905259"
+      "bytes": 4662,
+      "sha256": "bff6d3408a9434dec0b5869dc42901566c609f88ae358d6713ba9a41604e9e50"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Primers_Continuidad/2026-10-10_Primer_Continuidad_Donde_Estamos_Boticario_v1_0.md",
       "tipo": "primer",
-      "bytes": 6636,
-      "sha256": "7d8a9e8ad32d23ee282f08e240a159931a0f14e641fa5e07f2f1fbf9076a07de"
+      "bytes": 6977,
+      "sha256": "9a2fc577d5b73f8703dde8b5f76ebca7eef7f156cf02c09d033af73d714fbef9"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Prompts_Activacion/2026-10-09_Hoja_Activacion_INTEGRATE_Boticario_borrador_v0_1.md",
@@ -149,20 +149,26 @@
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/2026-10-10_Prompt_Sesion_FICHA_4_Decisiones_y_v1_0_v1_0.md",
       "tipo": "prompt_sesion",
-      "bytes": 1650,
-      "sha256": "ed05beec41a7a46546ce9fbc9c64e749f20649bf9c388835b55d0b8996825c3a"
+      "bytes": 1705,
+      "sha256": "afd5b02667709f8d62b5e5929174700ea14ca4560f6fb1076f5aceaba4d239d0"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/Registro_Decisiones/2026-10-09_Registro_Maestro_Decisiones_Boticario_Digital_101_v1_0.md",
       "tipo": "registro_decisiones",
-      "bytes": 19974,
-      "sha256": "f5f2ee7cdcef95f133d9c2c059e06936243e856464655a881f33a8289a334311"
+      "bytes": 22040,
+      "sha256": "57a55d403b661e2b21f7f0f723475f629cc7f50fab1cd61a8f66bee8dac5cb39"
     },
     {
       "ruta": "18_DOCUMENTACION_ACTIVA/WIKI_SYNC/2026-10-10_WIKI_SYNC_Ficha_Saberes_v1_0.md",
       "tipo": "wiki_sync",
       "bytes": 1748,
       "sha256": "fdf96224c904e44ee075b8fac6d7c1aea2c0d2c7a6cb30a6424554cd9d51692e"
+    },
+    {
+      "ruta": "README.md",
+      "tipo": "portada",
+      "sha256": "6b63af74356fe9a2b3b708b23d4e0cb0a3fb7423679902d890c1b544fcf99737",
+      "bytes": 15647
     }
   ],
   "nota": "Los 718 archivos del Framework no se listan aquí; su integridad consta en la procedencia. El manifest no se incluye a sí mismo.",
@@ -171,5 +177,11 @@
     "zip": false,
     "decision": "D-A30",
     "activacion": "00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md"
+  },
+  "integracion": {
+    "decision": "D-A32",
+    "etiqueta_mvp": "v0.9.0-mvp-historico",
+    "base": "adbb520",
+    "modo": "merge --no-ff en main; archivos del MVP sin cambios"
   }
 }

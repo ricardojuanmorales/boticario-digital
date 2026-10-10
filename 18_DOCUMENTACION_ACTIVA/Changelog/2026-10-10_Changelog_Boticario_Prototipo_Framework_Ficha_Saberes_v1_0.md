@@ -1,5 +1,16 @@
 # Changelog · Boticario Digital 101 · rama `prototipo/framework-v5.1.0`
-Base: `adbb520` (MVP v0.9.0, igual a `origin/main`). Nada de esto está fusionado a `main` ni subido a GitHub.
+Base: `adbb520` (MVP v0.9.0, etiqueta `v0.9.0-mvp-historico`). Integrado en `main` el 2026-10-10 (D-A32).
+
+## Integración en main · 2026-10-10
+### Añadido
+- D-A31 (la excepción D-A16 se revisa y se mantiene) y D-A32 (integración en `main`).
+- Etiqueta `v0.9.0-mvp-historico` sobre `adbb520`.
+### Cambiado
+- README: estado del proyecto, Ficha de Saberes, estructura del repositorio y cómo retomar el trabajo.
+- Prompts, primer, cierre, compendio y excepción: regla de ramas y estado de la integración.
+- D-A30: el kit de cierre vive en el repositorio y se activa por referencia, sin ZIP.
+### Sin cambios
+- Los archivos de la app del MVP (`index.html`, `plantas.json` y demás).
 
 ## [sin versión] · 2026-10-10 · Cierre de sesión
 ### Añadido

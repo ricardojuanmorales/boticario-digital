@@ -5,7 +5,7 @@
 
 **🔗 Demo en vivo:** [ricardojuanmorales.github.io/boticario-digital](https://ricardojuanmorales.github.io/boticario-digital/)
 
-> 🧪 **Estás en la rama `prototipo/framework-v5.1.0`.** Aquí el Boticario evoluciona hacia la v1.0 con el **Framework Genérico V5.1** y la **Ficha de Saberes**. La app publicada (MVP) vive en la rama `main` y no cambia hasta que se decida integrar esta rama.
+> 🧪 **Octubre 2026:** el Boticario evoluciona hacia la v1.0 con el **Framework Genérico V5.1** y la **Ficha de Saberes**. La app publicada sigue funcionando igual: sus archivos están en su lugar, y el MVP original queda congelado en la etiqueta [`v0.9.0-mvp-historico`](https://github.com/ricardojuanmorales/boticario-digital/tree/v0.9.0-mvp-historico).
 
 ---
 
@@ -13,8 +13,8 @@
 
 | Componente | Estado |
 |---|---|
-| 🌐 App publicada (MVP) | ✅ Estable en `main` y en GitHub Pages. No se modifica desde esta rama. |
-| 🧩 Framework Genérico V5.1 | ✅ Instalado como prototipo (copia completa, con excepción registrada). Activado en modo INTEGRATE, nivel N3, con los lentes PH · IT · AT. |
+| 🌐 App publicada (MVP) | ✅ Funciona en GitHub Pages; sus archivos siguen en la raíz, sin cambios. |
+| 🧩 Framework Genérico V5.1 | ✅ Integrado en el repositorio (copia completa, con excepción registrada y revisada). Activado en modo INTEGRATE, nivel N3, con los lentes PH · IT · AT. |
 | 📚 Ficha de Saberes | ✅ Spec v0.3 aprobada. Documento fundacional en **canon vigente**. Plantilla de uso lista. |
 | 🌱 Primer caso: anamú (*Petiveria alliacea*) | ◐ Ficha v0.1 llena y validada (5 de 5 criterios). Activación por autorizar. |
 | 🚦 Camino a la v1.0 | ◐ Quedan dos gates bloqueantes: G7 (ética y seguridad para menores) y G9 (calidad técnica). |
@@ -58,21 +58,18 @@ Es la ficha estandarizada de cada planta, y el corazón de la versión 1.0.
 git clone https://github.com/ricardojuanmorales/boticario-digital.git
 cd boticario-digital
 
-# 2. (Opcional) Cambia a la rama de desarrollo
-git checkout prototipo/framework-v5.1.0
-
-# 3. Levanta un servidor local (elige tu método preferido)
+# 2. Levanta un servidor local (elige tu método preferido)
 python3 -m http.server 8080      # Python 3 (macOS/Linux/Windows con Python)
 npx serve .                      # Node.js
 php -S localhost:8080            # PHP
 
-# 4. Abre en tu navegador
+# 3. Abre en tu navegador
 # → http://localhost:8080
 ```
 
 > ⚠️ **Nota:** El archivo `index.html` carga `plantas.json` via `fetch()`, por lo que necesitas un servidor local. No funcionará abriendo el archivo directamente con `file://`.
 >
-> En esta rama, `index.html` sigue siendo la app del Boticario. La entrada del Framework está en `index_framework_v5_1_0.html`, renombrada para no sobrescribir la app.
+> `index.html` sigue siendo la app del Boticario. La entrada del Framework está en `index_framework_v5_1_0.html`, renombrada para no sobrescribir la app.
 
 ---
 
@@ -153,10 +150,10 @@ boticario-digital/
 ├── DOCUMENTACION.md / .pdf              # Documentación técnica del MVP
 ├── CIERRE_DE_SESION.md                  # Acta de la sesión del MVP (mayo 2026)
 ├── README.md                            # Este archivo
-├── README_English.md                    # Versión en inglés (del MVP)
 │
 ├── index_framework_v5_1_0.html          # Entrada del Framework (renombrada)
 ├── README_Framework_V5_1_0.md           # README del Framework (renombrado)
+├── README_English.md                    # README del Framework en inglés (viene con el release)
 ├── 00_CONTROL_MAESTRO/ … 21_WIKI_DOCUMENTACION_HUMANA/
 │                                        # Macroestructura del Framework V5.1
 ├── 99_ARCHIVO_HISTORICO/                # Archivo histórico
@@ -248,6 +245,8 @@ Primero [abre un Issue](https://github.com/ricardojuanmorales/boticario-digital/
 
 ### Flujo de trabajo estándar
 
+`main` publica la app. Todo cambio entra por una rama y se integra con revisión humana.
+
 ```bash
 git checkout -b feature/nombre-de-la-feature
 # ... haz tus cambios ...
@@ -266,6 +265,7 @@ git push origin feature/nombre-de-la-feature
 - [x] Instalar el Framework V5.1 como prototipo
 - [x] Ficha de Saberes: spec v0.3, plantilla y documento fundacional
 - [x] Primera ficha aplicada y validada: anamú
+- [x] Integrar el Framework y la Ficha de Saberes en `main`, sin tocar la app publicada
 - [ ] Autorizar la activación de la ficha del anamú
 - [ ] Ficha de Saberes v1.0 (posible segundo caso: jengibre)
 - [ ] JSON Schema para `plantas.json`, con validación automática

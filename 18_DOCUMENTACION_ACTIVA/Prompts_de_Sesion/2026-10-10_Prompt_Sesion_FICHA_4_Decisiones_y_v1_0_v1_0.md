@@ -16,14 +16,15 @@ BLOQUES (uno a la vez, con mi confirmación)
 1. Presentarme, en una pregunta cada una, las decisiones pendientes:
    a) autorizar la activación del anamú (D-A25);
    b) aprendizajes A1–A4 (forma) y A5–A6 (estructura);
-   c) revisión de la excepción D-A16 (vencida);
-   d) candidato caleidoscópico de la bitácora (reconocer o descartar);
-   e) formato definitivo del identificador de especie.
+   c) candidato caleidoscópico de la bitácora (reconocer o descartar);
+   d) formato definitivo del identificador de especie;
+   e) Protocolo de Cierre V5 (T-004).
 2. Aplicar lo decidido: plantilla y spec v0.4 (o v1.0), siguiendo las reglas de evolución del
    documento fundacional §9. Las versiones anteriores se conservan (R8).
 3. Si decido un segundo caso, llenar la ficha del jengibre (Zingiber officinale) para probar
    E5 nutrición, P2 y P4.
 4. Cerrar dejando el kit de cierre en el repositorio, activable por referencia desde el prompt de activación (D-A30). Sin ZIP.
 
-Entregables en .md y .pdf. Commit en la rama prototipo/framework-v5.1.0; nunca en main.
+Entregables en .md y .pdf. Commits en la rama prototipo/framework-v5.1.0 (al día con main);
+integrar a main solo con mi autorización explícita (D-A32).
 ```

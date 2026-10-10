@@ -8,7 +8,8 @@ Vamos a trabajar en Boticario Digital 101, la app de plantas medicinales de Puer
 (repo github.com/ricardojuanmorales/boticario-digital), dentro del ecosistema del buen vivir.
 
 MARCO DE TRABAJO
-- Framework Genérico V5.1 instalado en el repo (copia completa con excepción, D-A16),
+- Framework Genérico V5.1 instalado en el repo (copia completa con excepción, D-A16,
+  revisada y mantenida en D-A31),
   activado en modo INTEGRATE, nivel N3, con las lentes PH, IT y AT (D-A17 a D-A19).
 - Regla: el Framework propone, la IA asiste y verifica, el humano (Ricardo) autoriza lo material.
 - Trabajo por bloques con baja carga cognitiva: la IA hace el trabajo pesado y deja a Ricardo
@@ -26,7 +27,8 @@ LEE PRIMERO (en este orden)
    - 00_CONTROL_MAESTRO/Manifiestos/2026-10-10_Manifest_Cierre_Sesion_Boticario_v1_0.json  (huellas SHA-256 del kit)
 
 REGLAS QUE NO SE NEGOCIAN
-- main y el MVP publicado no se tocan sin decisión explícita; se trabaja en rama.
+- main publica la app en GitHub Pages. Se trabaja en rama; integrar a main requiere
+  autorización explícita de Ricardo (D-A32). Los archivos del MVP se conservan en su lugar.
 - Todas las apps del ecosistema son local-first (D-A13).
 - Ficha de Saberes: una por especie, en 4 niveles de Max-Neef, con 5 voces de tradición,
   activación proporcional y la fuente junto a cada dato (canon, D-A27).

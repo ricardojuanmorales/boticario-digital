@@ -1,9 +1,9 @@
 # Excepción · Copia completa del Framework V5.1.0 en Boticario Digital 101
 
 **Fecha:** 2026-10-09
-**Estado:** APROBADA por decisión humana (D-A16)
+**Estado:** APROBADA por decisión humana (D-A16) · **revisada y mantenida** el 2026-10-10 (D-A31)
 **Autoridad:** Ricardo Juan Morales De Jesús, autor del Framework y responsable del proyecto
-**Ámbito:** repositorio `boticario-digital`, rama `prototipo/framework-v5.1.0` (commit de instalación `14534b9`)
+**Ámbito:** repositorio `boticario-digital`, rama `prototipo/framework-v5.1.0` (commit de instalación `14534b9`), integrada en `main` (D-A32)
 **Modo Framework:** INTEGRATE
 
 ## 1. Reglas canónicas que se exceptúan
@@ -41,3 +41,12 @@ Revisar esta excepción **al cerrar el bloque FICHA-2 o antes de fusionar a `mai
 
 ## 7. Aprendizaje candidato para el Framework
 La tensión entre D-A14 ("integrar el Framework dentro de cada repositorio") y el antipatrón de copiar 00–21 es un **aprendizaje candidato** para la transferencia simétrica reversible: conviene precisar en el maestro qué significa *integrar dentro de sí* para un ecosistema de repositorios hermanos. No entra al canon de forma automática; requiere contraste y un gate humano.
+
+## 8. Revisión realizada · 2026-10-10
+**Resultado:** se mantiene la copia completa (D-A31). Se revisó antes de fusionar a `main`, como pide el §5.
+
+| Pregunta | Respuesta |
+|---|---|
+| ¿El lenguaje común del Framework se usó realmente? | Sí. El trabajo del Boticario se ubicó en 00, 02, 03, 04, 07, 13, 15 y 18, con gates, niveles N1–N4 y lentes. |
+| ¿La copia generó confusión de identidad o rutas? | Menor, toda de la IA y corregida en la sesión: la propuesta de prefijo `BD101_` y una subcarpeta creada sin decisión. |
+| ¿Hubo divergencia con el maestro? | No. Ningún archivo del release se editó después de `14534b9`. |
