@@ -1,7 +1,7 @@
 # Registro Maestro de Decisiones — Boticario Digital 101
 
 **Proyecto:** Boticario Digital 101 — ruta v1.0.0 bajo SDD
-**Marco rector:** Framework Genérico V4.1.0 Integral Autosostenido
+**Marco rector:** Framework Genérico **V5.1.0** (D-A14). El registro nació bajo V4.1.0; D-A05 y D-A06 se releyeron con V5.1 (D-A17, D-A18).
 **Arquetipo de referencia:** AI StoryLab 1 v1.0.0
 **Estado:** activo
 **Nota de formato:** D-A06 queda reemplazada por D-A17 y D-A12 por D-A28. Las decisiones D-A01 a D-A29 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
@@ -217,7 +217,7 @@
 ### R-01 · Menores × contenido sanitario de alto riesgo · **CRÍTICO**
 **Origen:** D-A07 + hallazgo de contenido del Bloque 1.
 **Descripción:** el catálogo contiene 8 plantas de riesgo alto con contraindicaciones e interacciones medicamentosas de gravedad declarada, y 202 preparaciones con pasos ejecutables (infusión, decocción, tintura). Con audiencia K-12 confirmada, la aplicación puede entregar instrucciones de preparación a una persona menor de edad sin supervisión.
-**Estado:** abierto, con avance parcial: D-A09 define el ocultamiento de dosis en modo escolar.
+**Estado:** abierto, con avance parcial: D-A09 define el ocultamiento de dosis en modo escolar, y la ficha del anamú (FICHA-3) define 4 superficies por audiencia (N2), con mensaje escolar fijo y sin preparaciones ni dosis. Falta la política general en G7.
 **Debe resolverse en:** G7 (ética y derechos), antes de cualquier trabajo de implementación de la capa pedagógica.
 **Opciones a evaluar:** superficie diferenciada por audiencia; ocultar preparaciones de riesgo alto en modo escolar; requerir gesto explícito de adulto; o declarar el proyecto como consulta y no como guía de preparación para audiencias K-12.
 
@@ -249,17 +249,19 @@
 | G2 Ubicación | 🟡 | |
 | G3 Perfil / Caleidoscopio | 🟢 **cerrado por D-A17** (reemplaza a D-A06) | |
 | G4 Metodología | 🟡 en curso (Bloques 2–3) | |
-| G5 Evidencia | 🔴 → 🟡 en curso (Bloque FICHA) | |
+| G5 Evidencia | 🟡 Ficha de Saberes v0.3 aprobada y validada con el anamú (FICHA-3) | |
 | G6 IA responsable | 🟡 | |
 | G7 Ética y derechos | 🔴 | **Sí — R-01, custodia, licencia** |
 | G8 Accesibilidad | 🔴 | |
 | G9 Calidad | 🔴 | **Sí — XSS, schema, monolito** |
-| G10 Documentación | 🟢 | |
-| G11 Wiki / transferencia | 🔴 **elevado por D-A08** | |
-| G12 Archivo | 🟡 decidido, no ejecutado | |
-| G13 Continuidad | 🟡 | |
+| G10 Documentación | 🟢 cierre de sesión completo (2026-10-10) | |
+| G11 Wiki / transferencia | 🟡 documento fundacional, plantilla y primer humanos; wiki 21 pendiente (ver WIKI_SYNC) | |
+| G12 Archivo | 🟡 decidido, no ejecutado (tag del MVP y `/legado/` pendientes) | |
+| G13 Continuidad | 🟢 primer, prompts de activación y de sesión, y cierre (2026-10-10) | |
 | G14 Estabilización | 🔴 destino de la ruta | |
 
 ---
 
 *Registro abierto en el Bloque 1. Toda decisión posterior se numera D-Axx y se registra aquí antes de ejecutarse.*
+
+**Pendientes al cierre del 2026-10-10:** autorizar la activación del anamú (D-A25) · aprendizajes A1–A6 · ¿ficha v1.0? · revisión de la excepción D-A16 (vencida) · formato definitivo del identificador de especie.

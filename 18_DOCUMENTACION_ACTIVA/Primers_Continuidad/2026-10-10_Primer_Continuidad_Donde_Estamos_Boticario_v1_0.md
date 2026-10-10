@@ -14,8 +14,10 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 | 4 | ✅ **Paso 4** · Activación | El Boticario activado en modo INTEGRATE, N3, con PH, IT y AT | D-A17 a D-A19 |
 | 5 | ✅ **FICHA-2** · Auditoría y ficha | Ficha de Saberes v0.2, y luego v0.3 con activación proporcional | D-A20 a D-A26 |
 | 6 | ✅ **Documentación humana** | El documento fundacional (**canon vigente**), la plantilla de uso y este primer | D-A27 a D-A29 |
-| 7 | 👉 **AQUÍ** · **FICHA-3** · Anamú | La primera ficha real y el informe de validación: la estructura funciona, con 6 aprendizajes | autorización pendiente |
-| 8 | Después | El esquema de datos (JSON Schema, contrato obligatorio por D-A07) y, más tarde, la app | — |
+| 7 | ✅ **FICHA-3** · Anamú | La primera ficha real y el informe de validación: la estructura funciona, con 6 aprendizajes | autorización pendiente |
+| 8 | ✅ **Cierre de sesión** (2026-10-10) | Los 10 productos del protocolo del Framework, el manifest y el ZIP | — |
+| 9 | 👉 **PRÓXIMA SESIÓN · FICHA-4** | Decisiones pendientes y Ficha v1.0. Usa el prompt de sesión FICHA-4 | — |
+| 10 | Después | El esquema de datos (JSON Schema, contrato obligatorio por D-A07) y, más tarde, la app | — |
 
 ## Una aclaración: 35 no es el número de campos
 - **35** fueron las *dimensiones* con que auditamos la ficha en FICHA-2.
@@ -48,7 +50,7 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 | **Plantilla de la ficha (para trabajar)** | `07_PLANTILLAS_Y_MODELOS/Plantillas_Documentos/2026-10-10_Plantilla_Ficha_de_Saberes_v0_3.md` |
 | Spec completa de la ficha (el porqué) | `00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_3.md` |
 | Registro de decisiones D-A01 a D-A26 | `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/` y, en el Proyecto, `claude/D-A01_Decisiones_Apertura_BD101.md` |
-| Activación del Boticario | `03_METODOLOGIA_Y_FLUJO_DE_TRABAJO/Ciclo_Vida_Proyectos/` (ficha compacta) y `00_CONTROL_MAESTRO/Manifiestos/` (paquete para la app) |
+| Activación del Boticario | `03_METODOLOGIA_Y_FLUJO_DE_TRABAJO/Ciclo_Vida_Proyectos/` (ficha compacta) y `00_CONTROL_MAESTRO/Manifiestos/` (expediente portable **v1.1**, importable en la app) |
 | Excepción del Framework | `04_GOBERNANZA_ETICA_Y_RIESGOS/Registro_Excepciones/` |
 | Procedencia de la instalación | `00_CONTROL_MAESTRO/Control_Versiones/` |
 | Plano del Buen Vivir | página "Plano del Buen Vivir" y, en el Proyecto, `claude/FICHA-B1.5_Plano_Conceptual_Buen_Vivir.md` |
@@ -57,6 +59,11 @@ Ya tenemos **la ficha oficial aprobada y lista para usar** (Ficha de Saberes v0.
 ## Estado técnico
 - **Rama:** `prototipo/framework-v5.1.0`, solo en tu computadora y **sin subir a GitHub**.
 - **`main` está intacto** y el MVP del Boticario sigue accesible en línea, como pediste.
+
+## Cómo retomar
+1. Abre la sesión con el **prompt de activación**: `00_CONTROL_MAESTRO/Prompts_Activacion/2026-10-10_Prompt_Activacion_Boticario_Digital_101_v1_0.md`.
+2. Sigue con el **prompt de sesión FICHA-4**: `18_DOCUMENTACION_ACTIVA/Prompts_de_Sesion/2026-10-10_Prompt_Sesion_FICHA_4_Decisiones_y_v1_0_v1_0.md`.
+3. El detalle del cierre está en `18_DOCUMENTACION_ACTIVA/Cierres_Reportes/Cierres_Sesion/2026-10-10_Cierre_Sesion_Boticario_v1_0.md`.
 
 ## Lo que te toca ahora
 1. **Autorizar la activación del anamú** (D-A25). Es el último paso para que su ficha quede vigente.
