@@ -4,7 +4,7 @@
 **Marco rector:** Framework Genérico V4.1.0 Integral Autosostenido
 **Arquetipo de referencia:** AI StoryLab 1 v1.0.0
 **Estado:** activo
-**Nota de formato:** D-A06 queda reemplazada por D-A17. Las decisiones D-A01 a D-A19 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
+**Nota de formato:** D-A06 queda reemplazada por D-A17. Las decisiones D-A01 a D-A23 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
 
 ---
 
@@ -149,6 +149,30 @@
   - Copia de este registro: `18_DOCUMENTACION_ACTIVA/Registro_Decisiones/`.
 - La hoja de activación borrador (`18_DOCUMENTACION_ACTIVA/Prompts_Activacion/2026-10-09_Hoja_Activacion_INTEGRATE_Boticario_borrador_v0_1.md`) queda reemplazada por la ficha autorizada.
 - **Siguiente bloque:** Plano del Buen Vivir · FICHA-2.
+
+---
+
+## Bloque FICHA-2 — Ficha de Saberes v0.2 (Plano del Buen Vivir)
+
+**Insumo:** `00_CONTROL_MAESTRO/Spec_Driven_Development/2026-10-10_Auditoria_Triangulacion_y_Spec_Ficha_Saberes_FICHA_2_v0_2.md` · **Fecha:** 2026-10-10
+
+### D-A20 · Una ficha única completa
+**Decisión:** el Boticario, el Recetario y Yocahú usan la misma ficha, con todos sus módulos y sin perfiles por dominio.
+**Consecuencias:**
+- Ningún módulo se omite. Los vacíos declaran su estado: completo, parcial, no documentado (con fecha de búsqueda) o no aplica (con razón).
+- Para publicar se exige un núcleo mínimo: T0, E1, E2, E3, E6, E7, N1, N2 y V1.
+- La completitud se mide por módulo.
+
+### D-A21 · Los cuatro niveles de Max-Neef como estructura
+**Decisión:** la ficha completa se ordena en Empírico → Pragmático → Normativo → Valores. Las tarjetas de 15 s y 1 min son la puerta de entrada.
+
+### D-A22 · Primer círculo de voces de tradición
+**Decisión:** taína y afrocaribeña, Ayurveda, medicina tradicional china, andina y otras indígenas. La biomedicina entra por la evidencia T/E/H (E6).
+**Consecuencias:** cada voz tiene su gramática y sus fuentes, y ninguna se traduce en otra (R3). Si una voz no tiene registro para la especie, el campo dice "no documentado"; nunca se rellena por analogía.
+
+### D-A23 · Mapa de 13 dimensiones del bienestar
+**Decisión:** el módulo V3 usa los 10 pilares del IBP más las dimensiones ambiental, económica y espiritual de las 8 dimensiones.
+**Consecuencias:** V3 registra prácticas de buen vivir, no afirmaciones de salud. Abre una transferencia candidata hacia el Índice de Bienestar.
 
 ---
 
