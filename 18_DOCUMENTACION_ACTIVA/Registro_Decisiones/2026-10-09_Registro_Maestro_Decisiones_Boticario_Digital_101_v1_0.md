@@ -4,7 +4,7 @@
 **Marco rector:** Framework Genérico V4.1.0 Integral Autosostenido
 **Arquetipo de referencia:** AI StoryLab 1 v1.0.0
 **Estado:** activo
-**Nota de formato:** D-A06 queda reemplazada por D-A17. Las decisiones D-A01 a D-A23 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
+**Nota de formato:** D-A06 queda reemplazada por D-A17. Las decisiones D-A01 a D-A26 se registraron en formato provisional. Se reescribirán en el formato canónico de §16.2 del Framework (once campos) al abrir el Bloque 4.
 
 ---
 
@@ -173,6 +173,25 @@
 ### D-A23 · Mapa de 13 dimensiones del bienestar
 **Decisión:** el módulo V3 usa los 10 pilares del IBP más las dimensiones ambiental, económica y espiritual de las 8 dimensiones.
 **Consecuencias:** V3 registra prácticas de buen vivir, no afirmaciones de salud. Abre una transferencia candidata hacia el Índice de Bienestar.
+
+### D-A24 · Activación proporcional por especie (enmienda a D-A20)
+**Fecha:** 2026-10-10
+**Decisión:** esquema único, activación proporcional por especie y lente por repositorio.
+- Cuatro clases de campo: obligatorio, condicional, opcional y durmiente.
+- Cinco estados: activo completo, activo parcial, no documentado, no aplica y durmiente.
+- El núcleo mínimo publicable se mantiene.
+**Justificación:** prepara la base de conocimiento común futura, compartida entre repositorios, que cada uno interpreta desde su óptica. Los campos durmientes se conservan al compartir (regla I2: preservar lo desconocido).
+**Consecuencias:**
+- Las etiquetas `sistemas` del REPO pasan a ser disparadores de activación de voces.
+- La spec sube a v0.3 (§4.7).
+
+### D-A25 · Activación de módulos durmientes
+**Fecha:** 2026-10-10
+**Decisión:** las reglas proponen y el humano autoriza. Cada activación queda en el historial T0, con quién, cuándo y qué regla la propuso.
+
+### D-A26 · Custodia por módulo
+**Fecha:** 2026-10-10
+**Decisión:** diferida. Se decide al integrar las bases entre repositorios.
 
 ---
 
